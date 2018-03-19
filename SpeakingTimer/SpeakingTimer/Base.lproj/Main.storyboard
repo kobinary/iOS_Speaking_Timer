@@ -10,16 +10,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
         <array key="HelveticaNeueLights.ttc">
             <string>HelveticaNeue-Light</string>
             <string>HelveticaNeue-Thin</string>
         </array>
     </customFonts>
     <scenes>
-        <!--Start View Controller-->
+        <!--Start Timer View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="SpeakingTimer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StartTimerViewController" customModule="SpeakingTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,17 +36,9 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
                                 <state key="normal" title="Start" backgroundImage="actionButton"/>
                                 <connections>
-                                    <segue destination="hty-vv-eHk" kind="show" id="A6P-21-FbJ"/>
+                                    <segue destination="hty-vv-eHk" kind="showDetail" identifier="runTimer" id="krf-Lc-WDI"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IjD-xQ-F5A">
-                                <rect key="frame" x="47" y="260" width="320" height="216"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <date key="date" timeIntervalSinceReferenceDate="543146381.24945295">
-                                    <!--2018-03-19 09:59:41 +0000-->
-                                </date>
-                            </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speaking Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTa-Uk-0fY">
                                 <rect key="frame" x="20" y="70" width="374" height="53"/>
                                 <constraints>
@@ -54,21 +49,28 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9V-GJ-fze">
+                                <rect key="frame" x="47" y="260" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="vjh-Hk-IrC"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="rAZ-oC-LTT"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.73070985079999995" green="0.84483259919999998" blue="0.92943215369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="A9V-GJ-fze" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1Ex-az-2bf"/>
+                            <constraint firstItem="A9V-GJ-fze" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8sG-dW-H7K"/>
                             <constraint firstItem="3rm-qK-pAl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AUU-Ma-das"/>
                             <constraint firstItem="TTa-Uk-0fY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Esi-SS-GwN"/>
                             <constraint firstItem="3rm-qK-pAl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HgI-S5-zzO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3rm-qK-pAl" secondAttribute="bottom" constant="70" id="NEg-Tj-BV9"/>
                             <constraint firstItem="TTa-Uk-0fY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Qcv-Qk-aAz"/>
-                            <constraint firstItem="IjD-xQ-F5A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yB0-Bn-nCg"/>
-                            <constraint firstItem="IjD-xQ-F5A" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zoD-fs-eM1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="pickerTimer" destination="IjD-xQ-F5A" id="DgG-6U-tDp"/>
+                        <outlet property="timerPicker" destination="A9V-GJ-fze" id="4Xq-ab-5Dp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -104,6 +106,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00 : 00 : 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgS-OT-e5J">
+                                <rect key="frame" x="20" y="243" width="374" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="70"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdE-WN-K0I">
                                 <rect key="frame" x="227" y="566" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -123,10 +132,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qay-10-4SS"/>
                     </view>
+                    <connections>
+                        <outlet property="timerLabel" destination="sgS-OT-e5J" id="zSP-ca-FUd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3c-aZ-ylJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="759" y="34"/>
+            <point key="canvasLocation" x="979.71014492753636" y="32.608695652173914"/>
         </scene>
     </scenes>
     <resources>
