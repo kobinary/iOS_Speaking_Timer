@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4C60D804205FB60300659F85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D803205FB60300659F85 /* AppDelegate.swift */; };
-		4C60D806205FB60300659F85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D805205FB60300659F85 /* ViewController.swift */; };
+		4C60D806205FB60300659F85 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D805205FB60300659F85 /* StartViewController.swift */; };
 		4C60D809205FB60300659F85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D807205FB60300659F85 /* Main.storyboard */; };
 		4C60D80B205FB60300659F85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D80A205FB60300659F85 /* Assets.xcassets */; };
 		4C60D80E205FB60300659F85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D80C205FB60300659F85 /* LaunchScreen.storyboard */; };
@@ -22,6 +22,7 @@
 		4C60D849205FB6C900659F85 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D848205FB6C900659F85 /* NotificationController.swift */; };
 		4C60D84B205FB6C900659F85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D84A205FB6C900659F85 /* Assets.xcassets */; };
 		4C60D850205FB6C900659F85 /* SpeakingTimerWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4C60D833205FB6C900659F85 /* SpeakingTimerWatch.app */; };
+		4C60D85C205FC90100659F85 /* RunningTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D85B205FC90100659F85 /* RunningTimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +84,7 @@
 /* Begin PBXFileReference section */
 		4C60D800205FB60300659F85 /* SpeakingTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeakingTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C60D803205FB60300659F85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C60D805205FB60300659F85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4C60D805205FB60300659F85 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		4C60D808205FB60300659F85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C60D80A205FB60300659F85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C60D80D205FB60300659F85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 		4C60D84A205FB6C900659F85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C60D84C205FB6C900659F85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C60D84D205FB6C900659F85 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		4C60D85B205FC90100659F85 /* RunningTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTimerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,11 +168,10 @@
 		4C60D802205FB60300659F85 /* SpeakingTimer */ = {
 			isa = PBXGroup;
 			children = (
-				4C60D803205FB60300659F85 /* AppDelegate.swift */,
-				4C60D805205FB60300659F85 /* ViewController.swift */,
 				4C60D807205FB60300659F85 /* Main.storyboard */,
-				4C60D80A205FB60300659F85 /* Assets.xcassets */,
-				4C60D80C205FB60300659F85 /* LaunchScreen.storyboard */,
+				4C60D85A205FBEBE00659F85 /* Classes */,
+				4C60D803205FB60300659F85 /* AppDelegate.swift */,
+				4C60D859205FBEAD00659F85 /* Resources */,
 				4C60D80F205FB60300659F85 /* Info.plist */,
 			);
 			path = SpeakingTimer;
@@ -215,6 +216,24 @@
 				4C60D84D205FB6C900659F85 /* PushNotificationPayload.apns */,
 			);
 			path = "SpeakingTimerWatch Extension";
+			sourceTree = "<group>";
+		};
+		4C60D859205FBEAD00659F85 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C60D80A205FB60300659F85 /* Assets.xcassets */,
+				4C60D80C205FB60300659F85 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4C60D85A205FBEBE00659F85 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4C60D805205FB60300659F85 /* StartViewController.swift */,
+				4C60D85B205FC90100659F85 /* RunningTimerViewController.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,8 +433,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C60D806205FB60300659F85 /* ViewController.swift in Sources */,
+				4C60D806205FB60300659F85 /* StartViewController.swift in Sources */,
 				4C60D804205FB60300659F85 /* AppDelegate.swift in Sources */,
+				4C60D85C205FC90100659F85 /* RunningTimerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
