@@ -363,6 +363,11 @@
 					4C60D7FF205FB60300659F85 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					4C60D813205FB60300659F85 = {
 						CreatedOnToolsVersion = 9.2;

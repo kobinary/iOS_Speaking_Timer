@@ -73,6 +73,7 @@ extension RunningTimerViewController {
     func stopTimer() {
         self.timer.invalidate()
         self.isTimerRunning = false
+        self.dismiss(animated: true, completion: nil)
     }
 
     func pauseTimer() {

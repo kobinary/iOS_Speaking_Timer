@@ -12,9 +12,12 @@ class StartTimerViewController: UIViewController {
    
     @IBOutlet weak var timerPicker: UIPickerView!
     
-    var pickerDataSource = [["0 hours", "1", "2", "3", "4", "5", "6"],["0 min","1","2","3", "4", "5", "6"],["0 sec","1","2","3", "4", "5", "6"]];
+    var pickerDataSource = [["0 hours", "1", "2", "3", "4", "5", "6", "59"],
+                            ["0 min","1","2","3", "4", "5", "6", "23"],
+                            ["0 sec","1","2","3", "4", "5", "6", "59"]];
     
     var viewModel = StartTimerViewModel()
+    var timeInterval = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,16 +39,20 @@ class StartTimerViewController: UIViewController {
         self.timerPicker.setValue(UIColor.white, forKeyPath: "textColor")
     }
 
-    
      // MARK: - Navigation
-     
+
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        self.timeInterval = self.viewModel.getTimeIntervalWithSelectedValues() as Int
+        return self.timeInterval > 0 ? true : false
+    }
+    
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "runTimer" {
             let runningViewController = segue.destination as! RunningTimerViewController
-            runningViewController.time = self.viewModel.getTimeIntervalWithSelectedValues()
+            runningViewController.time = self.timeInterval
             runningViewController.startTimer()
         }
-     }
+    }
 }
 
 enum TimerComponents : Int {
@@ -55,7 +62,7 @@ enum TimerComponents : Int {
 extension StartTimerViewController : UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerDataSource[component].count;
+        return pickerDataSource[component].count
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -83,4 +90,11 @@ extension StartTimerViewController : UIPickerViewDelegate, UIPickerViewDataSourc
         }
     }
     
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let titleData = pickerDataSource[component][row]
+        let titleInWhite = NSAttributedString(string: titleData,
+                                              attributes: [NSAttributedStringKey.font:UIFont(name: "Helvetica Neue", size: 15.0)!, NSAttributedStringKey.foregroundColor:UIColor.white])
+        return titleInWhite
+    }
+
 }
