@@ -10,12 +10,14 @@ import UIKit
 
 class RunningTimerViewController: UIViewController {
 
-    var initTimeInDate : Date!
-    var pausedTime : Date!
+    var time : Int = 0
     var timer = Timer()
     var isTimerRunning : Bool = false
+    var isTimerPaused : Bool = false
+    let viewModel = RunningTimerViewModel()
     
     @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var pauseResumeButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,63 +26,78 @@ class RunningTimerViewController: UIViewController {
         
     func setup() {
         self.addBackground()
+        self.updatePasueResumeButton()
+    }
+    
+    func updatePasueResumeButton() {
+        if isTimerPaused {
+            self.pauseResumeButton.setTitle("Resume", for: UIControlState.normal)
+        } else {
+            self.pauseResumeButton.setTitle("Pause", for: UIControlState.normal)
+        }
+        self.pauseResumeButton.reloadInputViews()
     }
     
     func addBackground() {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
     }
-
 }
 
 extension RunningTimerViewController {
+
+    func startTimer() {
+        if !self.isTimerRunning {
+            self.runTimer()
+        }
+    }
     
-//    
-//    func startTimerFrom(time: Date) {
-//        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(ViewController.updateTimer)), userInfo: nil, repeats: true)
-//        self.isTimerRunning = true
-//
-//    }
-//    
-//    func updateTimer() {
-//        if seconds < 1 {
-//            timer.invalidate()
-//            //Send alert to indicate time's up.
-//        } else {
-//            seconds -= 1
-//            timerLabel.text = timeString(time: TimeInterval(seconds))
-//            timerLabel.text = String(seconds)
-//            //            labelButton.setTitle(timeString(time: TimeInterval(seconds)), for: UIControlState.normal)
-//        }
-//    }
-//    
-//    func timeString(time:TimeInterval) -> String {
-//        let hours = Int(time) / 3600
-//        let minutes = Int(time) / 60 % 60
-//        let seconds = Int(time) % 60
-//        return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
-//    }
-//    
-//    func stopTimer() {
-//        self.timer.invalidate()
-//        self.isTimerRunning = false
-//    }
-//    
-//    func pauseTimer() {
-//        self.timer.invalidate()
-//        self.isTimerRunning = false
-//        // save current time in paused timer
-//    }
-//    
-//    func resumeTimer() {
-//        self.starTimerFrom(time: pausedTime)
-//    }
-//    
-//    @IBAction func stopTimer(_ sender: Any) {
-//        self.stopTimer()
-//    }
-//    
-//    @IBAction func pauseTimer(_ sender: Any) {
-//        self.pauseTimer()
-//    }
+    func runTimer() {
+        self.timer = Timer.scheduledTimer(timeInterval: 1,
+                                          target: self,
+                                          selector: (#selector(RunningTimerViewController.updateTimer)),
+                                          userInfo: nil,
+                                          repeats: true)
+        self.isTimerRunning = true
+    }
+
+    @objc func updateTimer() {
+        if time < 1 {
+            timer.invalidate()
+            //Send alert to indicate time's up.
+        } else {
+            time -= 1
+            timerLabel.text = viewModel.updateTimeLabel(time: TimeInterval(time))
+        }
+    }
+
+    func stopTimer() {
+        self.timer.invalidate()
+        self.isTimerRunning = false
+    }
+
+    func pauseTimer() {
+        self.timer.invalidate()
+        self.isTimerRunning = false
+        self.isTimerPaused = true
+    }
+
+    func resumeTimer() {
+        self.runTimer()
+        self.isTimerRunning = true
+        self.isTimerPaused = false
+    }
+
+    @IBAction func stopTimer(_ sender: Any) {
+        self.stopTimer()
+    }
+
+    @IBAction func pauseResumeTimer(_ sender: Any) {
+        if self.isTimerPaused {
+            self.resumeTimer()
+        } else {
+            self.pauseTimer()
+        }
+        self.updatePasueResumeButton()
+    }
     
 }

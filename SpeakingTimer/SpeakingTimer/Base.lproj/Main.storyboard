@@ -117,11 +117,11 @@
                                 <rect key="frame" x="227" y="566" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
-                                <state key="normal" title="Pause" backgroundImage="actionButton">
+                                <state key="normal" title="    " backgroundImage="actionButton">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="pauseTimer:" destination="hty-vv-eHk" eventType="touchUpInside" id="L7g-7O-rac"/>
+                                    <action selector="pauseResumeTimer:" destination="hty-vv-eHk" eventType="touchUpInside" id="260-9N-OoL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -133,6 +133,7 @@
                         <viewLayoutGuide key="safeArea" id="Qay-10-4SS"/>
                     </view>
                     <connections>
+                        <outlet property="pauseResumeButton" destination="DdE-WN-K0I" id="pIm-aK-14v"/>
                         <outlet property="timerLabel" destination="sgS-OT-e5J" id="zSP-ca-FUd"/>
                     </connections>
                 </viewController>

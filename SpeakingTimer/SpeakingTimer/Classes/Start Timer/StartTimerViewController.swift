@@ -13,6 +13,7 @@ class StartTimerViewController: UIViewController {
     @IBOutlet weak var timerPicker: UIPickerView!
     
     var pickerDataSource = [["0 hours", "1", "2", "3", "4", "5", "6"],["0 min","1","2","3", "4", "5", "6"],["0 sec","1","2","3", "4", "5", "6"]];
+    
     var viewModel = StartTimerViewModel()
     
     override func viewDidLoad() {
@@ -38,12 +39,11 @@ class StartTimerViewController: UIViewController {
     
      // MARK: - Navigation
      
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "runTimer" {
-            let timerDate = self.viewModel.getTimerDataWithSelectedValues()
             let runningViewController = segue.destination as! RunningTimerViewController
-//            runningViewController.initTimeInDate = timerDate
+            runningViewController.time = self.viewModel.getTimeIntervalWithSelectedValues()
+            runningViewController.startTimer()
         }
      }
 }

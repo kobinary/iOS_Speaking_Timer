@@ -10,36 +10,24 @@ import UIKit
 
 class StartTimerViewModel: NSObject {
     
-    var hours : String! {
-        didSet {
-            print(hours)
-        }
-    }
-    var minutes : String! {
-        didSet {
-            print(minutes)
-        }
-    }
-    var seconds : String! {
-        didSet {
-            print(seconds)
-        }
+    var hours : String = "0"
+    var minutes : String = "0"
+    var seconds : String = "0"
+    
+    func getTimeIntervalWithSelectedValues() -> Int {
+        return self.transforValuesIntoTimerData(hours: hours, minutes: minutes, seconds: seconds)
     }
     
-    var timer : NSDate!
-    
-    func getTimerDataWithSelectedValues() {
-        self.transforValuesIntoTimerData(hours: hours, minutes: minutes, seconds: seconds)
-    }
-    
-    func transforValuesIntoTimerData(hours: String, minutes: String, seconds: String) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "hh:mm:ss" //Your date format
-        dateFormatter.timeZone = TimeZone(abbreviation: "GMT+0:00")
-        let time = hours+":"+minutes+":"+seconds
-        let date = dateFormatter.date(from: time) //according to date format your date string
-        print(date ?? "") //Convert String to Date
+    func transforValuesIntoTimerData(hours: String, minutes: String, seconds: String) -> Int {
+        let hoursValue = Int(hours)
+        let minutesValue = Int(minutes)
+        let secondsValue = Int(seconds)
+
+        let hoursToMinutes = hoursValue! * 60
+        let minutesToSeconds = (minutesValue! * 60) + (hoursValue! * 60)
+        let timeInterval = hoursToMinutes + minutesToSeconds + secondsValue!
         
+        return timeInterval
     }
     
 }

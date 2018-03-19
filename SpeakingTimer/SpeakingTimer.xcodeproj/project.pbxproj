@@ -24,6 +24,7 @@
 		4C60D850205FB6C900659F85 /* SpeakingTimerWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4C60D833205FB6C900659F85 /* SpeakingTimerWatch.app */; };
 		4C60D85C205FC90100659F85 /* RunningTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D85B205FC90100659F85 /* RunningTimerViewController.swift */; };
 		4C60D85E205FDEB900659F85 /* StartTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D85D205FDEB900659F85 /* StartTimerViewModel.swift */; };
+		4C60D86220600FFA00659F85 /* RunningTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D86120600FFA00659F85 /* RunningTimerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		4C60D84D205FB6C900659F85 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		4C60D85B205FC90100659F85 /* RunningTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTimerViewController.swift; sourceTree = "<group>"; };
 		4C60D85D205FDEB900659F85 /* StartTimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimerViewModel.swift; sourceTree = "<group>"; };
+		4C60D86120600FFA00659F85 /* RunningTimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTimerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				4C60D85B205FC90100659F85 /* RunningTimerViewController.swift */,
+				4C60D86120600FFA00659F85 /* RunningTimerViewModel.swift */,
 			);
 			path = "Running Timer";
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 			files = (
 				4C60D806205FB60300659F85 /* StartTimerViewController.swift in Sources */,
 				4C60D804205FB60300659F85 /* AppDelegate.swift in Sources */,
+				4C60D86220600FFA00659F85 /* RunningTimerViewModel.swift in Sources */,
 				4C60D85C205FC90100659F85 /* RunningTimerViewController.swift in Sources */,
 				4C60D85E205FDEB900659F85 /* StartTimerViewModel.swift in Sources */,
 			);
