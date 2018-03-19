@@ -1,0 +1,838 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C60D804205FB60300659F85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D803205FB60300659F85 /* AppDelegate.swift */; };
+		4C60D806205FB60300659F85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D805205FB60300659F85 /* ViewController.swift */; };
+		4C60D809205FB60300659F85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D807205FB60300659F85 /* Main.storyboard */; };
+		4C60D80B205FB60300659F85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D80A205FB60300659F85 /* Assets.xcassets */; };
+		4C60D80E205FB60300659F85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D80C205FB60300659F85 /* LaunchScreen.storyboard */; };
+		4C60D819205FB60300659F85 /* SpeakingTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D818205FB60300659F85 /* SpeakingTimerTests.swift */; };
+		4C60D824205FB60300659F85 /* SpeakingTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D823205FB60300659F85 /* SpeakingTimerUITests.swift */; };
+		4C60D837205FB6C900659F85 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D835205FB6C900659F85 /* Interface.storyboard */; };
+		4C60D839205FB6C900659F85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D838205FB6C900659F85 /* Assets.xcassets */; };
+		4C60D840205FB6C900659F85 /* SpeakingTimerWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4C60D83F205FB6C900659F85 /* SpeakingTimerWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4C60D845205FB6C900659F85 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D844205FB6C900659F85 /* InterfaceController.swift */; };
+		4C60D847205FB6C900659F85 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D846205FB6C900659F85 /* ExtensionDelegate.swift */; };
+		4C60D849205FB6C900659F85 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D848205FB6C900659F85 /* NotificationController.swift */; };
+		4C60D84B205FB6C900659F85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D84A205FB6C900659F85 /* Assets.xcassets */; };
+		4C60D850205FB6C900659F85 /* SpeakingTimerWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4C60D833205FB6C900659F85 /* SpeakingTimerWatch.app */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C60D815205FB60300659F85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C60D7F8205FB60300659F85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C60D7FF205FB60300659F85;
+			remoteInfo = SpeakingTimer;
+		};
+		4C60D820205FB60300659F85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C60D7F8205FB60300659F85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C60D7FF205FB60300659F85;
+			remoteInfo = SpeakingTimer;
+		};
+		4C60D841205FB6C900659F85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C60D7F8205FB60300659F85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C60D83E205FB6C900659F85;
+			remoteInfo = "SpeakingTimerWatch Extension";
+		};
+		4C60D84E205FB6C900659F85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C60D7F8205FB60300659F85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C60D832205FB6C900659F85;
+			remoteInfo = SpeakingTimerWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4C60D854205FB6C900659F85 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4C60D840205FB6C900659F85 /* SpeakingTimerWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C60D858205FB6C900659F85 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				4C60D850205FB6C900659F85 /* SpeakingTimerWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4C60D800205FB60300659F85 /* SpeakingTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeakingTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C60D803205FB60300659F85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4C60D805205FB60300659F85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4C60D808205FB60300659F85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4C60D80A205FB60300659F85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C60D80D205FB60300659F85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4C60D80F205FB60300659F85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C60D814205FB60300659F85 /* SpeakingTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeakingTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C60D818205FB60300659F85 /* SpeakingTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakingTimerTests.swift; sourceTree = "<group>"; };
+		4C60D81A205FB60300659F85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C60D81F205FB60300659F85 /* SpeakingTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeakingTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C60D823205FB60300659F85 /* SpeakingTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakingTimerUITests.swift; sourceTree = "<group>"; };
+		4C60D825205FB60400659F85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C60D833205FB6C900659F85 /* SpeakingTimerWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeakingTimerWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C60D836205FB6C900659F85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		4C60D838205FB6C900659F85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C60D83A205FB6C900659F85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C60D83F205FB6C900659F85 /* SpeakingTimerWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SpeakingTimerWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C60D844205FB6C900659F85 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		4C60D846205FB6C900659F85 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		4C60D848205FB6C900659F85 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		4C60D84A205FB6C900659F85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C60D84C205FB6C900659F85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C60D84D205FB6C900659F85 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C60D7FD205FB60300659F85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C60D811205FB60300659F85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C60D81C205FB60300659F85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C60D83C205FB6C900659F85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C60D7F7205FB60300659F85 = {
+			isa = PBXGroup;
+			children = (
+				4C60D802205FB60300659F85 /* SpeakingTimer */,
+				4C60D817205FB60300659F85 /* SpeakingTimerTests */,
+				4C60D822205FB60300659F85 /* SpeakingTimerUITests */,
+				4C60D834205FB6C900659F85 /* SpeakingTimerWatch */,
+				4C60D843205FB6C900659F85 /* SpeakingTimerWatch Extension */,
+				4C60D801205FB60300659F85 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4C60D801205FB60300659F85 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C60D800205FB60300659F85 /* SpeakingTimer.app */,
+				4C60D814205FB60300659F85 /* SpeakingTimerTests.xctest */,
+				4C60D81F205FB60300659F85 /* SpeakingTimerUITests.xctest */,
+				4C60D833205FB6C900659F85 /* SpeakingTimerWatch.app */,
+				4C60D83F205FB6C900659F85 /* SpeakingTimerWatch Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C60D802205FB60300659F85 /* SpeakingTimer */ = {
+			isa = PBXGroup;
+			children = (
+				4C60D803205FB60300659F85 /* AppDelegate.swift */,
+				4C60D805205FB60300659F85 /* ViewController.swift */,
+				4C60D807205FB60300659F85 /* Main.storyboard */,
+				4C60D80A205FB60300659F85 /* Assets.xcassets */,
+				4C60D80C205FB60300659F85 /* LaunchScreen.storyboard */,
+				4C60D80F205FB60300659F85 /* Info.plist */,
+			);
+			path = SpeakingTimer;
+			sourceTree = "<group>";
+		};
+		4C60D817205FB60300659F85 /* SpeakingTimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				4C60D818205FB60300659F85 /* SpeakingTimerTests.swift */,
+				4C60D81A205FB60300659F85 /* Info.plist */,
+			);
+			path = SpeakingTimerTests;
+			sourceTree = "<group>";
+		};
+		4C60D822205FB60300659F85 /* SpeakingTimerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4C60D823205FB60300659F85 /* SpeakingTimerUITests.swift */,
+				4C60D825205FB60400659F85 /* Info.plist */,
+			);
+			path = SpeakingTimerUITests;
+			sourceTree = "<group>";
+		};
+		4C60D834205FB6C900659F85 /* SpeakingTimerWatch */ = {
+			isa = PBXGroup;
+			children = (
+				4C60D835205FB6C900659F85 /* Interface.storyboard */,
+				4C60D838205FB6C900659F85 /* Assets.xcassets */,
+				4C60D83A205FB6C900659F85 /* Info.plist */,
+			);
+			path = SpeakingTimerWatch;
+			sourceTree = "<group>";
+		};
+		4C60D843205FB6C900659F85 /* SpeakingTimerWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4C60D844205FB6C900659F85 /* InterfaceController.swift */,
+				4C60D846205FB6C900659F85 /* ExtensionDelegate.swift */,
+				4C60D848205FB6C900659F85 /* NotificationController.swift */,
+				4C60D84A205FB6C900659F85 /* Assets.xcassets */,
+				4C60D84C205FB6C900659F85 /* Info.plist */,
+				4C60D84D205FB6C900659F85 /* PushNotificationPayload.apns */,
+			);
+			path = "SpeakingTimerWatch Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4C60D7FF205FB60300659F85 /* SpeakingTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C60D828205FB60400659F85 /* Build configuration list for PBXNativeTarget "SpeakingTimer" */;
+			buildPhases = (
+				4C60D7FC205FB60300659F85 /* Sources */,
+				4C60D7FD205FB60300659F85 /* Frameworks */,
+				4C60D7FE205FB60300659F85 /* Resources */,
+				4C60D858205FB6C900659F85 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C60D84F205FB6C900659F85 /* PBXTargetDependency */,
+			);
+			name = SpeakingTimer;
+			productName = SpeakingTimer;
+			productReference = 4C60D800205FB60300659F85 /* SpeakingTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4C60D813205FB60300659F85 /* SpeakingTimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C60D82B205FB60400659F85 /* Build configuration list for PBXNativeTarget "SpeakingTimerTests" */;
+			buildPhases = (
+				4C60D810205FB60300659F85 /* Sources */,
+				4C60D811205FB60300659F85 /* Frameworks */,
+				4C60D812205FB60300659F85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C60D816205FB60300659F85 /* PBXTargetDependency */,
+			);
+			name = SpeakingTimerTests;
+			productName = SpeakingTimerTests;
+			productReference = 4C60D814205FB60300659F85 /* SpeakingTimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4C60D81E205FB60300659F85 /* SpeakingTimerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C60D82E205FB60400659F85 /* Build configuration list for PBXNativeTarget "SpeakingTimerUITests" */;
+			buildPhases = (
+				4C60D81B205FB60300659F85 /* Sources */,
+				4C60D81C205FB60300659F85 /* Frameworks */,
+				4C60D81D205FB60300659F85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C60D821205FB60300659F85 /* PBXTargetDependency */,
+			);
+			name = SpeakingTimerUITests;
+			productName = SpeakingTimerUITests;
+			productReference = 4C60D81F205FB60300659F85 /* SpeakingTimerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		4C60D832205FB6C900659F85 /* SpeakingTimerWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C60D855205FB6C900659F85 /* Build configuration list for PBXNativeTarget "SpeakingTimerWatch" */;
+			buildPhases = (
+				4C60D831205FB6C900659F85 /* Resources */,
+				4C60D854205FB6C900659F85 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C60D842205FB6C900659F85 /* PBXTargetDependency */,
+			);
+			name = SpeakingTimerWatch;
+			productName = SpeakingTimerWatch;
+			productReference = 4C60D833205FB6C900659F85 /* SpeakingTimerWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		4C60D83E205FB6C900659F85 /* SpeakingTimerWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C60D851205FB6C900659F85 /* Build configuration list for PBXNativeTarget "SpeakingTimerWatch Extension" */;
+			buildPhases = (
+				4C60D83B205FB6C900659F85 /* Sources */,
+				4C60D83C205FB6C900659F85 /* Frameworks */,
+				4C60D83D205FB6C900659F85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SpeakingTimerWatch Extension";
+			productName = "SpeakingTimerWatch Extension";
+			productReference = 4C60D83F205FB6C900659F85 /* SpeakingTimerWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C60D7F8205FB60300659F85 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Maria Ortega";
+				TargetAttributes = {
+					4C60D7FF205FB60300659F85 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					4C60D813205FB60300659F85 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4C60D7FF205FB60300659F85;
+					};
+					4C60D81E205FB60300659F85 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4C60D7FF205FB60300659F85;
+					};
+					4C60D832205FB6C900659F85 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					4C60D83E205FB6C900659F85 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4C60D7FB205FB60300659F85 /* Build configuration list for PBXProject "SpeakingTimer" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4C60D7F7205FB60300659F85;
+			productRefGroup = 4C60D801205FB60300659F85 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4C60D7FF205FB60300659F85 /* SpeakingTimer */,
+				4C60D813205FB60300659F85 /* SpeakingTimerTests */,
+				4C60D81E205FB60300659F85 /* SpeakingTimerUITests */,
+				4C60D832205FB6C900659F85 /* SpeakingTimerWatch */,
+				4C60D83E205FB6C900659F85 /* SpeakingTimerWatch Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C60D7FE205FB60300659F85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C60D80E205FB60300659F85 /* LaunchScreen.storyboard in Resources */,
+				4C60D80B205FB60300659F85 /* Assets.xcassets in Resources */,
+				4C60D809205FB60300659F85 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C60D812205FB60300659F85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C60D81D205FB60300659F85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C60D831205FB6C900659F85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C60D839205FB6C900659F85 /* Assets.xcassets in Resources */,
+				4C60D837205FB6C900659F85 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C60D83D205FB6C900659F85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C60D84B205FB6C900659F85 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C60D7FC205FB60300659F85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C60D806205FB60300659F85 /* ViewController.swift in Sources */,
+				4C60D804205FB60300659F85 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C60D810205FB60300659F85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C60D819205FB60300659F85 /* SpeakingTimerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C60D81B205FB60300659F85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C60D824205FB60300659F85 /* SpeakingTimerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C60D83B205FB6C900659F85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C60D849205FB6C900659F85 /* NotificationController.swift in Sources */,
+				4C60D847205FB6C900659F85 /* ExtensionDelegate.swift in Sources */,
+				4C60D845205FB6C900659F85 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4C60D816205FB60300659F85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C60D7FF205FB60300659F85 /* SpeakingTimer */;
+			targetProxy = 4C60D815205FB60300659F85 /* PBXContainerItemProxy */;
+		};
+		4C60D821205FB60300659F85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C60D7FF205FB60300659F85 /* SpeakingTimer */;
+			targetProxy = 4C60D820205FB60300659F85 /* PBXContainerItemProxy */;
+		};
+		4C60D842205FB6C900659F85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C60D83E205FB6C900659F85 /* SpeakingTimerWatch Extension */;
+			targetProxy = 4C60D841205FB6C900659F85 /* PBXContainerItemProxy */;
+		};
+		4C60D84F205FB6C900659F85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C60D832205FB6C900659F85 /* SpeakingTimerWatch */;
+			targetProxy = 4C60D84E205FB6C900659F85 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4C60D807205FB60300659F85 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C60D808205FB60300659F85 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4C60D80C205FB60300659F85 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C60D80D205FB60300659F85 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4C60D835205FB6C900659F85 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C60D836205FB6C900659F85 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4C60D826205FB60400659F85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4C60D827205FB60400659F85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C60D829205FB60400659F85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4K6JDXN8TD;
+				INFOPLIST_FILE = SpeakingTimer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kobinary.SpeakingTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4C60D82A205FB60400659F85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4K6JDXN8TD;
+				INFOPLIST_FILE = SpeakingTimer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kobinary.SpeakingTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4C60D82C205FB60400659F85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4K6JDXN8TD;
+				INFOPLIST_FILE = SpeakingTimerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kobinary.SpeakingTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpeakingTimer.app/SpeakingTimer";
+			};
+			name = Debug;
+		};
+		4C60D82D205FB60400659F85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4K6JDXN8TD;
+				INFOPLIST_FILE = SpeakingTimerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kobinary.SpeakingTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpeakingTimer.app/SpeakingTimer";
+			};
+			name = Release;
+		};
+		4C60D82F205FB60400659F85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4K6JDXN8TD;
+				INFOPLIST_FILE = SpeakingTimerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kobinary.SpeakingTimerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SpeakingTimer;
+			};
+			name = Debug;
+		};
+		4C60D830205FB60400659F85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4K6JDXN8TD;
+				INFOPLIST_FILE = SpeakingTimerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kobinary.SpeakingTimerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SpeakingTimer;
+			};
+			name = Release;
+		};
+		4C60D852205FB6C900659F85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4K6JDXN8TD;
+				INFOPLIST_FILE = "SpeakingTimerWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kobinary.SpeakingTimer.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		4C60D853205FB6C900659F85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4K6JDXN8TD;
+				INFOPLIST_FILE = "SpeakingTimerWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kobinary.SpeakingTimer.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		4C60D856205FB6C900659F85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4K6JDXN8TD;
+				IBSC_MODULE = SpeakingTimerWatch_Extension;
+				INFOPLIST_FILE = SpeakingTimerWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = kobinary.SpeakingTimer.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		4C60D857205FB6C900659F85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4K6JDXN8TD;
+				IBSC_MODULE = SpeakingTimerWatch_Extension;
+				INFOPLIST_FILE = SpeakingTimerWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = kobinary.SpeakingTimer.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C60D7FB205FB60300659F85 /* Build configuration list for PBXProject "SpeakingTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C60D826205FB60400659F85 /* Debug */,
+				4C60D827205FB60400659F85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C60D828205FB60400659F85 /* Build configuration list for PBXNativeTarget "SpeakingTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C60D829205FB60400659F85 /* Debug */,
+				4C60D82A205FB60400659F85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C60D82B205FB60400659F85 /* Build configuration list for PBXNativeTarget "SpeakingTimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C60D82C205FB60400659F85 /* Debug */,
+				4C60D82D205FB60400659F85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C60D82E205FB60400659F85 /* Build configuration list for PBXNativeTarget "SpeakingTimerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C60D82F205FB60400659F85 /* Debug */,
+				4C60D830205FB60400659F85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C60D851205FB6C900659F85 /* Build configuration list for PBXNativeTarget "SpeakingTimerWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C60D852205FB6C900659F85 /* Debug */,
+				4C60D853205FB6C900659F85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C60D855205FB6C900659F85 /* Build configuration list for PBXNativeTarget "SpeakingTimerWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C60D856205FB6C900659F85 /* Debug */,
+				4C60D857205FB6C900659F85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4C60D7F8205FB60300659F85 /* Project object */;
+}
