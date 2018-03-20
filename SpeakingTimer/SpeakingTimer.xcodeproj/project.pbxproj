@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		113DF2E84030C33E63BED9EE /* Pods_SpeakingTimerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A006048AD3C3317AF175CE26 /* Pods_SpeakingTimerTests.framework */; };
+		4C30DBD82061205D00D6DB63 /* AudioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBD72061205D00D6DB63 /* AudioHelper.swift */; };
 		4C60D804205FB60300659F85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D803205FB60300659F85 /* AppDelegate.swift */; };
 		4C60D806205FB60300659F85 /* StartTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D805205FB60300659F85 /* StartTimerViewController.swift */; };
 		4C60D809205FB60300659F85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D807205FB60300659F85 /* Main.storyboard */; };
@@ -25,6 +27,20 @@
 		4C60D85C205FC90100659F85 /* RunningTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D85B205FC90100659F85 /* RunningTimerViewController.swift */; };
 		4C60D85E205FDEB900659F85 /* StartTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D85D205FDEB900659F85 /* StartTimerViewModel.swift */; };
 		4C60D86220600FFA00659F85 /* RunningTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D86120600FFA00659F85 /* RunningTimerViewModel.swift */; };
+		4C60D88820611C5900659F85 /* alarm3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D88520611C5800659F85 /* alarm3.mp3 */; };
+		4C60D88920611C5900659F85 /* alarm3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D88520611C5800659F85 /* alarm3.mp3 */; };
+		4C60D88A20611C5900659F85 /* alarm3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D88520611C5800659F85 /* alarm3.mp3 */; };
+		4C60D88B20611C5900659F85 /* alarm2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D88620611C5800659F85 /* alarm2.mp3 */; };
+		4C60D88C20611C5900659F85 /* alarm2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D88620611C5800659F85 /* alarm2.mp3 */; };
+		4C60D88D20611C5900659F85 /* alarm2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D88620611C5800659F85 /* alarm2.mp3 */; };
+		4C60D88E20611C5900659F85 /* alarm1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D88720611C5800659F85 /* alarm1.mp3 */; };
+		4C60D88F20611C5900659F85 /* alarm1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D88720611C5800659F85 /* alarm1.mp3 */; };
+		4C60D89020611C5900659F85 /* alarm1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D88720611C5800659F85 /* alarm1.mp3 */; };
+		4C60D89520611EA500659F85 /* NotificationPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D89420611EA500659F85 /* NotificationPopUp.swift */; };
+		8A2C377D1FFC077B4B9427D9 /* Pods_SpeakingTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526DFE21B00A608DE4962908 /* Pods_SpeakingTimer.framework */; };
+		A853FE8BDB34DE7D02DFC6E4 /* Pods_SpeakingTimerWatch_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE995FA4B85989E782DD8C19 /* Pods_SpeakingTimerWatch_Extension.framework */; };
+		D918C6F9B2608A745D38DB39 /* Pods_SpeakingTimerWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8898C9EAF9EE5FC0831B4483 /* Pods_SpeakingTimerWatch.framework */; };
+		FF5175326806B37C72956275 /* Pods_SpeakingTimerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E32229FD2F4B0C22C7F1898 /* Pods_SpeakingTimerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +100,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04BD42245F24B713581DC41A /* Pods-SpeakingTimerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakingTimerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakingTimerTests/Pods-SpeakingTimerTests.release.xcconfig"; sourceTree = "<group>"; };
+		388316CFDD8FB6CF97A26009 /* Pods-SpeakingTimerWatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakingTimerWatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakingTimerWatch/Pods-SpeakingTimerWatch.release.xcconfig"; sourceTree = "<group>"; };
+		3B431673027952026CE96B87 /* Pods-SpeakingTimerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakingTimerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakingTimerTests/Pods-SpeakingTimerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4C30DBD72061205D00D6DB63 /* AudioHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioHelper.swift; sourceTree = "<group>"; };
 		4C60D800205FB60300659F85 /* SpeakingTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeakingTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C60D803205FB60300659F85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C60D805205FB60300659F85 /* StartTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimerViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +131,22 @@
 		4C60D85B205FC90100659F85 /* RunningTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTimerViewController.swift; sourceTree = "<group>"; };
 		4C60D85D205FDEB900659F85 /* StartTimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimerViewModel.swift; sourceTree = "<group>"; };
 		4C60D86120600FFA00659F85 /* RunningTimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTimerViewModel.swift; sourceTree = "<group>"; };
+		4C60D88520611C5800659F85 /* alarm3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm3.mp3; sourceTree = "<group>"; };
+		4C60D88620611C5800659F85 /* alarm2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm2.mp3; sourceTree = "<group>"; };
+		4C60D88720611C5800659F85 /* alarm1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm1.mp3; sourceTree = "<group>"; };
+		4C60D89420611EA500659F85 /* NotificationPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPopUp.swift; sourceTree = "<group>"; };
+		526DFE21B00A608DE4962908 /* Pods_SpeakingTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeakingTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CD2AE789E88A7196B57557D /* Pods-SpeakingTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakingTimer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakingTimer/Pods-SpeakingTimer.debug.xcconfig"; sourceTree = "<group>"; };
+		5E32229FD2F4B0C22C7F1898 /* Pods_SpeakingTimerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeakingTimerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6734A65DE50E6DBD72E1230C /* Pods-SpeakingTimerWatch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakingTimerWatch Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakingTimerWatch Extension/Pods-SpeakingTimerWatch Extension.release.xcconfig"; sourceTree = "<group>"; };
+		75175BC753DE5CEDC8AA4BC0 /* Pods-SpeakingTimerWatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakingTimerWatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakingTimerWatch/Pods-SpeakingTimerWatch.debug.xcconfig"; sourceTree = "<group>"; };
+		8898C9EAF9EE5FC0831B4483 /* Pods_SpeakingTimerWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeakingTimerWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		939F3CFF51553613D8D7E38B /* Pods-SpeakingTimerWatch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakingTimerWatch Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakingTimerWatch Extension/Pods-SpeakingTimerWatch Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		A006048AD3C3317AF175CE26 /* Pods_SpeakingTimerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeakingTimerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF5F0F16C5BAB61E8D00CE34 /* Pods-SpeakingTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakingTimer.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakingTimer/Pods-SpeakingTimer.release.xcconfig"; sourceTree = "<group>"; };
+		BB0DF8BF7C41B297A8919B0F /* Pods-SpeakingTimerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakingTimerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakingTimerUITests/Pods-SpeakingTimerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D9BD341887F660411F483152 /* Pods-SpeakingTimerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakingTimerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakingTimerUITests/Pods-SpeakingTimerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FE995FA4B85989E782DD8C19 /* Pods_SpeakingTimerWatch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeakingTimerWatch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A2C377D1FFC077B4B9427D9 /* Pods_SpeakingTimer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				113DF2E84030C33E63BED9EE /* Pods_SpeakingTimerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF5175326806B37C72956275 /* Pods_SpeakingTimerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +178,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A853FE8BDB34DE7D02DFC6E4 /* Pods_SpeakingTimerWatch_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5997B6C01A36DCEF039C112 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D918C6F9B2608A745D38DB39 /* Pods_SpeakingTimerWatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +202,8 @@
 				4C60D834205FB6C900659F85 /* SpeakingTimerWatch */,
 				4C60D843205FB6C900659F85 /* SpeakingTimerWatch Extension */,
 				4C60D801205FB60300659F85 /* Products */,
+				A72A309F211A00C8930CBEB9 /* Pods */,
+				E9A25AB66AC6C63966A0A5FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,6 +225,7 @@
 				4C60D807205FB60300659F85 /* Main.storyboard */,
 				4C60D85A205FBEBE00659F85 /* Classes */,
 				4C60D859205FBEAD00659F85 /* Resources */,
+				4C60D88420611C4500659F85 /* Sounds */,
 				4C60D80F205FB60300659F85 /* Info.plist */,
 				4C60D803205FB60300659F85 /* AppDelegate.swift */,
 			);
@@ -234,6 +285,7 @@
 		4C60D85A205FBEBE00659F85 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4C60D8782061074200659F85 /* Helper */,
 				4C60D85F205FDEC000659F85 /* Start Timer */,
 				4C60D860205FDEC800659F85 /* Running Timer */,
 			);
@@ -258,6 +310,54 @@
 			path = "Running Timer";
 			sourceTree = "<group>";
 		};
+		4C60D8782061074200659F85 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				4C60D89420611EA500659F85 /* NotificationPopUp.swift */,
+				4C30DBD72061205D00D6DB63 /* AudioHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		4C60D88420611C4500659F85 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				4C60D88720611C5800659F85 /* alarm1.mp3 */,
+				4C60D88620611C5800659F85 /* alarm2.mp3 */,
+				4C60D88520611C5800659F85 /* alarm3.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		A72A309F211A00C8930CBEB9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5CD2AE789E88A7196B57557D /* Pods-SpeakingTimer.debug.xcconfig */,
+				AF5F0F16C5BAB61E8D00CE34 /* Pods-SpeakingTimer.release.xcconfig */,
+				3B431673027952026CE96B87 /* Pods-SpeakingTimerTests.debug.xcconfig */,
+				04BD42245F24B713581DC41A /* Pods-SpeakingTimerTests.release.xcconfig */,
+				D9BD341887F660411F483152 /* Pods-SpeakingTimerUITests.debug.xcconfig */,
+				BB0DF8BF7C41B297A8919B0F /* Pods-SpeakingTimerUITests.release.xcconfig */,
+				75175BC753DE5CEDC8AA4BC0 /* Pods-SpeakingTimerWatch.debug.xcconfig */,
+				388316CFDD8FB6CF97A26009 /* Pods-SpeakingTimerWatch.release.xcconfig */,
+				939F3CFF51553613D8D7E38B /* Pods-SpeakingTimerWatch Extension.debug.xcconfig */,
+				6734A65DE50E6DBD72E1230C /* Pods-SpeakingTimerWatch Extension.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E9A25AB66AC6C63966A0A5FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				526DFE21B00A608DE4962908 /* Pods_SpeakingTimer.framework */,
+				A006048AD3C3317AF175CE26 /* Pods_SpeakingTimerTests.framework */,
+				5E32229FD2F4B0C22C7F1898 /* Pods_SpeakingTimerUITests.framework */,
+				8898C9EAF9EE5FC0831B4483 /* Pods_SpeakingTimerWatch.framework */,
+				FE995FA4B85989E782DD8C19 /* Pods_SpeakingTimerWatch_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -265,10 +365,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C60D828205FB60400659F85 /* Build configuration list for PBXNativeTarget "SpeakingTimer" */;
 			buildPhases = (
+				B75DE46409B86A34B1DA69C8 /* [CP] Check Pods Manifest.lock */,
 				4C60D7FC205FB60300659F85 /* Sources */,
 				4C60D7FD205FB60300659F85 /* Frameworks */,
 				4C60D7FE205FB60300659F85 /* Resources */,
 				4C60D858205FB6C900659F85 /* Embed Watch Content */,
+				4ABA17C1A07F7B17ADCD9233 /* [CP] Embed Pods Frameworks */,
+				F0591A39F2BE00371A6C4EFD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -284,9 +387,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C60D82B205FB60400659F85 /* Build configuration list for PBXNativeTarget "SpeakingTimerTests" */;
 			buildPhases = (
+				10DA9594CEF81AB7CE27ADF4 /* [CP] Check Pods Manifest.lock */,
 				4C60D810205FB60300659F85 /* Sources */,
 				4C60D811205FB60300659F85 /* Frameworks */,
 				4C60D812205FB60300659F85 /* Resources */,
+				52BA8491E311CD4FE8F57767 /* [CP] Embed Pods Frameworks */,
+				B62CCF3FB812B69B95903A94 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,9 +408,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C60D82E205FB60400659F85 /* Build configuration list for PBXNativeTarget "SpeakingTimerUITests" */;
 			buildPhases = (
+				80D38ABFF86676CC5B31212A /* [CP] Check Pods Manifest.lock */,
 				4C60D81B205FB60300659F85 /* Sources */,
 				4C60D81C205FB60300659F85 /* Frameworks */,
 				4C60D81D205FB60300659F85 /* Resources */,
+				F143FB1BE0B16F9CD388596A /* [CP] Embed Pods Frameworks */,
+				DF1EC5CC403D6588E6D3C5F9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -320,8 +429,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C60D855205FB6C900659F85 /* Build configuration list for PBXNativeTarget "SpeakingTimerWatch" */;
 			buildPhases = (
+				87C5AE1DB302D76AD62DBE5B /* [CP] Check Pods Manifest.lock */,
 				4C60D831205FB6C900659F85 /* Resources */,
 				4C60D854205FB6C900659F85 /* Embed App Extensions */,
+				A5997B6C01A36DCEF039C112 /* Frameworks */,
+				AF0CBEF82FA00D59FDF4DEBD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -337,9 +449,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C60D851205FB6C900659F85 /* Build configuration list for PBXNativeTarget "SpeakingTimerWatch Extension" */;
 			buildPhases = (
+				ACFC70A714DBA1C74EB6A9DD /* [CP] Check Pods Manifest.lock */,
 				4C60D83B205FB6C900659F85 /* Sources */,
 				4C60D83C205FB6C900659F85 /* Frameworks */,
 				4C60D83D205FB6C900659F85 /* Resources */,
+				D2E48D5B46D9452DA7F8ECC4 /* [CP] Embed Pods Frameworks */,
+				DAF9A3FBEB23E7AC8C3238FB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -416,8 +531,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C60D88B20611C5900659F85 /* alarm2.mp3 in Resources */,
+				4C60D88820611C5900659F85 /* alarm3.mp3 in Resources */,
 				4C60D80E205FB60300659F85 /* LaunchScreen.storyboard in Resources */,
 				4C60D80B205FB60300659F85 /* Assets.xcassets in Resources */,
+				4C60D88E20611C5900659F85 /* alarm1.mp3 in Resources */,
 				4C60D809205FB60300659F85 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,8 +558,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C60D88F20611C5900659F85 /* alarm1.mp3 in Resources */,
 				4C60D839205FB6C900659F85 /* Assets.xcassets in Resources */,
 				4C60D837205FB6C900659F85 /* Interface.storyboard in Resources */,
+				4C60D88920611C5900659F85 /* alarm3.mp3 in Resources */,
+				4C60D88C20611C5900659F85 /* alarm2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,11 +570,247 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C60D88D20611C5900659F85 /* alarm2.mp3 in Resources */,
+				4C60D88A20611C5900659F85 /* alarm3.mp3 in Resources */,
+				4C60D89020611C5900659F85 /* alarm1.mp3 in Resources */,
 				4C60D84B205FB6C900659F85 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10DA9594CEF81AB7CE27ADF4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpeakingTimerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4ABA17C1A07F7B17ADCD9233 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SpeakingTimer/Pods-SpeakingTimer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftySound/SwiftySound.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftySound.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpeakingTimer/Pods-SpeakingTimer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52BA8491E311CD4FE8F57767 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpeakingTimerTests/Pods-SpeakingTimerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80D38ABFF86676CC5B31212A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpeakingTimerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87C5AE1DB302D76AD62DBE5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpeakingTimerWatch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACFC70A714DBA1C74EB6A9DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpeakingTimerWatch Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF0CBEF82FA00D59FDF4DEBD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpeakingTimerWatch/Pods-SpeakingTimerWatch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B62CCF3FB812B69B95903A94 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpeakingTimerTests/Pods-SpeakingTimerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B75DE46409B86A34B1DA69C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpeakingTimer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2E48D5B46D9452DA7F8ECC4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpeakingTimerWatch Extension/Pods-SpeakingTimerWatch Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAF9A3FBEB23E7AC8C3238FB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpeakingTimerWatch Extension/Pods-SpeakingTimerWatch Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF1EC5CC403D6588E6D3C5F9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpeakingTimerUITests/Pods-SpeakingTimerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0591A39F2BE00371A6C4EFD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpeakingTimer/Pods-SpeakingTimer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F143FB1BE0B16F9CD388596A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpeakingTimerUITests/Pods-SpeakingTimerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4C60D7FC205FB60300659F85 /* Sources */ = {
@@ -461,6 +818,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C60D806205FB60300659F85 /* StartTimerViewController.swift in Sources */,
+				4C30DBD82061205D00D6DB63 /* AudioHelper.swift in Sources */,
+				4C60D89520611EA500659F85 /* NotificationPopUp.swift in Sources */,
 				4C60D804205FB60300659F85 /* AppDelegate.swift in Sources */,
 				4C60D86220600FFA00659F85 /* RunningTimerViewModel.swift in Sources */,
 				4C60D85C205FC90100659F85 /* RunningTimerViewController.swift in Sources */,
@@ -656,6 +1015,7 @@
 		};
 		4C60D829205FB60400659F85 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CD2AE789E88A7196B57557D /* Pods-SpeakingTimer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -671,6 +1031,7 @@
 		};
 		4C60D82A205FB60400659F85 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF5F0F16C5BAB61E8D00CE34 /* Pods-SpeakingTimer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -686,6 +1047,7 @@
 		};
 		4C60D82C205FB60400659F85 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B431673027952026CE96B87 /* Pods-SpeakingTimerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -703,6 +1065,7 @@
 		};
 		4C60D82D205FB60400659F85 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04BD42245F24B713581DC41A /* Pods-SpeakingTimerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -720,6 +1083,7 @@
 		};
 		4C60D82F205FB60400659F85 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9BD341887F660411F483152 /* Pods-SpeakingTimerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -736,6 +1100,7 @@
 		};
 		4C60D830205FB60400659F85 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB0DF8BF7C41B297A8919B0F /* Pods-SpeakingTimerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -752,6 +1117,7 @@
 		};
 		4C60D852205FB6C900659F85 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 939F3CFF51553613D8D7E38B /* Pods-SpeakingTimerWatch Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -770,6 +1136,7 @@
 		};
 		4C60D853205FB6C900659F85 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6734A65DE50E6DBD72E1230C /* Pods-SpeakingTimerWatch Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -788,6 +1155,7 @@
 		};
 		4C60D856205FB6C900659F85 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75175BC753DE5CEDC8AA4BC0 /* Pods-SpeakingTimerWatch.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -807,6 +1175,7 @@
 		};
 		4C60D857205FB6C900659F85 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 388316CFDD8FB6CF97A26009 /* Pods-SpeakingTimerWatch.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

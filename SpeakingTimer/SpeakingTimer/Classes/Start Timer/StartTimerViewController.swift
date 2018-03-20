@@ -49,6 +49,9 @@ class StartTimerViewController: UIViewController {
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "runTimer" {
             let runningViewController = segue.destination as! RunningTimerViewController
+            runningViewController.isHeroEnabled = true
+            runningViewController.heroModalAnimationType = .fade
+            
             runningViewController.time = self.timeInterval
             runningViewController.startTimer()
         }

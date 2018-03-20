@@ -14,7 +14,7 @@ class RunningTimerViewModel: NSObject {
     var minutes : String = "0"
     var seconds : String = "0"
     
-    func updateTimeLabel(time: TimeInterval) -> String {
+    func updateTimeLabel(time: Int) -> String {
         let hours = Int(time) / 3600
         let minutes = Int(time) / 60 % 60
         let seconds = Int(time) % 60
@@ -22,5 +22,9 @@ class RunningTimerViewModel: NSObject {
         let timeString = String(format:"%02i : %02i : %02i", hours, minutes, seconds)
         return timeString
     }
-    
+
+    func timerIsOver() {
+        AudioHelper().playTimeIsOverWith(sound: "alarm2")
+    }
+  
 }

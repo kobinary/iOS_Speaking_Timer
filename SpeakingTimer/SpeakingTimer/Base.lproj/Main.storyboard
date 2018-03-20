@@ -79,7 +79,16 @@
                             <constraint firstItem="TTa-Uk-0fY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Qcv-Qk-aAz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="timerON"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="fade"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="timerPicker" destination="A9V-GJ-fze" id="4Xq-ab-5Dp"/>
                     </connections>
@@ -108,12 +117,12 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speaking Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbl-mX-FRI">
-                                <rect key="frame" x="20" y="70" width="374" height="53"/>
+                                <rect key="frame" x="72.666666666666657" y="70" width="269.33333333333331" height="53"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="EVr-Rb-zyZ"/>
+                                    <constraint firstAttribute="width" constant="269.33333333333331" id="EVr-Rb-zyZ"/>
                                     <constraint firstAttribute="height" constant="53" id="NMK-n6-af8"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -142,7 +151,15 @@
                             <constraint firstItem="wbl-mX-FRI" firstAttribute="centerX" secondItem="Cqd-fp-Oir" secondAttribute="centerX" id="mK3-Yv-TVw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qay-10-4SS"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="timerON"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="fade"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="pauseResumeButton" destination="DdE-WN-K0I" id="pIm-aK-14v"/>
                         <outlet property="timerLabel" destination="sgS-OT-e5J" id="zSP-ca-FUd"/>

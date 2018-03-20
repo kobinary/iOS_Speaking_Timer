@@ -1,0 +1,15 @@
+PODS:
+  - Hero (1.1.0)
+  - SwiftySound (0.7.0)
+
+DEPENDENCIES:
+  - Hero
+  - SwiftySound
+
+SPEC CHECKSUMS:
+  Hero: ce59e81c79390613d97b43da7179e2c5e1017e04
+  SwiftySound: bca0bb721690fb65249f4776cb0875abd98e9941
+
+PODFILE CHECKSUM: 42cef0535278a3002f1d3f39db0a1d107f639547
+
+COCOAPODS: 1.4.0

@@ -1,0 +1,6 @@
+framework module Pods_SpeakingTimerWatch {
+  umbrella header "Pods-SpeakingTimerWatch-umbrella.h"
+
+  export *
+  module * { export * }
+}
