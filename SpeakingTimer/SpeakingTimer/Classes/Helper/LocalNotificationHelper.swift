@@ -13,15 +13,12 @@ import UserNotificationsUI
 class LocalNotificationHelper: NSObject {
 
     func showSpeechNotification(time: Int) {
-        
         let content = UNMutableNotificationContent()
         content.title = "Timer Done"
-        
         let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: TimeInterval(time), repeats: false)
         let request = UNNotificationRequest(identifier:"TimerIsOVer", content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request){(error) in
-            
             if (error != nil) {
                 print(error?.localizedDescription as Any)
             }
