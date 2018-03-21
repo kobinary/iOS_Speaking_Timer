@@ -10,34 +10,16 @@ import UIKit
 import UserNotifications
 import UserNotificationsUI
 
-class LocalNotificationHelper: NSObject, UNUserNotificationCenterDelegate {
-    
-    func showNotification(time: Int) {
+class LocalNotificationHelper: NSObject {
+
+    func showSpeechNotification(time: Int) {
         
         let content = UNMutableNotificationContent()
         content.title = "Timer Done"
-//        content.subtitle = "Lets code,Talk is cheap"
-//        content.body = "Sample code from WWDC"
-        content.sound = UNNotificationSound(named: "alarm2.mp3")
         
-        //To Present image in notification
-        //        if let path = Bundle.main.path(forResource: "monkey", ofType: "png") {
-        //            let url = URL(fileURLWithPath: path)
-        //
-        //            do {
-        //                let attachment = try UNNotificationAttachment(identifier: "sampleImage", url: url, options: nil)
-        //                content.attachments = [attachment]
-        //            } catch {
-        //                print("attachment not found.")
-        //            }
-        //        }
-        //
-        
-        let timeInterval = TimeInterval(time)
-        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: timeInterval, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: TimeInterval(time), repeats: false)
         let request = UNNotificationRequest(identifier:"TimerIsOVer", content: content, trigger: trigger)
         
-        UNUserNotificationCenter.current().delegate = self
         UNUserNotificationCenter.current().add(request){(error) in
             
             if (error != nil) {
@@ -46,21 +28,30 @@ class LocalNotificationHelper: NSObject, UNUserNotificationCenterDelegate {
         }
     }
     
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        
-        print("Tapped in notification")
-    }
-    
-    //This is key callback to present notification while the app is in foreground
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        
-        print("Notification being triggered")
-        //You can either present alert ,sound or increase badge while the app is in foreground too with ios 10
-        //to distinguish between notifications
-        if notification.request.identifier == "TimerIsOVer"{
-            
-            completionHandler( [.alert,.sound,.badge])
-            
+    func countDownText(hours: Int, minutes: Int, seconds: Int) -> String {
+        if minutes == 0 && seconds == 0 && hours > 1 {
+            return("still \(hours) hours left")
+        } else if (minutes == 0 && seconds == 0 && hours == 1) {
+            return( "still one hour left")
         }
+        if hours == 0 && seconds == 0 && (minutes > 9 && minutes < 51) {
+            if  seconds == 0 && (minutes == 50 || minutes == 40 || minutes == 30 || minutes == 20 || minutes == 10) {
+                return ("still \(minutes) minutes left")
+            }
+        } else if hours == 0 && minutes == 5 && seconds == 0 {
+            return("still 5 minutes left")
+        } else if hours == 0 && (minutes < 5 && minutes > 0) && seconds == 0 {
+            return( "still \(minutes) minutes left")
+        }
+        if hours == 0 && minutes == 0 && (seconds > 9  && seconds < 51) {
+            if seconds == 50 || seconds == 40 || seconds == 30 || seconds == 20 || seconds == 10 {
+                return("still \(seconds) seconds left")
+            }
+        } else if hours == 0 && minutes == 0 && seconds < 10 {
+            return("\(seconds)")
+        }
+        return ""
     }
 }
+
+

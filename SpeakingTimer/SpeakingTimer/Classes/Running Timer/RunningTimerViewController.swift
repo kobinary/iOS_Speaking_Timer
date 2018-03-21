@@ -111,10 +111,9 @@ extension RunningTimerViewController {
     }
     
     @objc func timerDidEnterToBackground(notification: Notification) {
-        LocalNotificationHelper().showNotification(time: viewModel.time)
+        LocalNotificationHelper().showSpeechNotification(time: viewModel.time)
     }
     
     @objc func timerDidEnterToForeground(notification: Notification) {
-        
     }
 }

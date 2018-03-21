@@ -27,6 +27,8 @@ class RunningTimerViewModel: NSObject {
     var isTimerPaused : Bool = false
     var isTimerOnBackground : Bool = false
     
+    var backgroundTask = BackgroundTask()
+    
     init(withTime time: Int) {
         self.time = time
     }
@@ -38,6 +40,7 @@ class RunningTimerViewModel: NSObject {
     }
     
     func runTimer() {
+        backgroundTask.startBackgroundTask()
         self.timer = Timer.scheduledTimer(timeInterval: 1,
                                           target: self,
                                           selector: (#selector(updateTimer)),
@@ -60,11 +63,13 @@ class RunningTimerViewModel: NSObject {
     
     func stopTimer() {
         self.timer.invalidate()
+        backgroundTask.stopBackgroundTask()
         self.isTimerRunning = false
     }
     
     func pauseTimer() {
         self.timer.invalidate()
+        backgroundTask.stopBackgroundTask()
         self.isTimerRunning = false
         self.isTimerPaused = true
     }
@@ -91,5 +96,3 @@ class RunningTimerViewModel: NSObject {
         AudioHelper().playTimeIsOverWith(sound: "alarm2")
     }
 }
-
-

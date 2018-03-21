@@ -57,7 +57,7 @@ class SpeechHelper: NSObject {
             if seconds == 50 || seconds == 40 || seconds == 30 || seconds == 20 || seconds == 10 {
                 speak(text: "still \(seconds) seconds left")
             }
-        } else if hours == 0 && minutes == 0 && seconds < 10 {
+        } else if hours == 0 && minutes == 0 && (seconds < 10 && seconds > 0) {
             speak(text: "\(seconds)", rate: 0.5)
         }
     }

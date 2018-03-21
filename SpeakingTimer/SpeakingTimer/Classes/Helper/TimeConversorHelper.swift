@@ -29,5 +29,13 @@ class TimeConversorHelper: NSObject {
         
         return timeInSeconds
     }
+    
+    func transformIntevalIntoTime(interval: Int) -> (Int, Int, Int) {
+        let seconds = interval % 60
+        let minutes = (interval / 60) % 60
+        let hours = (interval / 3600)
+        
+        return (hours,minutes,seconds)
+    }
    
 }

@@ -10,11 +10,11 @@
 		113DF2E84030C33E63BED9EE /* Pods_SpeakingTimerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A006048AD3C3317AF175CE26 /* Pods_SpeakingTimerTests.framework */; };
 		4C30DBD82061205D00D6DB63 /* AudioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBD72061205D00D6DB63 /* AudioHelper.swift */; };
 		4C30DBDA2061320200D6DB63 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C30DBD92061320200D6DB63 /* AudioToolbox.framework */; };
-		4C30DBDD2061385700D6DB63 /* BackgroundTimerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBDC2061385700D6DB63 /* BackgroundTimerHelper.swift */; };
 		4C30DBDF20613A2F00D6DB63 /* TimeConversorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBDE20613A2F00D6DB63 /* TimeConversorHelper.swift */; };
 		4C30DBE12062574200D6DB63 /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBE02062574100D6DB63 /* LocalNotificationHelper.swift */; };
 		4C30DBE32062604F00D6DB63 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C30DBE22062604F00D6DB63 /* AVFoundation.framework */; };
 		4C30DBE52062625900D6DB63 /* SpeechHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBE42062625900D6DB63 /* SpeechHelper.swift */; };
+		4C30DBE72062C55E00D6DB63 /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBE62062C55E00D6DB63 /* BackgroundTask.swift */; };
 		4C60D804205FB60300659F85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D803205FB60300659F85 /* AppDelegate.swift */; };
 		4C60D806205FB60300659F85 /* StartTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D805205FB60300659F85 /* StartTimerViewController.swift */; };
 		4C60D809205FB60300659F85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D807205FB60300659F85 /* Main.storyboard */; };
@@ -111,11 +111,11 @@
 		4C30DBD72061205D00D6DB63 /* AudioHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioHelper.swift; sourceTree = "<group>"; };
 		4C30DBD92061320200D6DB63 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4C30DBDB2061320200D6DB63 /* SpeakingTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpeakingTimer.entitlements; sourceTree = "<group>"; };
-		4C30DBDC2061385700D6DB63 /* BackgroundTimerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTimerHelper.swift; sourceTree = "<group>"; };
 		4C30DBDE20613A2F00D6DB63 /* TimeConversorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeConversorHelper.swift; sourceTree = "<group>"; };
 		4C30DBE02062574100D6DB63 /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelper.swift; sourceTree = "<group>"; };
 		4C30DBE22062604F00D6DB63 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4C30DBE42062625900D6DB63 /* SpeechHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechHelper.swift; sourceTree = "<group>"; };
+		4C30DBE62062C55E00D6DB63 /* BackgroundTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
 		4C60D800205FB60300659F85 /* SpeakingTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeakingTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C60D803205FB60300659F85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C60D805205FB60300659F85 /* StartTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimerViewController.swift; sourceTree = "<group>"; };
@@ -327,8 +327,8 @@
 		4C60D8782061074200659F85 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				4C30DBE62062C55E00D6DB63 /* BackgroundTask.swift */,
 				4C30DBD72061205D00D6DB63 /* AudioHelper.swift */,
-				4C30DBDC2061385700D6DB63 /* BackgroundTimerHelper.swift */,
 				4C30DBDE20613A2F00D6DB63 /* TimeConversorHelper.swift */,
 				4C30DBE02062574100D6DB63 /* LocalNotificationHelper.swift */,
 				4C30DBE42062625900D6DB63 /* SpeechHelper.swift */,
@@ -840,7 +840,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C60D806205FB60300659F85 /* StartTimerViewController.swift in Sources */,
-				4C30DBDD2061385700D6DB63 /* BackgroundTimerHelper.swift in Sources */,
 				4C30DBD82061205D00D6DB63 /* AudioHelper.swift in Sources */,
 				4C30DBE52062625900D6DB63 /* SpeechHelper.swift in Sources */,
 				4C30DBE12062574200D6DB63 /* LocalNotificationHelper.swift in Sources */,
@@ -848,6 +847,7 @@
 				4C30DBDF20613A2F00D6DB63 /* TimeConversorHelper.swift in Sources */,
 				4C60D86220600FFA00659F85 /* RunningTimerViewModel.swift in Sources */,
 				4C60D85C205FC90100659F85 /* RunningTimerViewController.swift in Sources */,
+				4C30DBE72062C55E00D6DB63 /* BackgroundTask.swift in Sources */,
 				4C60D85E205FDEB900659F85 /* StartTimerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
