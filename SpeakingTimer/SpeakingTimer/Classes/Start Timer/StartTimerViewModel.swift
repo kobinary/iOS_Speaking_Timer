@@ -15,19 +15,31 @@ class StartTimerViewModel: NSObject {
     var seconds : String = "0"
     
     func getTimeIntervalWithSelectedValues() -> Int {
-        return self.transforValuesIntoTimerData(hours: hours, minutes: minutes, seconds: seconds)
+        return self.transfromTime(hours: hours, minutes: minutes, seconds: seconds)
     }
     
-    func transforValuesIntoTimerData(hours: String, minutes: String, seconds: String) -> Int {
-        let hoursValue = Int(hours)
-        let minutesValue = Int(minutes)
-        let secondsValue = Int(seconds)
+    func transfromTime(hours: String, minutes: String, seconds: String) -> Int {
+        self.hours = getCorrectValueFrom(stringValue: hours)
+        self.minutes = getCorrectValueFrom(stringValue: minutes)
+        self.seconds = getCorrectValueFrom(stringValue: seconds)
+        
+        return self.transforValuesIntoTimerData()
+    }
+    
+    func transforValuesIntoTimerData() -> Int {
+        let hoursValue = Int(self.hours)
+        let minutesValue = Int(self.minutes)
+        let secondsValue = Int(self.seconds)
 
         let hoursToMinutes = hoursValue! * 60
         let minutesToSeconds = (minutesValue! * 60) + (hoursValue! * 60)
         let timeInterval = hoursToMinutes + minutesToSeconds + secondsValue!
         
         return timeInterval
+    }
+    
+    func getCorrectValueFrom(stringValue: String) -> String {
+        return stringValue.contains(" ") ? "0" : stringValue
     }
     
 }

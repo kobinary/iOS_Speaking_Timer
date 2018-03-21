@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		113DF2E84030C33E63BED9EE /* Pods_SpeakingTimerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A006048AD3C3317AF175CE26 /* Pods_SpeakingTimerTests.framework */; };
 		4C30DBD82061205D00D6DB63 /* AudioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBD72061205D00D6DB63 /* AudioHelper.swift */; };
+		4C30DBDA2061320200D6DB63 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C30DBD92061320200D6DB63 /* AudioToolbox.framework */; };
+		4C30DBDD2061385700D6DB63 /* BackgroundTimerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBDC2061385700D6DB63 /* BackgroundTimerHelper.swift */; };
+		4C30DBDF20613A2F00D6DB63 /* TimeConversorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBDE20613A2F00D6DB63 /* TimeConversorHelper.swift */; };
+		4C30DBE12062574200D6DB63 /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBE02062574100D6DB63 /* LocalNotificationHelper.swift */; };
+		4C30DBE32062604F00D6DB63 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C30DBE22062604F00D6DB63 /* AVFoundation.framework */; };
+		4C30DBE52062625900D6DB63 /* SpeechHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBE42062625900D6DB63 /* SpeechHelper.swift */; };
 		4C60D804205FB60300659F85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D803205FB60300659F85 /* AppDelegate.swift */; };
 		4C60D806205FB60300659F85 /* StartTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D805205FB60300659F85 /* StartTimerViewController.swift */; };
 		4C60D809205FB60300659F85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D807205FB60300659F85 /* Main.storyboard */; };
@@ -36,7 +42,6 @@
 		4C60D88E20611C5900659F85 /* alarm1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D88720611C5800659F85 /* alarm1.mp3 */; };
 		4C60D88F20611C5900659F85 /* alarm1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D88720611C5800659F85 /* alarm1.mp3 */; };
 		4C60D89020611C5900659F85 /* alarm1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D88720611C5800659F85 /* alarm1.mp3 */; };
-		4C60D89520611EA500659F85 /* NotificationPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D89420611EA500659F85 /* NotificationPopUp.swift */; };
 		8A2C377D1FFC077B4B9427D9 /* Pods_SpeakingTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526DFE21B00A608DE4962908 /* Pods_SpeakingTimer.framework */; };
 		A853FE8BDB34DE7D02DFC6E4 /* Pods_SpeakingTimerWatch_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE995FA4B85989E782DD8C19 /* Pods_SpeakingTimerWatch_Extension.framework */; };
 		D918C6F9B2608A745D38DB39 /* Pods_SpeakingTimerWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8898C9EAF9EE5FC0831B4483 /* Pods_SpeakingTimerWatch.framework */; };
@@ -104,6 +109,13 @@
 		388316CFDD8FB6CF97A26009 /* Pods-SpeakingTimerWatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakingTimerWatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakingTimerWatch/Pods-SpeakingTimerWatch.release.xcconfig"; sourceTree = "<group>"; };
 		3B431673027952026CE96B87 /* Pods-SpeakingTimerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakingTimerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakingTimerTests/Pods-SpeakingTimerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C30DBD72061205D00D6DB63 /* AudioHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioHelper.swift; sourceTree = "<group>"; };
+		4C30DBD92061320200D6DB63 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4C30DBDB2061320200D6DB63 /* SpeakingTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpeakingTimer.entitlements; sourceTree = "<group>"; };
+		4C30DBDC2061385700D6DB63 /* BackgroundTimerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTimerHelper.swift; sourceTree = "<group>"; };
+		4C30DBDE20613A2F00D6DB63 /* TimeConversorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeConversorHelper.swift; sourceTree = "<group>"; };
+		4C30DBE02062574100D6DB63 /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelper.swift; sourceTree = "<group>"; };
+		4C30DBE22062604F00D6DB63 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4C30DBE42062625900D6DB63 /* SpeechHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechHelper.swift; sourceTree = "<group>"; };
 		4C60D800205FB60300659F85 /* SpeakingTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeakingTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C60D803205FB60300659F85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C60D805205FB60300659F85 /* StartTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimerViewController.swift; sourceTree = "<group>"; };
@@ -134,7 +146,6 @@
 		4C60D88520611C5800659F85 /* alarm3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm3.mp3; sourceTree = "<group>"; };
 		4C60D88620611C5800659F85 /* alarm2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm2.mp3; sourceTree = "<group>"; };
 		4C60D88720611C5800659F85 /* alarm1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm1.mp3; sourceTree = "<group>"; };
-		4C60D89420611EA500659F85 /* NotificationPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPopUp.swift; sourceTree = "<group>"; };
 		526DFE21B00A608DE4962908 /* Pods_SpeakingTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeakingTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD2AE789E88A7196B57557D /* Pods-SpeakingTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakingTimer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakingTimer/Pods-SpeakingTimer.debug.xcconfig"; sourceTree = "<group>"; };
 		5E32229FD2F4B0C22C7F1898 /* Pods_SpeakingTimerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeakingTimerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,7 +165,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C30DBE32062604F00D6DB63 /* AVFoundation.framework in Frameworks */,
 				8A2C377D1FFC077B4B9427D9 /* Pods_SpeakingTimer.framework in Frameworks */,
+				4C30DBDA2061320200D6DB63 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +235,7 @@
 		4C60D802205FB60300659F85 /* SpeakingTimer */ = {
 			isa = PBXGroup;
 			children = (
+				4C30DBDB2061320200D6DB63 /* SpeakingTimer.entitlements */,
 				4C60D807205FB60300659F85 /* Main.storyboard */,
 				4C60D85A205FBEBE00659F85 /* Classes */,
 				4C60D859205FBEAD00659F85 /* Resources */,
@@ -313,8 +327,11 @@
 		4C60D8782061074200659F85 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				4C60D89420611EA500659F85 /* NotificationPopUp.swift */,
 				4C30DBD72061205D00D6DB63 /* AudioHelper.swift */,
+				4C30DBDC2061385700D6DB63 /* BackgroundTimerHelper.swift */,
+				4C30DBDE20613A2F00D6DB63 /* TimeConversorHelper.swift */,
+				4C30DBE02062574100D6DB63 /* LocalNotificationHelper.swift */,
+				4C30DBE42062625900D6DB63 /* SpeechHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -349,6 +366,8 @@
 		E9A25AB66AC6C63966A0A5FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C30DBE22062604F00D6DB63 /* AVFoundation.framework */,
+				4C30DBD92061320200D6DB63 /* AudioToolbox.framework */,
 				526DFE21B00A608DE4962908 /* Pods_SpeakingTimer.framework */,
 				A006048AD3C3317AF175CE26 /* Pods_SpeakingTimerTests.framework */,
 				5E32229FD2F4B0C22C7F1898 /* Pods_SpeakingTimerUITests.framework */,
@@ -480,6 +499,9 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InterAppAudio = {
 								enabled = 1;
 							};
 						};
@@ -818,9 +840,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C60D806205FB60300659F85 /* StartTimerViewController.swift in Sources */,
+				4C30DBDD2061385700D6DB63 /* BackgroundTimerHelper.swift in Sources */,
 				4C30DBD82061205D00D6DB63 /* AudioHelper.swift in Sources */,
-				4C60D89520611EA500659F85 /* NotificationPopUp.swift in Sources */,
+				4C30DBE52062625900D6DB63 /* SpeechHelper.swift in Sources */,
+				4C30DBE12062574200D6DB63 /* LocalNotificationHelper.swift in Sources */,
 				4C60D804205FB60300659F85 /* AppDelegate.swift in Sources */,
+				4C30DBDF20613A2F00D6DB63 /* TimeConversorHelper.swift in Sources */,
 				4C60D86220600FFA00659F85 /* RunningTimerViewModel.swift in Sources */,
 				4C60D85C205FC90100659F85 /* RunningTimerViewController.swift in Sources */,
 				4C60D85E205FDEB900659F85 /* StartTimerViewModel.swift in Sources */,
@@ -1018,6 +1043,7 @@
 			baseConfigurationReference = 5CD2AE789E88A7196B57557D /* Pods-SpeakingTimer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SpeakingTimer/SpeakingTimer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4K6JDXN8TD;
 				INFOPLIST_FILE = SpeakingTimer/Info.plist;
@@ -1034,6 +1060,7 @@
 			baseConfigurationReference = AF5F0F16C5BAB61E8D00CE34 /* Pods-SpeakingTimer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SpeakingTimer/SpeakingTimer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4K6JDXN8TD;
 				INFOPLIST_FILE = SpeakingTimer/Info.plist;

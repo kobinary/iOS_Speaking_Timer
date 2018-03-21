@@ -15,6 +15,7 @@ class RunningTimerViewController: UIViewController {
     var timer = Timer()
     var isTimerRunning : Bool = false
     var isTimerPaused : Bool = false
+    var isTimerOnBackground : Bool = false
     let viewModel = RunningTimerViewModel()
     
     @IBOutlet weak var timerLabel: UILabel!
@@ -30,6 +31,7 @@ class RunningTimerViewController: UIViewController {
     }
         
     func setup() {
+        self.addObservers()
         self.addBackground()
         self.updatePasueResumeButton()
         self.updateTimeLabel()
@@ -71,6 +73,7 @@ extension RunningTimerViewController {
     }
 
     @objc func updateTimer() {
+        print("updateTimer: ",self.time)
         if time < 1 {
             timer.invalidate()
             viewModel.timerIsOver()
@@ -78,13 +81,18 @@ extension RunningTimerViewController {
         } else {
             time -= 1
             timerLabel.text = viewModel.updateTimeLabel(time: time)
+            SpeechHelper().speak(text: "5 minutes left")
         }
     }
 
     func stopTimer() {
         self.timer.invalidate()
         self.isTimerRunning = false
-        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func stopTimerAndDismissView() {
+        self.stopTimer()
+        self.dismissTimer()
     }
 
     func pauseTimer() {
@@ -100,7 +108,7 @@ extension RunningTimerViewController {
     }
 
     @IBAction func stopTimer(_ sender: Any) {
-        self.stopTimer()
+        self.stopTimerAndDismissView()
     }
 
     @IBAction func pauseResumeTimer(_ sender: Any) {
@@ -111,18 +119,45 @@ extension RunningTimerViewController {
         }
         self.updatePasueResumeButton()
     }
+    
+    func dismissTimer() {
+        self.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension RunningTimerViewController {
+
+    func showAlertIsOver() {
+        let alert = UIAlertController(title: "Timer Done", message: nil , preferredStyle: UIAlertControllerStyle.alert)
+      
+        alert.addAction(UIAlertAction(title: "Stop", style: UIAlertActionStyle.destructive, handler:{ action in
+            self.stopAlarm()
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func stopAlarm() {
+        AudioHelper().stopAlarm()
+        self.stopTimerAndDismissView()
+    }
 }
 
 extension RunningTimerViewController {
     
-    func showAlertIsOver() {
-        let alarmActionHandler = { (action:UIAlertAction!) -> Void in
-            AudioHelper().stopAlarm()
-        }
+    func addObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(timerDidEnterToBackground(notification:)), name: .UIApplicationDidEnterBackground, object: nil)
         
-        let alert = UIAlertController(title: "Timer Done", message: nil , preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Stop", style: UIAlertActionStyle.destructive, handler: alarmActionHandler))
-        self.present(NotificationPopUp().showAlertIsOver(), animated: true, completion: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(timerDidEnterToForeground(notification:)), name: .UIApplicationWillEnterForeground, object: nil)
     }
     
+    @objc func timerDidEnterToBackground(notification: Notification) {
+        print(self.time)
+        LocalNotificationHelper().showNotification(time: self.time)
+    }
+    
+    @objc func timerDidEnterToForeground(notification: Notification) {
+        
+        
+    }
 }

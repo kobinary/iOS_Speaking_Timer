@@ -37,6 +37,8 @@ class StartTimerViewController: UIViewController {
         self.timerPicker.dataSource = self;
         self.timerPicker.delegate = self;
         self.timerPicker.setValue(UIColor.white, forKeyPath: "textColor")
+        
+        // setup picker to 0,0,0
     }
 
      // MARK: - Navigation
@@ -49,9 +51,8 @@ class StartTimerViewController: UIViewController {
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "runTimer" {
             let runningViewController = segue.destination as! RunningTimerViewController
-            runningViewController.isHeroEnabled = true
-            runningViewController.heroModalAnimationType = .fade
-            
+            runningViewController.hero.isEnabled = true
+            runningViewController.hero.modalAnimationType = .fade
             runningViewController.time = self.timeInterval
             runningViewController.startTimer()
         }

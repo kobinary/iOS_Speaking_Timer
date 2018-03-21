@@ -26,5 +26,5 @@ class RunningTimerViewModel: NSObject {
     func timerIsOver() {
         AudioHelper().playTimeIsOverWith(sound: "alarm2")
     }
-  
+
 }

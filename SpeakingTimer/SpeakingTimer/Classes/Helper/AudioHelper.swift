@@ -13,7 +13,17 @@ import SwiftySound
 class AudioHelper: NSObject {
 
     func playTimeIsOverWith(sound: String) {
-        Sound.play(file: sound, fileExtension: "mp3", numberOfLoops: numberOfLoops())
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.mixWithOthers)
+            do {
+                try AVAudioSession.sharedInstance().setActive(true)
+                Sound.play(file: sound, fileExtension: "mp3", numberOfLoops: numberOfLoops())
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
     }
     
     private func numberOfLoops() -> Int {

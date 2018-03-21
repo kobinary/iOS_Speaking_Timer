@@ -80,7 +80,7 @@ open class Sound {
 
     /// Sound category for current session. Using this variable is a convenient way to set AVAudioSessions category. The default value is .ambient.
     public static var category: SoundCategory = {
-        let defaultCategory = SoundCategory.ambient
+        let defaultCategory = SoundCategory.playback
         try? session.setCategory(defaultCategory.avFoundationCategory)
         return defaultCategory
         }() {
@@ -316,12 +316,15 @@ extension AVAudioPlayer: Player, AVAudioPlayerDelegate {
         self.numberOfLoops = numberOfLoops
         
         do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-            try AVAudioSession.sharedInstance().setActive(true)
-            return play()
-        }
-        catch {
-            print(error)
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.mixWithOthers)
+            do {
+                try AVAudioSession.sharedInstance().setActive(true)
+                return play()
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        } catch let error as NSError {
+            print(error.localizedDescription)
         }
         return false
     }
