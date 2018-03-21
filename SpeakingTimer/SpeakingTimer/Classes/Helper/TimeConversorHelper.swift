@@ -23,11 +23,11 @@ class TimeConversorHelper: NSObject {
         let minutesValue = Int(minutes)
         let secondsValue = Int(seconds)
         
-        let hoursToMinutes = hoursValue! * 60
-        let minutesToSeconds = (minutesValue! * 60) + (hoursValue! * 60)
-        let timeInSeconds = hoursToMinutes + minutesToSeconds + secondsValue!
+        let hoursToSeconds = hoursValue! * 60
+        let minutesToSeconds = (minutesValue! * 60) + (hoursToSeconds * 60)
+        let timeInSeconds = minutesToSeconds + secondsValue!
         
         return timeInSeconds
     }
-    
+   
 }

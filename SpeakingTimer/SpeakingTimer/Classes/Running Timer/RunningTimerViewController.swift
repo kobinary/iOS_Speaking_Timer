@@ -9,15 +9,10 @@
 import UIKit
 import Hero
 
-class RunningTimerViewController: UIViewController {
+class RunningTimerViewController: UIViewController, RunningTimerDelegate {
 
-    var time : Int = 0
-    var timer = Timer()
-    var isTimerRunning : Bool = false
-    var isTimerPaused : Bool = false
-    var isTimerOnBackground : Bool = false
-    let viewModel = RunningTimerViewModel()
-    
+    var viewModel : RunningTimerViewModel!
+    @IBOutlet weak var leftTimeLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var pauseResumeButton: UIButton!
     
@@ -34,15 +29,27 @@ class RunningTimerViewController: UIViewController {
         self.addObservers()
         self.addBackground()
         self.updatePasueResumeButton()
-        self.updateTimeLabel()
+        self.updateLabelWithCurrentTime()
     }
     
-    func updateTimeLabel() {
-        self.timerLabel.text = viewModel.updateTimeLabel(time: self.time)
+    func updateWithViewModel(viewModel: RunningTimerViewModel) {
+        viewModel.delegate = self
+        self.viewModel = viewModel
+        self.viewModel.startTimer()
+    }
+    
+    func updateLabelWithCurrentTime() {
+        self.timerLabel.text = viewModel.updateTimeLabel(time: viewModel.time)
+        self.leftTimeLabel.text = viewModel.speechText
+    }
+    
+    func updateLabelWithRunningTime(time: String) {
+        self.timerLabel.text = time
+        self.leftTimeLabel.text = viewModel.speechText
     }
     
     func updatePasueResumeButton() {
-        if isTimerPaused {
+        if viewModel.isTimerPaused {
             self.pauseResumeButton.setTitle("Resume", for: UIControlState.normal)
         } else {
             self.pauseResumeButton.setTitle("Pause", for: UIControlState.normal)
@@ -57,54 +64,9 @@ class RunningTimerViewController: UIViewController {
 
 extension RunningTimerViewController {
 
-    func startTimer() {
-        if !self.isTimerRunning {
-            self.runTimer()
-        }
-    }
-    
-    func runTimer() {
-        self.timer = Timer.scheduledTimer(timeInterval: 1,
-                                          target: self,
-                                          selector: (#selector(RunningTimerViewController.updateTimer)),
-                                          userInfo: nil,
-                                          repeats: true)
-        self.isTimerRunning = true
-    }
-
-    @objc func updateTimer() {
-        print("updateTimer: ",self.time)
-        if time < 1 {
-            timer.invalidate()
-            viewModel.timerIsOver()
-            self.showAlertIsOver()
-        } else {
-            time -= 1
-            timerLabel.text = viewModel.updateTimeLabel(time: time)
-            SpeechHelper().speak(text: "5 minutes left")
-        }
-    }
-
-    func stopTimer() {
-        self.timer.invalidate()
-        self.isTimerRunning = false
-    }
-    
     func stopTimerAndDismissView() {
-        self.stopTimer()
+        viewModel.stopTimer()
         self.dismissTimer()
-    }
-
-    func pauseTimer() {
-        self.timer.invalidate()
-        self.isTimerRunning = false
-        self.isTimerPaused = true
-    }
-
-    func resumeTimer() {
-        self.runTimer()
-        self.isTimerRunning = true
-        self.isTimerPaused = false
     }
 
     @IBAction func stopTimer(_ sender: Any) {
@@ -112,10 +74,10 @@ extension RunningTimerViewController {
     }
 
     @IBAction func pauseResumeTimer(_ sender: Any) {
-        if self.isTimerPaused {
-            self.resumeTimer()
+        if viewModel.isTimerPaused {
+            viewModel.resumeTimer()
         } else {
-            self.pauseTimer()
+            viewModel.pauseTimer()
         }
         self.updatePasueResumeButton()
     }
@@ -123,13 +85,10 @@ extension RunningTimerViewController {
     func dismissTimer() {
         self.dismiss(animated: true, completion: nil)
     }
-}
-
-extension RunningTimerViewController {
-
+    
     func showAlertIsOver() {
         let alert = UIAlertController(title: "Timer Done", message: nil , preferredStyle: UIAlertControllerStyle.alert)
-      
+        
         alert.addAction(UIAlertAction(title: "Stop", style: UIAlertActionStyle.destructive, handler:{ action in
             self.stopAlarm()
         }))
@@ -152,12 +111,10 @@ extension RunningTimerViewController {
     }
     
     @objc func timerDidEnterToBackground(notification: Notification) {
-        print(self.time)
-        LocalNotificationHelper().showNotification(time: self.time)
+        LocalNotificationHelper().showNotification(time: viewModel.time)
     }
     
     @objc func timerDidEnterToForeground(notification: Notification) {
-        
         
     }
 }

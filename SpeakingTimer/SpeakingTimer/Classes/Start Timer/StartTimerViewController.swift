@@ -12,9 +12,12 @@ class StartTimerViewController: UIViewController {
    
     @IBOutlet weak var timerPicker: UIPickerView!
     
-    var pickerDataSource = [["0 hours", "1", "2", "3", "4", "5", "6", "59"],
-                            ["0 min","1","2","3", "4", "5", "6", "23"],
-                            ["0 sec","1","2","3", "4", "5", "6", "59"]];
+    var pickerDataSource = [["0 hours", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+                             "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
+                            ["0 min","1","2","3", "4", "5", "6", "7", "8", "9", "10", "11",  "12", "13", "14", "15", "16", "17", "18", "19", "20",
+                             "21", "22", "23","59"],
+                            ["0 sec","1","2","3", "4", "5", "6", "7", "8", "9", "10", "11",  "12", "13", "14", "15", "16", "17", "18", "19", "20",
+                             "21", "22", "23", "59"]];
     
     var viewModel = StartTimerViewModel()
     var timeInterval = 0
@@ -44,7 +47,9 @@ class StartTimerViewController: UIViewController {
      // MARK: - Navigation
 
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        self.timeInterval = self.viewModel.getTimeIntervalWithSelectedValues() as Int
+        self.timeInterval = TimeConversorHelper().transforStringValuesIntoSeconds(hours: viewModel.hours,
+                                                                                  minutes: viewModel.minutes,
+                                                                                  seconds: viewModel.seconds)
         return self.timeInterval > 0 ? true : false
     }
     
@@ -53,8 +58,9 @@ class StartTimerViewController: UIViewController {
             let runningViewController = segue.destination as! RunningTimerViewController
             runningViewController.hero.isEnabled = true
             runningViewController.hero.modalAnimationType = .fade
-            runningViewController.time = self.timeInterval
-            runningViewController.startTimer()
+            
+            let runningViewModel = RunningTimerViewModel.init(withTime: self.timeInterval)
+            runningViewController.updateWithViewModel(viewModel: runningViewModel)
         }
     }
 }

@@ -117,7 +117,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speaking Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbl-mX-FRI">
-                                <rect key="frame" x="72.666666666666657" y="70" width="269.33333333333331" height="53"/>
+                                <rect key="frame" x="72.666666666666657" y="70" width="269.33333333333337" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="269.33333333333331" id="EVr-Rb-zyZ"/>
                                     <constraint firstAttribute="height" constant="53" id="NMK-n6-af8"/>
@@ -144,6 +144,13 @@
                                     <action selector="pauseResumeTimer:" destination="hty-vv-eHk" eventType="touchUpInside" id="260-9N-OoL"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Still 59 minutes left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHS-1w-5nC">
+                                <rect key="frame" x="20" y="326" width="374" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.73070985079999995" green="0.84483259919999998" blue="0.92943215369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -161,6 +168,7 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="leftTimeLabel" destination="XHS-1w-5nC" id="hNu-oY-mPB"/>
                         <outlet property="pauseResumeButton" destination="DdE-WN-K0I" id="pIm-aK-14v"/>
                         <outlet property="timerLabel" destination="sgS-OT-e5J" id="zSP-ca-FUd"/>
                     </connections>
