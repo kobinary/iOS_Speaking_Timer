@@ -367,11 +367,11 @@
 		4C60D8782061074200659F85 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				4C30DBE62062C55E00D6DB63 /* BackgroundTask.swift */,
 				4C30DBD72061205D00D6DB63 /* AudioHelper.swift */,
 				4C30DBDE20613A2F00D6DB63 /* TimeConversorHelper.swift */,
 				4C30DBE02062574100D6DB63 /* LocalNotificationHelper.swift */,
 				4C30DBE42062625900D6DB63 /* SpeechHelper.swift */,
+				4C30DBE62062C55E00D6DB63 /* BackgroundTask.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";

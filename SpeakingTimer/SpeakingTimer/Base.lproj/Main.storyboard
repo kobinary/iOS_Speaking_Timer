@@ -27,8 +27,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rm-qK-pAl" userLabel="startAction">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rm-qK-pAl" userLabel="Start">
                                 <rect key="frame" x="157" y="566" width="100" height="100"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Start" label="Start"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="1Nw-Np-ykw"/>
                                     <constraint firstAttribute="height" constant="100" id="4eN-pq-XpV"/>
