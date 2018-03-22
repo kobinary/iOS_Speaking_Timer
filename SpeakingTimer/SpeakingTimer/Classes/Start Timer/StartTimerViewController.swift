@@ -27,6 +27,11 @@ class StartTimerViewController: UIViewController {
         self.setup()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.resetPickerView()
+    }
+    
     func addBackground() {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
     }
@@ -40,8 +45,12 @@ class StartTimerViewController: UIViewController {
         self.timerPicker.dataSource = self;
         self.timerPicker.delegate = self;
         self.timerPicker.setValue(UIColor.white, forKeyPath: "textColor")
-        
-        // setup picker to 0,0,0
+    }
+    
+    func resetPickerView() {
+        self.timerPicker.selectRow(0, inComponent: 0, animated: false)
+        self.timerPicker.selectRow(0, inComponent: 1, animated: false)
+        self.timerPicker.selectRow(0, inComponent: 2, animated: false)
     }
 
      // MARK: - Navigation
