@@ -19,6 +19,7 @@
 		4C30DC3F2063A89C00D6DB63 /* RunningTimerInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DC3E2063A89C00D6DB63 /* RunningTimerInterfaceController.swift */; };
 		4C30DC412063B52000D6DB63 /* SpeechHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBE42062625900D6DB63 /* SpeechHelper.swift */; };
 		4C30DC422063B52500D6DB63 /* TimeConversorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBDE20613A2F00D6DB63 /* TimeConversorHelper.swift */; };
+		4C30DC492063C54D00D6DB63 /* AudioWatchHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DC482063C54D00D6DB63 /* AudioWatchHelper.swift */; };
 		4C60D804205FB60300659F85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D803205FB60300659F85 /* AppDelegate.swift */; };
 		4C60D806205FB60300659F85 /* StartTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D805205FB60300659F85 /* StartTimerViewController.swift */; };
 		4C60D809205FB60300659F85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D807205FB60300659F85 /* Main.storyboard */; };
@@ -121,6 +122,7 @@
 		4C30DBE62062C55E00D6DB63 /* BackgroundTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
 		4C30DC3C2063A5C900D6DB63 /* StartTimerInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimerInterfaceController.swift; sourceTree = "<group>"; };
 		4C30DC3E2063A89C00D6DB63 /* RunningTimerInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTimerInterfaceController.swift; sourceTree = "<group>"; };
+		4C30DC482063C54D00D6DB63 /* AudioWatchHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioWatchHelper.swift; sourceTree = "<group>"; };
 		4C60D800205FB60300659F85 /* SpeakingTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeakingTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C60D803205FB60300659F85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C60D805205FB60300659F85 /* StartTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimerViewController.swift; sourceTree = "<group>"; };
@@ -213,10 +215,38 @@
 		4C30DC402063A8A800D6DB63 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4C30DC472063C52F00D6DB63 /* Helper */,
+				4C30DC462063C40900D6DB63 /* Timer */,
+				4C60D846205FB6C900659F85 /* ExtensionDelegate.swift */,
+				4C60D848205FB6C900659F85 /* NotificationController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		4C30DC452063C3DC00D6DB63 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C60D84A205FB6C900659F85 /* Assets.xcassets */,
+				4C60D84D205FB6C900659F85 /* PushNotificationPayload.apns */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4C30DC462063C40900D6DB63 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
 				4C30DC3C2063A5C900D6DB63 /* StartTimerInterfaceController.swift */,
 				4C30DC3E2063A89C00D6DB63 /* RunningTimerInterfaceController.swift */,
 			);
-			path = Classes;
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		4C30DC472063C52F00D6DB63 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				4C30DC482063C54D00D6DB63 /* AudioWatchHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		4C60D7F7205FB60300659F85 = {
@@ -248,8 +278,8 @@
 		4C60D802205FB60300659F85 /* SpeakingTimer */ = {
 			isa = PBXGroup;
 			children = (
-				4C30DBDB2061320200D6DB63 /* SpeakingTimer.entitlements */,
 				4C60D807205FB60300659F85 /* Main.storyboard */,
+				4C30DBDB2061320200D6DB63 /* SpeakingTimer.entitlements */,
 				4C60D85A205FBEBE00659F85 /* Classes */,
 				4C60D859205FBEAD00659F85 /* Resources */,
 				4C60D88420611C4500659F85 /* Sounds */,
@@ -290,12 +320,9 @@
 		4C60D843205FB6C900659F85 /* SpeakingTimerWatch Extension */ = {
 			isa = PBXGroup;
 			children = (
+				4C30DC452063C3DC00D6DB63 /* Resources */,
 				4C30DC402063A8A800D6DB63 /* Classes */,
-				4C60D846205FB6C900659F85 /* ExtensionDelegate.swift */,
-				4C60D848205FB6C900659F85 /* NotificationController.swift */,
-				4C60D84A205FB6C900659F85 /* Assets.xcassets */,
 				4C60D84C205FB6C900659F85 /* Info.plist */,
-				4C60D84D205FB6C900659F85 /* PushNotificationPayload.apns */,
 			);
 			path = "SpeakingTimerWatch Extension";
 			sourceTree = "<group>";
@@ -887,6 +914,7 @@
 			files = (
 				4C30DC422063B52500D6DB63 /* TimeConversorHelper.swift in Sources */,
 				4C60D849205FB6C900659F85 /* NotificationController.swift in Sources */,
+				4C30DC492063C54D00D6DB63 /* AudioWatchHelper.swift in Sources */,
 				4C60D847205FB6C900659F85 /* ExtensionDelegate.swift in Sources */,
 				4C30DC3D2063A5C900D6DB63 /* StartTimerInterfaceController.swift in Sources */,
 				4C30DC412063B52000D6DB63 /* SpeechHelper.swift in Sources */,

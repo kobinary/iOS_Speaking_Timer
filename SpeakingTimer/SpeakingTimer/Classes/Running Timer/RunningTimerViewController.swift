@@ -11,6 +11,10 @@ import Hero
 
 class RunningTimerViewController: UIViewController, RunningTimerDelegate {
 
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     var viewModel : RunningTimerViewModel!
     @IBOutlet weak var leftTimeLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
@@ -23,6 +27,12 @@ class RunningTimerViewController: UIViewController, RunningTimerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        viewModel.stopTimer()
+        self.stopAlarm()
     }
         
     func setup() {
@@ -106,14 +116,9 @@ extension RunningTimerViewController {
     
     func addObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(timerDidEnterToBackground(notification:)), name: .UIApplicationDidEnterBackground, object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(timerDidEnterToForeground(notification:)), name: .UIApplicationWillEnterForeground, object: nil)
     }
     
     @objc func timerDidEnterToBackground(notification: Notification) {
         LocalNotificationHelper().showSpeechNotification(time: viewModel.time)
-    }
-    
-    @objc func timerDidEnterToForeground(notification: Notification) {
     }
 }

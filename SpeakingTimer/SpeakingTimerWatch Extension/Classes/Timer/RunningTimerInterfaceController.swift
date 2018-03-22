@@ -24,6 +24,7 @@ class RunningTimerInterfaceController: WKInterfaceController {
         super.awake(withContext: context)
         self.updatePasueResumeButton()
         self.setupWithContext(context)
+        AudioWatchHelper().setupPlayer()
     }
     
     override func willActivate() {
@@ -66,6 +67,7 @@ extension RunningTimerInterfaceController {
         print("updateTimer: ",time)
         if time < 1 {
             speechTimer.invalidate()
+            AudioWatchHelper().playSound()
         } else {
             time -= 1
             updateSpeechTime(time: time)
