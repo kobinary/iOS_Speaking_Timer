@@ -20,6 +20,7 @@
 		4C30DC412063B52000D6DB63 /* SpeechHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBE42062625900D6DB63 /* SpeechHelper.swift */; };
 		4C30DC422063B52500D6DB63 /* TimeConversorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBDE20613A2F00D6DB63 /* TimeConversorHelper.swift */; };
 		4C30DC492063C54D00D6DB63 /* AudioWatchHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DC482063C54D00D6DB63 /* AudioWatchHelper.swift */; };
+		4C30DC522063E93000D6DB63 /* localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C30DC512063E93000D6DB63 /* localizable.strings */; };
 		4C60D804205FB60300659F85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D803205FB60300659F85 /* AppDelegate.swift */; };
 		4C60D806205FB60300659F85 /* StartTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D805205FB60300659F85 /* StartTimerViewController.swift */; };
 		4C60D809205FB60300659F85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D807205FB60300659F85 /* Main.storyboard */; };
@@ -123,6 +124,8 @@
 		4C30DC3C2063A5C900D6DB63 /* StartTimerInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimerInterfaceController.swift; sourceTree = "<group>"; };
 		4C30DC3E2063A89C00D6DB63 /* RunningTimerInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTimerInterfaceController.swift; sourceTree = "<group>"; };
 		4C30DC482063C54D00D6DB63 /* AudioWatchHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioWatchHelper.swift; sourceTree = "<group>"; };
+		4C30DC4F2063E8B900D6DB63 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		4C30DC512063E93000D6DB63 /* localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = localizable.strings; sourceTree = "<group>"; };
 		4C60D800205FB60300659F85 /* SpeakingTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeakingTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C60D803205FB60300659F85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C60D805205FB60300659F85 /* StartTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimerViewController.swift; sourceTree = "<group>"; };
@@ -249,6 +252,14 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		4C30DC502063E8CD00D6DB63 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				4C30DC512063E93000D6DB63 /* localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		4C60D7F7205FB60300659F85 = {
 			isa = PBXGroup;
 			children = (
@@ -339,6 +350,7 @@
 		4C60D85A205FBEBE00659F85 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4C30DC502063E8CD00D6DB63 /* Localization */,
 				4C60D8782061074200659F85 /* Helper */,
 				4C60D85F205FDEC000659F85 /* Start Timer */,
 				4C60D860205FDEC800659F85 /* Running Timer */,
@@ -596,6 +608,7 @@
 				4C60D88B20611C5900659F85 /* alarm2.mp3 in Resources */,
 				4C60D88820611C5900659F85 /* alarm3.mp3 in Resources */,
 				4C60D80E205FB60300659F85 /* LaunchScreen.storyboard in Resources */,
+				4C30DC522063E93000D6DB63 /* localizable.strings in Resources */,
 				4C60D80B205FB60300659F85 /* Assets.xcassets in Resources */,
 				4C60D88E20611C5900659F85 /* alarm1.mp3 in Resources */,
 				4C60D809205FB60300659F85 /* Main.storyboard in Resources */,
@@ -952,6 +965,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4C60D808205FB60300659F85 /* Base */,
+				4C30DC4F2063E8B900D6DB63 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

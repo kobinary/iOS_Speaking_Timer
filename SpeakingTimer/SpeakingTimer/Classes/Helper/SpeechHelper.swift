@@ -16,8 +16,9 @@ class SpeechHelper: NSObject {
     
     func speak(text: String) {
         self.spechText = text
-        let speechUtterance = AVSpeechUtterance(string: text)
-        speechSynthesizer.speak(speechUtterance)
+        let speakMsg = AVSpeechUtterance(string: text)
+        speakMsg.voice  = AVSpeechSynthesisVoice(language: "en-US")
+        speechSynthesizer.speak(speakMsg)
     }
     
     func speak(text: String, rate: Float) {
