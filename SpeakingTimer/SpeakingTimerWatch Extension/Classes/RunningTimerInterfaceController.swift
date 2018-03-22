@@ -31,6 +31,7 @@ class RunningTimerInterfaceController: WKInterfaceController {
     }
     
     override func didDeactivate() {
+        invalidateTimers()
         super.didDeactivate()
     }
     
