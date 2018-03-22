@@ -37,5 +37,5 @@ class TimeConversorHelper: NSObject {
         
         return (hours,minutes,seconds)
     }
-   
+
 }
