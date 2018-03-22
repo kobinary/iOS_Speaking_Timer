@@ -52,7 +52,7 @@ class RunningTimerViewModel: NSObject {
     @objc func updateTimer() {
         print("updateTimer: ",self.time)
         if time < 1 {
-            SpeechHelper().speak(text: "time is over")
+            SpeechHelper().speak(text: NSLocalizedString("timeIsOverText", comment: "timeIsOverText speech"))
             self.timerIsOver()
             delegate?.showAlertIsOver()
         } else {

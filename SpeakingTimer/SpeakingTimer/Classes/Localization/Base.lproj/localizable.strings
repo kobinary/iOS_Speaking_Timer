@@ -6,14 +6,15 @@
   Copyright © 2018 Maria Ortega. All rights reserved.
 */
 
-
 "stillText" = "still"
 
 "hoursText" = "hours"
 
-"minutesText" = "minutes"
+"hourText" = "hour"
 
 "minutesText" = "minutes"
+
+"secondsText" = "seconds"
 
 "leftText" = "left"
 
@@ -30,3 +31,6 @@
 "pauseText" = "Pause"
 
 "stopText" = "Stop"
+
+"en-US-SpeechLanguage" = "en-US"
+

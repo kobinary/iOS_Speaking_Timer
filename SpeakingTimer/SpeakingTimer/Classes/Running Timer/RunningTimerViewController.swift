@@ -60,9 +60,11 @@ class RunningTimerViewController: UIViewController, RunningTimerDelegate {
     
     func updatePasueResumeButton() {
         if viewModel.isTimerPaused {
-            self.pauseResumeButton.setTitle("Resume", for: UIControlState.normal)
+            self.pauseResumeButton.setTitle(NSLocalizedString("resumeText", comment: "resumeText for button"),
+                                            for: UIControlState.normal)
         } else {
-            self.pauseResumeButton.setTitle("Pause", for: UIControlState.normal)
+            self.pauseResumeButton.setTitle(NSLocalizedString("pauseText", comment: "pauseText for button"),
+                                            for: UIControlState.normal)
         }
         self.pauseResumeButton.reloadInputViews()
     }
@@ -97,9 +99,13 @@ extension RunningTimerViewController {
     }
     
     func showAlertIsOver() {
-        let alert = UIAlertController(title: "Timer Done", message: nil , preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: NSLocalizedString("timerDoneText", comment: "timerDoneText for Alert"),
+                                      message: nil ,
+                                      preferredStyle: UIAlertControllerStyle.alert)
         
-        alert.addAction(UIAlertAction(title: "Stop", style: UIAlertActionStyle.destructive, handler:{ action in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("stopText", comment: "stopText for Alert"),
+                                      style: UIAlertActionStyle.destructive, 
+                                      handler:{ action in
             self.stopAlarm()
         }))
         

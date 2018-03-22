@@ -1,0 +1,36 @@
+/* 
+  localizable.strings
+  SpeakingTimer
+
+  Created by Maria Ortega on 22/03/2018.
+  Copyright © 2018 Maria Ortega. All rights reserved.
+*/
+
+
+"stillText" = "still"
+
+"hoursText" = "hours"
+
+"hourText" = "hour"
+
+"minutesText" = "minutes"
+
+"secondsText" = "seconds"
+
+"leftText" = "left"
+
+"timerDoneText"= "Timer Done"
+
+"stilOneHourLeftText" = "still one hour left"
+
+"timeIsOverText" = "time is over"
+
+"speechLanguage" =  "en-US"
+
+"resumeText" = "Resume"
+
+"pauseText" = "Pause"
+
+"stopText" = "Stop"
+
+"en-US-SpeechLanguage" = "en-US"
