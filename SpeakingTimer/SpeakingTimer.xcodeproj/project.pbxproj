@@ -15,6 +15,10 @@
 		4C30DBE32062604F00D6DB63 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C30DBE22062604F00D6DB63 /* AVFoundation.framework */; };
 		4C30DBE52062625900D6DB63 /* SpeechHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBE42062625900D6DB63 /* SpeechHelper.swift */; };
 		4C30DBE72062C55E00D6DB63 /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBE62062C55E00D6DB63 /* BackgroundTask.swift */; };
+		4C30DC3D2063A5C900D6DB63 /* StartTimerInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DC3C2063A5C900D6DB63 /* StartTimerInterfaceController.swift */; };
+		4C30DC3F2063A89C00D6DB63 /* RunningTimerInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DC3E2063A89C00D6DB63 /* RunningTimerInterfaceController.swift */; };
+		4C30DC412063B52000D6DB63 /* SpeechHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBE42062625900D6DB63 /* SpeechHelper.swift */; };
+		4C30DC422063B52500D6DB63 /* TimeConversorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBDE20613A2F00D6DB63 /* TimeConversorHelper.swift */; };
 		4C60D804205FB60300659F85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D803205FB60300659F85 /* AppDelegate.swift */; };
 		4C60D806205FB60300659F85 /* StartTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D805205FB60300659F85 /* StartTimerViewController.swift */; };
 		4C60D809205FB60300659F85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D807205FB60300659F85 /* Main.storyboard */; };
@@ -25,7 +29,6 @@
 		4C60D837205FB6C900659F85 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D835205FB6C900659F85 /* Interface.storyboard */; };
 		4C60D839205FB6C900659F85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D838205FB6C900659F85 /* Assets.xcassets */; };
 		4C60D840205FB6C900659F85 /* SpeakingTimerWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4C60D83F205FB6C900659F85 /* SpeakingTimerWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		4C60D845205FB6C900659F85 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D844205FB6C900659F85 /* InterfaceController.swift */; };
 		4C60D847205FB6C900659F85 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D846205FB6C900659F85 /* ExtensionDelegate.swift */; };
 		4C60D849205FB6C900659F85 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D848205FB6C900659F85 /* NotificationController.swift */; };
 		4C60D84B205FB6C900659F85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D84A205FB6C900659F85 /* Assets.xcassets */; };
@@ -116,6 +119,8 @@
 		4C30DBE22062604F00D6DB63 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4C30DBE42062625900D6DB63 /* SpeechHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechHelper.swift; sourceTree = "<group>"; };
 		4C30DBE62062C55E00D6DB63 /* BackgroundTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
+		4C30DC3C2063A5C900D6DB63 /* StartTimerInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimerInterfaceController.swift; sourceTree = "<group>"; };
+		4C30DC3E2063A89C00D6DB63 /* RunningTimerInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTimerInterfaceController.swift; sourceTree = "<group>"; };
 		4C60D800205FB60300659F85 /* SpeakingTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeakingTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C60D803205FB60300659F85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C60D805205FB60300659F85 /* StartTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimerViewController.swift; sourceTree = "<group>"; };
@@ -134,7 +139,6 @@
 		4C60D838205FB6C900659F85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C60D83A205FB6C900659F85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C60D83F205FB6C900659F85 /* SpeakingTimerWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SpeakingTimerWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C60D844205FB6C900659F85 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		4C60D846205FB6C900659F85 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		4C60D848205FB6C900659F85 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		4C60D84A205FB6C900659F85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -206,6 +210,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C30DC402063A8A800D6DB63 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4C30DC3C2063A5C900D6DB63 /* StartTimerInterfaceController.swift */,
+				4C30DC3E2063A89C00D6DB63 /* RunningTimerInterfaceController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		4C60D7F7205FB60300659F85 = {
 			isa = PBXGroup;
 			children = (
@@ -277,7 +290,7 @@
 		4C60D843205FB6C900659F85 /* SpeakingTimerWatch Extension */ = {
 			isa = PBXGroup;
 			children = (
-				4C60D844205FB6C900659F85 /* InterfaceController.swift */,
+				4C30DC402063A8A800D6DB63 /* Classes */,
 				4C60D846205FB6C900659F85 /* ExtensionDelegate.swift */,
 				4C60D848205FB6C900659F85 /* NotificationController.swift */,
 				4C60D84A205FB6C900659F85 /* Assets.xcassets */,
@@ -872,9 +885,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C30DC422063B52500D6DB63 /* TimeConversorHelper.swift in Sources */,
 				4C60D849205FB6C900659F85 /* NotificationController.swift in Sources */,
 				4C60D847205FB6C900659F85 /* ExtensionDelegate.swift in Sources */,
-				4C60D845205FB6C900659F85 /* InterfaceController.swift in Sources */,
+				4C30DC3D2063A5C900D6DB63 /* StartTimerInterfaceController.swift in Sources */,
+				4C30DC412063B52000D6DB63 /* SpeechHelper.swift in Sources */,
+				4C30DC3F2063A89C00D6DB63 /* RunningTimerInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
