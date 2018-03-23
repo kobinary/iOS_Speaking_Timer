@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UnB-YS-ioq">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HF2-90-OAa">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,6 +11,7 @@
     <customFonts key="customFonts">
         <array key="HelveticaNeue.ttc">
             <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Bold</string>
         </array>
         <array key="HelveticaNeueExtras.ttc">
             <string>HelveticaNeue-CondensedBold</string>
@@ -22,52 +23,76 @@
     </customFonts>
     <scenes>
         <!--StartTimer-->
-        <scene sceneID="GlB-6N-NDM">
+        <scene sceneID="Bqx-qA-TkP">
             <objects>
-                <controller identifier="StartTimer" hidesWhenLoading="NO" id="UnB-YS-ioq" customClass="StartTimerInterfaceController" customModule="SpeakingTimerWatch_Extension">
+                <controller identifier="StartTimer" hidesWhenLoading="NO" id="HF2-90-OAa" customClass="StartTimerInterfaceController" customModule="SpeakingTimerWatch_Extension">
                     <items>
-                        <group width="1" alignment="left" layout="vertical" spacing="4" id="HRg-Yl-8wj">
+                        <group width="1" alignment="center" spacing="2" id="V2p-oZ-yTi">
                             <items>
-                                <label width="136" alignment="center" text="Speaking Timer" textAlignment="center" id="5r1-0j-wXf">
-                                    <color key="textColor" red="0.28235294117647058" green="0.68627450980392157" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </label>
-                                <button width="1" alignment="center" title="1 min" id="6mV-bA-7fG">
-                                    <color key="backgroundColor" red="0.28235294119999998" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <group width="43" height="117" alignment="left" layout="vertical" spacing="4" id="zIG-cf-qON">
+                                    <items>
+                                        <label width="43" height="12" alignment="left" text="HH" textAlignment="center" id="73a-J9-uOi">
+                                            <color key="textColor" red="0.28235294119999998" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <fontDescription key="font" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                        </label>
+                                        <picker width="43" height="100" alignment="left" focusStyle="sequence" id="RYY-O3-7md">
+                                            <connections>
+                                                <action selector="pickerHoursSelectedItemChanged:" destination="HF2-90-OAa" id="rvk-BS-7b0"/>
+                                            </connections>
+                                        </picker>
+                                    </items>
+                                </group>
+                                <group width="43" height="117" alignment="left" layout="vertical" spacing="4" id="pnW-dI-ur1">
+                                    <items>
+                                        <label width="43" height="12" alignment="left" text="MM" textAlignment="center" id="Mvp-hF-yH3">
+                                            <color key="textColor" red="0.28235294119999998" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <fontDescription key="font" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                        </label>
+                                        <picker width="43" height="100" alignment="center" focusStyle="sequence" id="1yA-Oq-GPw">
+                                            <connections>
+                                                <action selector="pickerSecsSelectedItemChanged:" destination="HF2-90-OAa" id="fOv-yd-s75"/>
+                                            </connections>
+                                        </picker>
+                                    </items>
+                                </group>
+                                <group width="43" height="117" alignment="left" layout="vertical" spacing="4" id="8Qo-ZJ-Pxu">
+                                    <items>
+                                        <label width="43" height="12" alignment="left" text="SS" textAlignment="center" id="LsN-lE-bs3">
+                                            <color key="textColor" red="0.28235294119999998" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <fontDescription key="font" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                        </label>
+                                        <picker width="43" height="100" alignment="left" focusStyle="sequence" id="VM1-Mt-UaC">
+                                            <connections>
+                                                <action selector="pickerMinssSelectedItemChanged:" destination="HF2-90-OAa" id="uPI-Bz-vNb"/>
+                                            </connections>
+                                        </picker>
+                                    </items>
+                                </group>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                        </group>
+                        <group width="1" alignment="center" id="BA0-vz-EDB">
+                            <items>
+                                <button width="1" alignment="center" title="Start" id="25k-yP-Ukt">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" red="0.015686274510000001" green="0.87058823529999996" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                     <connections>
-                                        <action selector="runTimerWithOneMin" destination="UnB-YS-ioq" id="xso-PQ-jjh"/>
-                                        <segue destination="Kg7-Ks-QY7" kind="push" identifier="60" id="HIl-JD-JrD"/>
-                                    </connections>
-                                </button>
-                                <button width="1" alignment="center" title="2 mins" id="iQh-hg-dEt">
-                                    <color key="backgroundColor" red="0.28235294119999998" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <connections>
-                                        <segue destination="Kg7-Ks-QY7" kind="push" identifier="120" id="M0Z-Hn-W9Y"/>
-                                    </connections>
-                                </button>
-                                <button width="1" alignment="center" title="5 mins" id="cCM-LS-PgJ">
-                                    <color key="backgroundColor" red="0.28235294119999998" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <connections>
-                                        <segue destination="Kg7-Ks-QY7" kind="push" identifier="250" id="31o-Di-4ml"/>
-                                    </connections>
-                                </button>
-                                <button width="1" alignment="center" title="10 mins" id="vBg-Al-YMb">
-                                    <color key="backgroundColor" red="0.28235294119999998" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <connections>
-                                        <segue destination="Kg7-Ks-QY7" kind="push" identifier="600" id="WFY-eJ-Dd6"/>
+                                        <segue destination="Kg7-Ks-QY7" kind="push" id="cLt-i4-UQP"/>
                                     </connections>
                                 </button>
                             </items>
                         </group>
                     </items>
                     <connections>
-                        <outlet property="fiveMinsButton" destination="cCM-LS-PgJ" id="6oh-NA-Z6L"/>
-                        <outlet property="oneMinButton" destination="6mV-bA-7fG" id="rKs-fl-S8s"/>
-                        <outlet property="tenMinsButton" destination="vBg-Al-YMb" id="csQ-08-wNd"/>
-                        <outlet property="twoMinsButton" destination="iQh-hg-dEt" id="pLF-im-ZJ2"/>
+                        <outlet property="hoursPickerView" destination="RYY-O3-7md" id="sGw-fZ-Q5K"/>
+                        <outlet property="minutesPickerView" destination="1yA-Oq-GPw" id="Tys-WL-MLr"/>
+                        <outlet property="secondsPickerView" destination="VM1-Mt-UaC" id="9qY-dY-7Ds"/>
+                        <outlet property="startButton" destination="25k-yP-Ukt" id="aBF-mx-VRm"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="217" y="301.5"/>
+            <point key="canvasLocation" x="233" y="301"/>
         </scene>
         <!--RunningTimer-->
         <scene sceneID="FSR-MN-cmg">
@@ -141,7 +166,4 @@
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="WFY-eJ-Dd6"/>
-    </inferredMetricsTieBreakers>
 </document>

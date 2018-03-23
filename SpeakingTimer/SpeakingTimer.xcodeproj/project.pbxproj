@@ -49,6 +49,9 @@
 		4CF044A52065109E0011C2A5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CF044A72065109E0011C2A5 /* Localizable.strings */; };
 		4CF044AB20651C940011C2A5 /* pickerData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CF044AA20651C940011C2A5 /* pickerData.plist */; };
 		4CF044AC20651C940011C2A5 /* pickerData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CF044AA20651C940011C2A5 /* pickerData.plist */; };
+		4CF044AD2065254D0011C2A5 /* pickerData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CF044AA20651C940011C2A5 /* pickerData.plist */; };
+		4CF044AE206525530011C2A5 /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBE62062C55E00D6DB63 /* BackgroundTask.swift */; };
+		4CF044AF206527630011C2A5 /* StartTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D85D205FDEB900659F85 /* StartTimerViewModel.swift */; };
 		8A2C377D1FFC077B4B9427D9 /* Pods_SpeakingTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526DFE21B00A608DE4962908 /* Pods_SpeakingTimer.framework */; };
 		A853FE8BDB34DE7D02DFC6E4 /* Pods_SpeakingTimerWatch_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE995FA4B85989E782DD8C19 /* Pods_SpeakingTimerWatch_Extension.framework */; };
 		D918C6F9B2608A745D38DB39 /* Pods_SpeakingTimerWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8898C9EAF9EE5FC0831B4483 /* Pods_SpeakingTimerWatch.framework */; };
@@ -653,6 +656,7 @@
 			files = (
 				4C60D88F20611C5900659F85 /* alarm1.mp3 in Resources */,
 				4C60D839205FB6C900659F85 /* Assets.xcassets in Resources */,
+				4CF044AD2065254D0011C2A5 /* pickerData.plist in Resources */,
 				4C60D837205FB6C900659F85 /* Interface.storyboard in Resources */,
 				4C60D88920611C5900659F85 /* alarm3.mp3 in Resources */,
 				4C60D88C20611C5900659F85 /* alarm2.mp3 in Resources */,
@@ -946,8 +950,10 @@
 			files = (
 				4C30DC422063B52500D6DB63 /* TimeConversorHelper.swift in Sources */,
 				4C60D849205FB6C900659F85 /* NotificationController.swift in Sources */,
+				4CF044AE206525530011C2A5 /* BackgroundTask.swift in Sources */,
 				4C30DC492063C54D00D6DB63 /* AudioWatchHelper.swift in Sources */,
 				4C60D847205FB6C900659F85 /* ExtensionDelegate.swift in Sources */,
+				4CF044AF206527630011C2A5 /* StartTimerViewModel.swift in Sources */,
 				4C30DC3D2063A5C900D6DB63 /* StartTimerInterfaceController.swift in Sources */,
 				4C30DC412063B52000D6DB63 /* SpeechHelper.swift in Sources */,
 				4C30DC3F2063A89C00D6DB63 /* RunningTimerInterfaceController.swift in Sources */,
