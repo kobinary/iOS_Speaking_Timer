@@ -31,23 +31,17 @@ class SpeakingTimerUITests: XCTestCase {
         let pickerWheel = app/*@START_MENU_TOKEN@*/.pickerWheels["0 hours"]/*[[".pickers.pickerWheels[\"0 hours\"]",".pickerWheels[\"0 hours\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
         pickerWheel.tap()
         pickerWheel.swipeUp()
-        
-        let pickerWheel2 = app/*@START_MENU_TOKEN@*/.pickerWheels["0 min"]/*[[".pickers.pickerWheels[\"0 min\"]",".pickerWheels[\"0 min\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        pickerWheel2.tap()
-        pickerWheel2.swipeUp()
-        
-        let pickerWheel3 = app/*@START_MENU_TOKEN@*/.pickerWheels["0 sec"]/*[[".pickers.pickerWheels[\"0 sec\"]",".pickerWheels[\"0 sec\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        pickerWheel3.tap()
-        pickerWheel3.swipeUp()
-      
+        app/*@START_MENU_TOKEN@*/.pickerWheels["0 mins"]/*[[".pickers.pickerWheels[\"0 mins\"]",".pickerWheels[\"0 mins\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeUp()
+        app/*@START_MENU_TOKEN@*/.pickerWheels["0 secs"]/*[[".pickers.pickerWheels[\"0 secs\"]",".pickerWheels[\"0 secs\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         app.buttons["Start"].tap()
     }
     
     func testRunningTimer() {
-        let pickerWheel = app/*@START_MENU_TOKEN@*/.pickerWheels["0 min"]/*[[".pickers.pickerWheels[\"0 min\"]",".pickerWheels[\"0 min\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        let pickerWheel = app/*@START_MENU_TOKEN@*/.pickerWheels["0 hours"]/*[[".pickers.pickerWheels[\"0 hours\"]",".pickerWheels[\"0 hours\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
         pickerWheel.tap()
         pickerWheel.swipeUp()
-        app/*@START_MENU_TOKEN@*/.pickerWheels["0 sec"]/*[[".pickers.pickerWheels[\"0 sec\"]",".pickerWheels[\"0 sec\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeUp()
+        app/*@START_MENU_TOKEN@*/.pickerWheels["0 mins"]/*[[".pickers.pickerWheels[\"0 mins\"]",".pickerWheels[\"0 mins\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeUp()
+        app/*@START_MENU_TOKEN@*/.pickerWheels["0 secs"]/*[[".pickers.pickerWheels[\"0 secs\"]",".pickerWheels[\"0 secs\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         app.buttons["Start"].tap()
         app.buttons["Pause"].tap()
         app.buttons["Resume"].tap()

@@ -72,23 +72,23 @@ class SpeakingTimerTests: XCTestCase {
     
     func testTransforStringValuesIntoSeconds() {
         var (hours, minutes , seconds) = ("0", "10", "59")
-        var timeConverted = TimeConversorHelper().transforStringValuesIntoSeconds(hours: hours, minutes: minutes, seconds: seconds)
+        var timeConverted = TimeConversorHelper().transformStringValuesIntoSeconds(hours: hours, minutes: minutes, seconds: seconds)
         XCTAssertEqual(timeConverted, 659)
         
         (hours, minutes , seconds)  = ("0", "0", "0")
-        timeConverted = TimeConversorHelper().transforStringValuesIntoSeconds(hours: hours, minutes: minutes, seconds: seconds)
+        timeConverted = TimeConversorHelper().transformStringValuesIntoSeconds(hours: hours, minutes: minutes, seconds: seconds)
         XCTAssertEqual(timeConverted, 0)
         
         (hours, minutes , seconds)  = ("0", "54", "2")
-        timeConverted = TimeConversorHelper().transforStringValuesIntoSeconds(hours: hours, minutes: minutes, seconds: seconds)
+        timeConverted = TimeConversorHelper().transformStringValuesIntoSeconds(hours: hours, minutes: minutes, seconds: seconds)
         XCTAssertEqual(timeConverted, 3242)
         
         (hours, minutes , seconds) = ("23", "59", "59")
-        timeConverted = TimeConversorHelper().transforStringValuesIntoSeconds(hours: hours, minutes: minutes, seconds: seconds)
+        timeConverted = TimeConversorHelper().transformStringValuesIntoSeconds(hours: hours, minutes: minutes, seconds: seconds)
         XCTAssertEqual(timeConverted, 86399)
         
         let (hours_2, minutes_2 , seconds_2) : (String, String, String) = ("4", "32", "0")
-        let timeConverted_2 = TimeConversorHelper().transforStringValuesIntoSeconds(hours: hours_2, minutes: minutes_2, seconds: seconds_2)
+        let timeConverted_2 = TimeConversorHelper().transformStringValuesIntoSeconds(hours: hours_2, minutes: minutes_2, seconds: seconds_2)
         XCTAssertEqual(timeConverted_2, 16320)
     }
     
@@ -105,47 +105,43 @@ class SpeakingTimerTests: XCTestCase {
         var (hours, minutes, seconds) : (Int, Int, Int) = (0, 0, 0)
         
         (hours, minutes, seconds) = (0, 0, 10)
-        var speechForTime = LocalNotificationHelper().countDownText(hours: hours, minutes: minutes, seconds: seconds)
+        var speechForTime = SpeechHelper().getSpeechTextForTimeIn(hours: hours, minutes: minutes, seconds: seconds)
         XCTAssertEqual(speechForTime, "still 10 seconds left")
         
         (hours, minutes, seconds) = (0, 0, 9)
-        speechForTime = LocalNotificationHelper().countDownText(hours: hours, minutes: minutes, seconds: seconds)
+        speechForTime = SpeechHelper().getSpeechTextForTimeIn(hours: hours, minutes: minutes, seconds: seconds)
         XCTAssertEqual(speechForTime, "9")
 
         (hours, minutes, seconds) = (0, 0, 40)
-        speechForTime = LocalNotificationHelper().countDownText(hours: hours, minutes: minutes, seconds: seconds)
+        speechForTime = SpeechHelper().getSpeechTextForTimeIn(hours: hours, minutes: minutes, seconds: seconds)
         XCTAssertEqual(speechForTime, "still 40 seconds left")
-
-        (hours, minutes, seconds) = (1, 0, 1)
-        speechForTime = LocalNotificationHelper().countDownText(hours: hours, minutes: minutes, seconds: seconds)
-        XCTAssertEqual(speechForTime, "")
         
         (hours, minutes, seconds) = (1, 0, 0)
-        speechForTime = LocalNotificationHelper().countDownText(hours: hours, minutes: minutes, seconds: seconds)
-        XCTAssertEqual(speechForTime, "still one hour left")
+        speechForTime = SpeechHelper().getSpeechTextForTimeIn(hours: hours, minutes: minutes, seconds: seconds)
+        XCTAssertEqual(speechForTime, "still 1 hours left")
 
         (hours, minutes, seconds) = (0, 50, 0)
-        speechForTime = LocalNotificationHelper().countDownText(hours: hours, minutes: minutes, seconds: seconds)
+        speechForTime = SpeechHelper().getSpeechTextForTimeIn(hours: hours, minutes: minutes, seconds: seconds)
         XCTAssertEqual(speechForTime,  "still 50 minutes left")
 
         (hours, minutes, seconds) = (0, 5, 0)
-        speechForTime = LocalNotificationHelper().countDownText(hours: hours, minutes: minutes, seconds: seconds)
+        speechForTime = SpeechHelper().getSpeechTextForTimeIn(hours: hours, minutes: minutes, seconds: seconds)
         XCTAssertEqual(speechForTime, "still 5 minutes left")
 
         (hours, minutes, seconds) = (0, 2, 0)
-        speechForTime = LocalNotificationHelper().countDownText(hours: hours, minutes: minutes, seconds: seconds)
+        speechForTime = SpeechHelper().getSpeechTextForTimeIn(hours: hours, minutes: minutes, seconds: seconds)
         XCTAssertEqual(speechForTime, "still 2 minutes left")
 
         (hours, minutes, seconds) = (3, 0, 00)
-        speechForTime = LocalNotificationHelper().countDownText(hours: hours, minutes: minutes, seconds: seconds)
+        speechForTime = SpeechHelper().hoursCountDown(hours: hours, minutes: minutes, seconds: seconds)
         XCTAssertEqual(speechForTime, "still 3 hours left")
 
         (hours, minutes, seconds) = (1, 5, 46)
-        speechForTime = LocalNotificationHelper().countDownText(hours: hours, minutes: minutes, seconds: seconds)
+        speechForTime = SpeechHelper().getSpeechTextForTimeIn(hours: hours, minutes: minutes, seconds: seconds)
         XCTAssertEqual(speechForTime, "")
 
         (hours, minutes, seconds) = (0, 10, 7)
-        speechForTime = LocalNotificationHelper().countDownText(hours: hours, minutes: minutes, seconds: seconds)
+        speechForTime = SpeechHelper().getSpeechTextForTimeIn(hours: hours, minutes: minutes, seconds: seconds)
         XCTAssertEqual(speechForTime,  "")
     }
 
