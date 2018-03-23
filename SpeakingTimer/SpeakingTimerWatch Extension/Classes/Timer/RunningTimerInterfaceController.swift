@@ -75,10 +75,8 @@ extension RunningTimerInterfaceController {
     }
     
     func updateSpeechTime(time: Int) {
-        let hours = Int(time) / 3600
-        let minutes = Int(time) / 60 % 60
-        let seconds = Int(time) % 60
-        SpeechHelper().updateCountDown(hours: hours, minutes: minutes, seconds: seconds)
+        let (hours, minutes, seconds) = TimeConversorHelper().transformIntevalIntoTime(interval: Int(time))
+        SpeechHelper().updateSpeechCountDown(hours: hours, minutes: minutes, seconds: seconds)
     }
     
     func resumeTimer() {

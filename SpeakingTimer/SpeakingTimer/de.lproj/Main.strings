@@ -1,16 +1,15 @@
 
-
 /* Class = "UIButton"; normalTitle = "Start"; ObjectID = "3rm-qK-pAl"; */
-"3rm-qK-pAl.normalTitle" = "Start";
+"3rm-qK-pAl.normalTitle" = "Anfang";
 
 /* Class = "UILabel"; text = "Speaking Timer helps you track your progress while practicing."; ObjectID = "9P8-D4-8XM"; */
-"9P8-D4-8XM.text" = "Speaking Timer helps you track your progress while practicing.";
+"9P8-D4-8XM.text" = "Speaking Timer hilft dir, deinen Fortschritt während des Trainings zu verfolgen.";
 
 /* Class = "UILabel"; text = "Speaking Timer"; ObjectID = "TTa-Uk-0fY"; */
 "TTa-Uk-0fY.text" = "Speaking Timer";
 
 /* Class = "UIButton"; normalTitle = "Stop"; ObjectID = "UQM-eW-yqi"; */
-"UQM-eW-yqi.normalTitle" = "Stop";
+"UQM-eW-yqi.normalTitle" = "Halt";
 
 /* Class = "UILabel"; text = "Speaking Timer"; ObjectID = "wbl-mX-FRI"; */
 "wbl-mX-FRI.text" = "Speaking Timer";

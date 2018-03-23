@@ -53,13 +53,16 @@ class RunningTimerViewController: UIViewController, RunningTimerDelegate {
         self.leftTimeLabel.text = viewModel.speechText
     }
     
-    func updateLabelWithRunningTime(time: String) {
+    func updateLabelWithRunningTime(time: String, leftTime: String) {
         self.timerLabel.text = time
-        self.leftTimeLabel.text = viewModel.speechText
+        self.leftTimeLabel.text = leftTime
     }
     
     func updatePasueResumeButton() {
         if viewModel.isTimerPaused {
+            
+            print(NSLocalizedString("resumeText", comment: "resumeText for button"))
+
             self.pauseResumeButton.setTitle(NSLocalizedString("resumeText", comment: "resumeText for button"),
                                             for: UIControlState.normal)
         } else {

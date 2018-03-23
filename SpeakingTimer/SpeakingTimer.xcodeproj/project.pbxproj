@@ -19,7 +19,6 @@
 		4C30DC412063B52000D6DB63 /* SpeechHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBE42062625900D6DB63 /* SpeechHelper.swift */; };
 		4C30DC422063B52500D6DB63 /* TimeConversorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBDE20613A2F00D6DB63 /* TimeConversorHelper.swift */; };
 		4C30DC492063C54D00D6DB63 /* AudioWatchHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DC482063C54D00D6DB63 /* AudioWatchHelper.swift */; };
-		4C30DC53206458BB00D6DB63 /* localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C30DC55206458BB00D6DB63 /* localizable.strings */; };
 		4C60D804205FB60300659F85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D803205FB60300659F85 /* AppDelegate.swift */; };
 		4C60D806205FB60300659F85 /* StartTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D805205FB60300659F85 /* StartTimerViewController.swift */; };
 		4C60D809205FB60300659F85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D807205FB60300659F85 /* Main.storyboard */; };
@@ -46,6 +45,8 @@
 		4C60D88E20611C5900659F85 /* alarm1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D88720611C5800659F85 /* alarm1.mp3 */; };
 		4C60D88F20611C5900659F85 /* alarm1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D88720611C5800659F85 /* alarm1.mp3 */; };
 		4C60D89020611C5900659F85 /* alarm1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D88720611C5800659F85 /* alarm1.mp3 */; };
+		4CF044A42065109E0011C2A5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CF044A72065109E0011C2A5 /* Localizable.strings */; };
+		4CF044A52065109E0011C2A5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CF044A72065109E0011C2A5 /* Localizable.strings */; };
 		8A2C377D1FFC077B4B9427D9 /* Pods_SpeakingTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526DFE21B00A608DE4962908 /* Pods_SpeakingTimer.framework */; };
 		A853FE8BDB34DE7D02DFC6E4 /* Pods_SpeakingTimerWatch_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE995FA4B85989E782DD8C19 /* Pods_SpeakingTimerWatch_Extension.framework */; };
 		D918C6F9B2608A745D38DB39 /* Pods_SpeakingTimerWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8898C9EAF9EE5FC0831B4483 /* Pods_SpeakingTimerWatch.framework */; };
@@ -122,9 +123,6 @@
 		4C30DC3C2063A5C900D6DB63 /* StartTimerInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimerInterfaceController.swift; sourceTree = "<group>"; };
 		4C30DC3E2063A89C00D6DB63 /* RunningTimerInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTimerInterfaceController.swift; sourceTree = "<group>"; };
 		4C30DC482063C54D00D6DB63 /* AudioWatchHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioWatchHelper.swift; sourceTree = "<group>"; };
-		4C30DC4F2063E8B900D6DB63 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		4C30DC54206458BB00D6DB63 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/localizable.strings; sourceTree = "<group>"; };
-		4C30DC56206458C500D6DB63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/localizable.strings; sourceTree = "<group>"; };
 		4C60D800205FB60300659F85 /* SpeakingTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeakingTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C60D803205FB60300659F85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C60D805205FB60300659F85 /* StartTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimerViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +152,14 @@
 		4C60D88520611C5800659F85 /* alarm3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm3.mp3; sourceTree = "<group>"; };
 		4C60D88620611C5800659F85 /* alarm2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm2.mp3; sourceTree = "<group>"; };
 		4C60D88720611C5800659F85 /* alarm1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm1.mp3; sourceTree = "<group>"; };
+		4CF0449920650AE80011C2A5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		4CF0449A20650AE80011C2A5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4CF0449B20650AE80011C2A5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Interface.strings; sourceTree = "<group>"; };
+		4CF0449D20650AFD0011C2A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		4CF0449E20650AFF0011C2A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4CF0449F20650AFF0011C2A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Interface.strings; sourceTree = "<group>"; };
+		4CF044A62065109E0011C2A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4CF044A8206510A30011C2A5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		526DFE21B00A608DE4962908 /* Pods_SpeakingTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeakingTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD2AE789E88A7196B57557D /* Pods-SpeakingTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakingTimer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakingTimer/Pods-SpeakingTimer.debug.xcconfig"; sourceTree = "<group>"; };
 		5E32229FD2F4B0C22C7F1898 /* Pods_SpeakingTimerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeakingTimerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,7 +260,7 @@
 		4C30DC502063E8CD00D6DB63 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
-				4C30DC55206458BB00D6DB63 /* localizable.strings */,
+				4CF044A72065109E0011C2A5 /* Localizable.strings */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -581,8 +587,9 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				de,
+				en,
 			);
 			mainGroup = 4C60D7F7205FB60300659F85;
 			productRefGroup = 4C60D801205FB60300659F85 /* Products */;
@@ -606,8 +613,8 @@
 				4C60D88B20611C5900659F85 /* alarm2.mp3 in Resources */,
 				4C60D88820611C5900659F85 /* alarm3.mp3 in Resources */,
 				4C60D80E205FB60300659F85 /* LaunchScreen.storyboard in Resources */,
-				4C30DC53206458BB00D6DB63 /* localizable.strings in Resources */,
 				4C60D80B205FB60300659F85 /* Assets.xcassets in Resources */,
+				4CF044A42065109E0011C2A5 /* Localizable.strings in Resources */,
 				4C60D88E20611C5900659F85 /* alarm1.mp3 in Resources */,
 				4C60D809205FB60300659F85 /* Main.storyboard in Resources */,
 			);
@@ -643,6 +650,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CF044A52065109E0011C2A5 /* Localizable.strings in Resources */,
 				4C60D88D20611C5900659F85 /* alarm2.mp3 in Resources */,
 				4C60D88A20611C5900659F85 /* alarm3.mp3 in Resources */,
 				4C60D89020611C5900659F85 /* alarm1.mp3 in Resources */,
@@ -958,20 +966,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4C30DC55206458BB00D6DB63 /* localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4C30DC54206458BB00D6DB63 /* en */,
-				4C30DC56206458C500D6DB63 /* Base */,
-			);
-			name = localizable.strings;
-			sourceTree = "<group>";
-		};
 		4C60D807205FB60300659F85 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4C60D808205FB60300659F85 /* Base */,
-				4C30DC4F2063E8B900D6DB63 /* en */,
+				4CF0449920650AE80011C2A5 /* de */,
+				4CF0449D20650AFD0011C2A5 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -980,6 +980,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				4C60D80D205FB60300659F85 /* Base */,
+				4CF0449A20650AE80011C2A5 /* de */,
+				4CF0449E20650AFF0011C2A5 /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -988,8 +990,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				4C60D836205FB6C900659F85 /* Base */,
+				4CF0449B20650AE80011C2A5 /* de */,
+				4CF0449F20650AFF0011C2A5 /* en */,
 			);
 			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		4CF044A72065109E0011C2A5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CF044A62065109E0011C2A5 /* en */,
+				4CF044A8206510A30011C2A5 /* de */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -999,6 +1012,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1056,6 +1070,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

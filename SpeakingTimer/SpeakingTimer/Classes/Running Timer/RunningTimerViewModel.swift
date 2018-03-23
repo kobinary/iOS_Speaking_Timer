@@ -9,7 +9,7 @@
 import UIKit
 
 protocol RunningTimerDelegate {
-    func updateLabelWithRunningTime(time: String)
+    func updateLabelWithRunningTime(time: String, leftTime: String)
     func showAlertIsOver()
 }
 
@@ -26,12 +26,43 @@ class RunningTimerViewModel: NSObject {
     var isTimerRunning : Bool = false
     var isTimerPaused : Bool = false
     var isTimerOnBackground : Bool = false
-    
     var backgroundTask = BackgroundTask()
     
     init(withTime time: Int) {
         self.time = time
     }
+    
+    // MARK : Update Countdown Methods
+    
+    @objc func updateTimer() {
+        print("updateTimer: ",self.time)
+        if time < 1 {
+            SpeechHelper().speak(text: NSLocalizedString("timeIsOverText", comment: "timeIsOverText speech"))
+            self.timerIsOver()
+            delegate?.showAlertIsOver()
+        } else {
+            time -= 1
+            
+            delegate?.updateLabelWithRunningTime(time: self.updateTimeLabel(time: time),
+                                                 leftTime: self.updateLeftTimeLabel(time: time))
+        }
+    }
+    
+    func updateLeftTimeLabel(time: Int) -> String {
+        let (hours, minutes, seconds) = TimeConversorHelper().transformIntevalIntoTime(interval: Int(time))
+        return SpeechHelper().getSpeechTextForTimeIn(hours: hours, minutes: minutes, seconds: seconds)
+    }
+    
+    func updateTimeLabel(time: Int) -> String {
+        let (hours, minutes, seconds) = TimeConversorHelper().transformIntevalIntoTime(interval: Int(time))
+        SpeechHelper().updateSpeechCountDown(hours: hours, minutes: minutes, seconds: seconds)
+        let timeString = String(format:"%02i : %02i : %02i", hours, minutes, seconds)
+    
+        return timeString
+    }
+    
+    
+    // MARK : Timer Methods
     
     func startTimer() {
         if !self.isTimerRunning {
@@ -49,24 +80,6 @@ class RunningTimerViewModel: NSObject {
         self.isTimerRunning = true
     }
     
-    @objc func updateTimer() {
-        print("updateTimer: ",self.time)
-        if time < 1 {
-            SpeechHelper().speak(text: NSLocalizedString("timeIsOverText", comment: "timeIsOverText speech"))
-            self.timerIsOver()
-            delegate?.showAlertIsOver()
-        } else {
-            time -= 1
-            delegate?.updateLabelWithRunningTime(time: self.updateTimeLabel(time: time))
-        }
-    }
-    
-    func stopTimer() {
-        self.timer.invalidate()
-        backgroundTask.stopBackgroundTask()
-        self.isTimerRunning = false
-    }
-    
     func pauseTimer() {
         self.timer.invalidate()
         backgroundTask.stopBackgroundTask()
@@ -80,17 +93,12 @@ class RunningTimerViewModel: NSObject {
         self.isTimerPaused = false
     }
     
-    func updateTimeLabel(time: Int) -> String {
-        let hours = Int(time) / 3600
-        let minutes = Int(time) / 60 % 60
-        let seconds = Int(time) % 60
-        
-        SpeechHelper().updateCountDown(hours: hours, minutes: minutes, seconds: seconds)
-        
-        let timeString = String(format:"%02i : %02i : %02i", hours, minutes, seconds)
-        return timeString
+    func stopTimer() {
+        self.timer.invalidate()
+        backgroundTask.stopBackgroundTask()
+        self.isTimerRunning = false
     }
-
+    
     func timerIsOver() {
         self.timer.invalidate()
         AudioHelper().playTimeIsOverWith(sound: "alarm2")
