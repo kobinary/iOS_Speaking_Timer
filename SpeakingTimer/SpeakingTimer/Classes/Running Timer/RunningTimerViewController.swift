@@ -83,9 +83,6 @@ class RunningTimerViewController: UIViewController, RunningTimerDelegate {
     
     func updatePasueResumeButton() {
         if viewModel.isTimerPaused {
-            
-            print(NSLocalizedString("resumeText", comment: "resumeText for button"))
-
             self.pauseResumeButton.setTitle(NSLocalizedString("resumeText", comment: "resumeText for button"),
                                             for: UIControlState.normal)
         } else {

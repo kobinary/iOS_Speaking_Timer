@@ -114,9 +114,9 @@ extension RunningTimerInterfaceController {
     
     func updatePasueResumeButton() {
         if self.isTimerPaused {
-            self.pauseButton.setTitle("Resume")
+            self.pauseButton.setTitle(NSLocalizedString("resumeText", comment: "resumeText for button"))
         } else {
-            self.pauseButton.setTitle("Pause")
+            self.pauseButton.setTitle(NSLocalizedString("pauseText", comment: "pauseText for button"))
         }
     }
     
