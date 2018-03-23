@@ -5,6 +5,11 @@
 //  Created by Maria Ortega on 22/03/2018.
 //  Copyright © 2018 Maria Ortega. All rights reserved.
 //
+//
+// StartTimerInterfaceController Class : It is the first InterfaceController whichs allow the user to select the time for the timer.
+//
+//
+
 
 import WatchKit
 import Foundation

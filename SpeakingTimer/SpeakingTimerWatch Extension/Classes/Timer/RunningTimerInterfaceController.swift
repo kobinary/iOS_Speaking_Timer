@@ -5,6 +5,11 @@
 //  Created by Maria Ortega on 22/03/2018.
 //  Copyright © 2018 Maria Ortega. All rights reserved.
 //
+//
+//  RunningTimerInterfaceController Class : It is the InterfaceController which shows the timer running on the watch.
+//                                          Shows Stop, Pause and Resume button.
+//
+//
 
 import WatchKit
 import Foundation
@@ -36,6 +41,9 @@ class RunningTimerInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     
+    
+    // MARK : Setup Method
+    
     func setupWithContext(_ context: Any?) {
         let dict = context as? NSDictionary
         if dict != nil {
@@ -46,9 +54,8 @@ class RunningTimerInterfaceController: WKInterfaceController {
 }
 
 
-/*
- EXTENSION: Timer Methods
- */
+// MARK : Extension with all the Timer Methods
+
 extension RunningTimerInterfaceController {
     
     func starTimerWithTime(_ time : Int) {

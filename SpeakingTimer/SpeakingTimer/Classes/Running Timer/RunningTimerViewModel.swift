@@ -5,6 +5,10 @@
 //  Created by Maria Ortega on 19/03/2018.
 //  Copyright © 2018 Maria Ortega. All rights reserved.
 //
+//
+// RunningTimerViewModel Class : It is the StartTimer View Model for the RunningTimerViewContrller.
+//                               Where the main logic is based, like all the timer logic, activate speech, etc.
+//
 
 import UIKit
 
@@ -35,7 +39,6 @@ class RunningTimerViewModel: NSObject {
     // MARK : Update Countdown Methods
     
     @objc func updateTimer() {
-        print("updateTimer: ",self.time)
         if time < 1 {
             SpeechHelper().speak(text: NSLocalizedString("timeIsOverText", comment: "timeIsOverText speech"))
             self.timerIsOver()

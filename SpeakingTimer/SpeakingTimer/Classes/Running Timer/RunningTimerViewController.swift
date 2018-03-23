@@ -5,6 +5,11 @@
 //  Created by Maria Ortega on 19/03/2018.
 //  Copyright © 2018 Maria Ortega. All rights reserved.
 //
+//
+// RunningTimerViewController Class : It is the viewController which shows the timer running on the screen.
+//                                    Shows Stop, Pause and Resume button.
+//
+//
 
 import UIKit
 import Hero
@@ -34,6 +39,9 @@ class RunningTimerViewController: UIViewController, RunningTimerDelegate {
         viewModel.stopTimer()
         self.stopAlarm()
     }
+    
+    
+    // MARK: - Setup view methods
         
     func setup() {
         self.addObservers()
@@ -41,6 +49,13 @@ class RunningTimerViewController: UIViewController, RunningTimerDelegate {
         self.updatePasueResumeButton()
         self.updateLabelWithCurrentTime()
     }
+    
+    func addBackground() {
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
+    }
+    
+    
+    // MARK: - Update view and logic methods
     
     func updateWithViewModel(viewModel: RunningTimerViewModel) {
         viewModel.delegate = self
@@ -71,11 +86,10 @@ class RunningTimerViewController: UIViewController, RunningTimerDelegate {
         }
         self.pauseResumeButton.reloadInputViews()
     }
-    
-    func addBackground() {
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
-    }
 }
+
+
+// MARK: - Extension with all the Timer Logic
 
 extension RunningTimerViewController {
 
@@ -121,6 +135,9 @@ extension RunningTimerViewController {
     }
 }
 
+
+// MARK: - Extension with all the Observers Logic
+
 extension RunningTimerViewController {
     
     func addObservers() {
@@ -128,6 +145,8 @@ extension RunningTimerViewController {
     }
     
     @objc func timerDidEnterToBackground(notification: Notification) {
-        SpeechHelper().showSpeechNotification(time: viewModel.time)
+        if viewModel.isTimerRunning {
+            SpeechHelper().showSpeechNotification(time: viewModel.time)
+        }
     }
 }

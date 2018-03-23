@@ -5,6 +5,11 @@
 //  Created by Maria Ortega on 21/03/2018.
 //  Copyright © 2018 Maria Ortega. All rights reserved.
 //
+//
+// SpeechHelper Class : Provide all the methods needed to generate the speech to be spoken by the app when a certain time is reached.
+//                      All these logic follows the requirements provided.
+//                      Also generate the speech text to be shown on the app screen under the timer.
+//
 
 import UIKit
 import AVFoundation
@@ -24,6 +29,9 @@ class SpeechHelper: NSObject {
     let speechSynthesizer = AVSpeechSynthesizer()
     var spechText : String!
     
+    
+    // MARK : Speak the text whic is being passed
+
     func speak(text: String) {
         print(text)
         let speakMsg = AVSpeechUtterance(string: text)
@@ -31,11 +39,17 @@ class SpeechHelper: NSObject {
         speechSynthesizer.speak(speakMsg)
     }
     
+    
+    // MARK : Updates speech countDown depends on the values (hours, minuts, seconds) which are being passed
+
     func updateSpeechCountDown(hours: Int, minutes: Int, seconds: Int) {
         speak(text: getSpeechTextForTimeIn(hours: hours, minutes: minutes, seconds: seconds))
     }
+
     
-    func getSpeechTextForTimeIn(hours: Int, minutes: Int, seconds: Int) -> String{
+    // MARK : Get the speech text for the time values (hours, minuts, seconds) which are being passed
+
+    func getSpeechTextForTimeIn(hours: Int, minutes: Int, seconds: Int) -> String {
         var speech = ""
         let hoursSpeech = hoursCountDown(hours: hours, minutes: minutes, seconds: seconds)
         let minutesSpeech = minutesCountDown(hours: hours, minutes: minutes, seconds: seconds)
@@ -48,16 +62,18 @@ class SpeechHelper: NSObject {
         } else if secondsSpeech != "" {
             speech = secondsSpeech
         }
-        print("speech: ",speech)
-        
         return speech
     }
     
+    // MARK : Get the hours speech text
+
     func hoursCountDown(hours: Int, minutes: Int, seconds: Int) -> String {
         let stillHoursLeft = (minutes == 0 && seconds == 0 && hours > 0)
         return stillHoursLeft ? (stillText + " \(hours) " + hoursText + " " + leftText) : ""
     }
     
+    // MARK : Get the minutes speech text
+
     func minutesCountDown(hours: Int, minutes: Int, seconds: Int) -> String {
         let stillFiveOrLessMinutesLeft = (hours == 0 && seconds == 0 && (minutes < 6 && minutes > 0))
         let stillMoreThanTenMinutes = (hours == 0 && seconds == 0 && (minutes > 9 && minutes < 51))
@@ -66,6 +82,9 @@ class SpeechHelper: NSObject {
        
         return stillFiveOrLessMinutesLeft || stillMinutesLeft ? (stillText + " \(minutes) " + minutesText + " " + leftText) : ""
     }
+    
+    
+    // MARK : Get the seconds speech text
     
     func secondsCountDown(hours: Int, minutes: Int, seconds: Int) -> String {
         let stillLessThanTenSeconds = (hours == 0 && minutes == 0 && (seconds < 10 && seconds > 0))
@@ -84,6 +103,9 @@ class SpeechHelper: NSObject {
         return ""
     }
     
+    
+    // MARK : Shows And Says Time Done on a notification when the timer is over
+    
     func showSpeechNotification(time: Int) {
         let content = UNMutableNotificationContent()
         content.title = NSLocalizedString("timerDoneText", comment: "timerDoneText for Notification")
@@ -95,44 +117,5 @@ class SpeechHelper: NSObject {
                 print(error?.localizedDescription as Any)
             }
         }
-    }
-    
-    func countDownText(hours: Int, minutes: Int, seconds: Int) -> String {
-        var speechText = ""
-        
-        let stillText = NSLocalizedString("stillText", comment: "stillText for speech text")
-        let leftText = NSLocalizedString("leftText", comment: "leftText for speech text")
-        let hourText = NSLocalizedString("hourText", comment: "hourText for speech text")
-        let hoursText = NSLocalizedString("hoursText", comment: "hoursText for speech text")
-        let minutesText = NSLocalizedString("minutesText", comment: "minutesText for speech text")
-        let secondsText = NSLocalizedString("secondsText", comment: "secondsText for speech text")
-        
-        // Hours Speech Logic
-        if minutes == 0 && seconds == 0 && hours > 1 {
-            speechText = stillText + " \(hours) " + hoursText + " " + leftText
-        } else if (minutes == 0 && seconds == 0 && hours == 1) {
-            speechText = stillText + " \(hours) " + hourText + " " + leftText
-        }
-        
-        // Minutes Speech Logic
-        if hours == 0 && seconds == 0 && (minutes > 9 && minutes < 51) {
-            if  seconds == 0 && (minutes == 50 || minutes == 40 || minutes == 30 || minutes == 20 || minutes == 10) {
-                speechText = stillText + " \(minutes) " + minutesText + " " + leftText
-            }
-        } else if hours == 0 && minutes == 5 && seconds == 0 {
-            speechText = stillText + " \(minutes) " + minutesText + " " + leftText
-        } else if hours == 0 && (minutes < 5 && minutes > 0) && seconds == 0 {
-            speechText = stillText + " \(minutes) " + minutesText + " " + leftText
-        }
-        
-        // Seconds Speech Logic
-        if hours == 0 && minutes == 0 && (seconds > 9  && seconds < 51) {
-            if seconds == 50 || seconds == 40 || seconds == 30 || seconds == 20 || seconds == 10 {
-                speechText = stillText + " \(seconds) " + secondsText + " " + leftText
-            }
-        } else if hours == 0 && minutes == 0 && seconds < 10 {
-            speechText = "\(seconds)"
-        }
-        return speechText
     }
 }

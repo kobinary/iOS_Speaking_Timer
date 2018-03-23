@@ -5,20 +5,23 @@
 //  Created by Maria Ortega on 19/03/2018.
 //  Copyright © 2018 Maria Ortega. All rights reserved.
 //
+//
+// StartTimerViewController Class : It is the viewController whichs shows the first screen where the PickerView
+//                                  is shown to select the time for the timer. Ans Start button to start runnung the timer.
+//
+//
 
 import UIKit
+
+enum TimerComponents : Int {
+    case hours = 0, mins, secs
+}
 
 class StartTimerViewController: UIViewController {
    
     @IBOutlet weak var timerPicker: UIPickerView!
     
-    var pickerDataSource = [["0 hours", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
-                             "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
-                            ["0 min","1","2","3", "4", "5", "6", "7", "8", "9", "10", "11",  "12", "13", "14", "15", "16", "17", "18", "19", "20",
-                             "21", "22", "23","59"],
-                            ["0 sec","1","2","3", "4", "5", "6", "7", "8", "9", "10", "11",  "12", "13", "14", "15", "16", "17", "18", "19", "20",
-                             "21", "22", "23", "59"]];
-    
+    var pickerData = [[""]]
     var viewModel = StartTimerViewModel()
     var timeInterval = 0
     
@@ -32,33 +35,43 @@ class StartTimerViewController: UIViewController {
         self.resetPickerView()
     }
     
+    
+    // MARK: - All setup methods
+    
     func addBackground() {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
     }
     
     func setup() {
-        self.addBackground()
         self.setupPicker()
+        self.addBackground()
     }
     
     func setupPicker() {
+        self.getPickerData()
         self.timerPicker.dataSource = self;
         self.timerPicker.delegate = self;
         self.timerPicker.setValue(UIColor.white, forKeyPath: "textColor")
     }
     
     func resetPickerView() {
+        self.getPickerData()
         self.timerPicker.selectRow(0, inComponent: 0, animated: false)
         self.timerPicker.selectRow(0, inComponent: 1, animated: false)
         self.timerPicker.selectRow(0, inComponent: 2, animated: false)
     }
-
-     // MARK: - Navigation
+    
+    func getPickerData() {
+        self.pickerData = viewModel.getPickerValues()
+        print(self.pickerData)
+    }
+    
+    // MARK: - Navigation method between viewControllers
 
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        self.timeInterval = TimeConversorHelper().transforStringValuesIntoSeconds(hours: viewModel.hours,
-                                                                                  minutes: viewModel.minutes,
-                                                                                  seconds: viewModel.seconds)
+        self.timeInterval = TimeConversorHelper().transformStringValuesIntoSeconds(hours: viewModel.hours,
+                                                                                   minutes: viewModel.minutes,
+                                                                                   seconds: viewModel.seconds)
         return self.timeInterval > 0 ? true : false
     }
     
@@ -74,14 +87,13 @@ class StartTimerViewController: UIViewController {
     }
 }
 
-enum TimerComponents : Int {
-    case hours = 0, mins, secs
-}
+
+// MARK: - Extension with all the PickerView Logic
 
 extension StartTimerViewController : UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerDataSource[component].count
+        return pickerData[component].count
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -89,7 +101,7 @@ extension StartTimerViewController : UIPickerViewDelegate, UIPickerViewDataSourc
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerDataSource[component][row]
+        return pickerData[component][row]
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -97,20 +109,20 @@ extension StartTimerViewController : UIPickerViewDelegate, UIPickerViewDataSourc
             
         switch pickerComponent {
         case .hours?:
-            viewModel.hours = pickerDataSource[component][row]
+            viewModel.hours = pickerData[component][row]
             break
         case .mins?:
-            viewModel.minutes = pickerDataSource[component][row]
+            viewModel.minutes = pickerData[component][row]
             break
         default:
-            viewModel.seconds = pickerDataSource[component][row]
+            viewModel.seconds = pickerData[component][row]
             break
             
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        let titleData = pickerDataSource[component][row]
+        let titleData = pickerData[component][row]
         let titleInWhite = NSAttributedString(string: titleData,
                                               attributes: [NSAttributedStringKey.font:UIFont(name: "Helvetica Neue", size: 15.0)!, NSAttributedStringKey.foregroundColor:UIColor.white])
         return titleInWhite

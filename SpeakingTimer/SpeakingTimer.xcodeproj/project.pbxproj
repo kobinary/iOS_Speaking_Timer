@@ -47,6 +47,8 @@
 		4C60D89020611C5900659F85 /* alarm1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D88720611C5800659F85 /* alarm1.mp3 */; };
 		4CF044A42065109E0011C2A5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CF044A72065109E0011C2A5 /* Localizable.strings */; };
 		4CF044A52065109E0011C2A5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CF044A72065109E0011C2A5 /* Localizable.strings */; };
+		4CF044AB20651C940011C2A5 /* pickerData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CF044AA20651C940011C2A5 /* pickerData.plist */; };
+		4CF044AC20651C940011C2A5 /* pickerData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CF044AA20651C940011C2A5 /* pickerData.plist */; };
 		8A2C377D1FFC077B4B9427D9 /* Pods_SpeakingTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526DFE21B00A608DE4962908 /* Pods_SpeakingTimer.framework */; };
 		A853FE8BDB34DE7D02DFC6E4 /* Pods_SpeakingTimerWatch_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE995FA4B85989E782DD8C19 /* Pods_SpeakingTimerWatch_Extension.framework */; };
 		D918C6F9B2608A745D38DB39 /* Pods_SpeakingTimerWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8898C9EAF9EE5FC0831B4483 /* Pods_SpeakingTimerWatch.framework */; };
@@ -160,6 +162,7 @@
 		4CF0449F20650AFF0011C2A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Interface.strings; sourceTree = "<group>"; };
 		4CF044A62065109E0011C2A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4CF044A8206510A30011C2A5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4CF044AA20651C940011C2A5 /* pickerData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = pickerData.plist; path = SpeakingTimer/Resources/pickerData.plist; sourceTree = SOURCE_ROOT; };
 		526DFE21B00A608DE4962908 /* Pods_SpeakingTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeakingTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD2AE789E88A7196B57557D /* Pods-SpeakingTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakingTimer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakingTimer/Pods-SpeakingTimer.debug.xcconfig"; sourceTree = "<group>"; };
 		5E32229FD2F4B0C22C7F1898 /* Pods_SpeakingTimerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeakingTimerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,8 +228,7 @@
 			children = (
 				4C30DC472063C52F00D6DB63 /* Helper */,
 				4C30DC462063C40900D6DB63 /* Timer */,
-				4C60D846205FB6C900659F85 /* ExtensionDelegate.swift */,
-				4C60D848205FB6C900659F85 /* NotificationController.swift */,
+				4CF044A920651B4D0011C2A5 /* Extra classes */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -346,6 +348,7 @@
 		4C60D859205FBEAD00659F85 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4CF044AA20651C940011C2A5 /* pickerData.plist */,
 				4C60D80A205FB60300659F85 /* Assets.xcassets */,
 				4C60D80C205FB60300659F85 /* LaunchScreen.storyboard */,
 			);
@@ -400,6 +403,15 @@
 				4C60D88520611C5800659F85 /* alarm3.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		4CF044A920651B4D0011C2A5 /* Extra classes */ = {
+			isa = PBXGroup;
+			children = (
+				4C60D846205FB6C900659F85 /* ExtensionDelegate.swift */,
+				4C60D848205FB6C900659F85 /* NotificationController.swift */,
+			);
+			name = "Extra classes";
 			sourceTree = "<group>";
 		};
 		A72A309F211A00C8930CBEB9 /* Pods */ = {
@@ -612,6 +624,7 @@
 			files = (
 				4C60D88B20611C5900659F85 /* alarm2.mp3 in Resources */,
 				4C60D88820611C5900659F85 /* alarm3.mp3 in Resources */,
+				4CF044AB20651C940011C2A5 /* pickerData.plist in Resources */,
 				4C60D80E205FB60300659F85 /* LaunchScreen.storyboard in Resources */,
 				4C60D80B205FB60300659F85 /* Assets.xcassets in Resources */,
 				4CF044A42065109E0011C2A5 /* Localizable.strings in Resources */,
@@ -652,6 +665,7 @@
 			files = (
 				4CF044A52065109E0011C2A5 /* Localizable.strings in Resources */,
 				4C60D88D20611C5900659F85 /* alarm2.mp3 in Resources */,
+				4CF044AC20651C940011C2A5 /* pickerData.plist in Resources */,
 				4C60D88A20611C5900659F85 /* alarm3.mp3 in Resources */,
 				4C60D89020611C5900659F85 /* alarm1.mp3 in Resources */,
 				4C60D84B205FB6C900659F85 /* Assets.xcassets in Resources */,

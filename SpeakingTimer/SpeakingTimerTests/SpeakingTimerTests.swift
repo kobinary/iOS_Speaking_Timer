@@ -54,19 +54,19 @@ class SpeakingTimerTests: XCTestCase {
     
     func testTransforTimeIntoSeoncds() {
         var (hours, minutes , seconds) : (Int, Int, Int) = (1, 5, 40)
-        var timeConverted = TimeConversorHelper().transforTimeIntoSeoncds(hours: hours, minutes: minutes, seconds: seconds)
+        var timeConverted = TimeConversorHelper().transformTimeIntoSeoncds(hours: hours, minutes: minutes, seconds: seconds)
         XCTAssertEqual(timeConverted, 3940)
         
         (hours, minutes , seconds) = (0, 9, 21)
-        timeConverted = TimeConversorHelper().transforTimeIntoSeoncds(hours: hours, minutes: minutes, seconds: seconds)
+        timeConverted = TimeConversorHelper().transformTimeIntoSeoncds(hours: hours, minutes: minutes, seconds: seconds)
         XCTAssertEqual(timeConverted, 561)
         
         (hours, minutes , seconds) = (20, 0, 0)
-        timeConverted = TimeConversorHelper().transforTimeIntoSeoncds(hours: hours, minutes: minutes, seconds: seconds)
+        timeConverted = TimeConversorHelper().transformTimeIntoSeoncds(hours: hours, minutes: minutes, seconds: seconds)
         XCTAssertEqual(timeConverted, 72000)
         
         (hours, minutes , seconds) = (3, 3, 3)
-        timeConverted = TimeConversorHelper().transforTimeIntoSeoncds(hours: hours, minutes: minutes, seconds: seconds)
+        timeConverted = TimeConversorHelper().transformTimeIntoSeoncds(hours: hours, minutes: minutes, seconds: seconds)
         XCTAssertEqual(timeConverted, 10983)
     }
     

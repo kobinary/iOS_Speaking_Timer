@@ -5,20 +5,30 @@
 //  Created by Maria Ortega on 20/03/2018.
 //  Copyright © 2018 Maria Ortega. All rights reserved.
 //
+//
+// TimeConversorHelper Class : Provide all the methods needed to transform Time in miliseconds to Hours, Minutes and Seconds, and viceversa also.
+//                             Also transform String values into miliseconds values to usa as TimeInteval into the Timer.
+//
 
 import UIKit
 
 class TimeConversorHelper: NSObject {
 
-    func transforTimeIntoSeoncds(hours: Int, minutes: Int, seconds: Int) -> Int {
+    
+    // MARK : Transform Time in (hours, minuts, seconds) into a milisecs
+
+    func transformTimeIntoSeoncds(hours: Int, minutes: Int, seconds: Int) -> Int {
         let hoursToMinutes = hours * 60
         let minutesToSeconds = (minutes * 60) + (hoursToMinutes * 60)
         let timeInSeconds = minutesToSeconds + seconds
         
         return timeInSeconds
     }
-    
-    func transforStringValuesIntoSeconds(hours: String, minutes: String, seconds: String) -> Int {
+
+
+    // MARK : Transform String values (hours, minuts, seconds) into a milisecs
+
+    func transformStringValuesIntoSeconds(hours: String, minutes: String, seconds: String) -> Int {
         let hoursValue = Int(hours)
         let minutesValue = Int(minutes)
         let secondsValue = Int(seconds)
@@ -30,6 +40,9 @@ class TimeConversorHelper: NSObject {
         return timeInSeconds
     }
     
+    
+    // MARK : Transform Milisecs into Time values (hours, minuts, seconds)
+
     func transformIntevalIntoTime(interval: Int) -> (Int, Int, Int) {
         let seconds = interval % 60
         let minutes = (interval / 60) % 60
