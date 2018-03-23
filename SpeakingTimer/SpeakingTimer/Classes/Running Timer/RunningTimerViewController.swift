@@ -14,6 +14,8 @@
 import UIKit
 import Hero
 
+let fontTimerName = "Helvetica Neue"
+
 class RunningTimerViewController: UIViewController, RunningTimerDelegate {
 
     deinit {
@@ -25,6 +27,9 @@ class RunningTimerViewController: UIViewController, RunningTimerDelegate {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var pauseResumeButton: UIButton!
     
+    
+    // MARK: - Setup view methods
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.setup()
@@ -40,14 +45,16 @@ class RunningTimerViewController: UIViewController, RunningTimerDelegate {
         self.stopAlarm()
     }
     
-    
-    // MARK: - Setup view methods
-        
     func setup() {
         self.addObservers()
         self.addBackground()
+        self.setupTimerLabel()
         self.updatePasueResumeButton()
         self.updateLabelWithCurrentTime()
+    }
+    
+    func setupTimerLabel() {
+        self.timerLabel.font = UIFont(name: fontTimerName, size: CGFloat(DeviceSizeHelper().getCorrectFontSize()))
     }
     
     func addBackground() {

@@ -12,6 +12,7 @@
         <array key="HelveticaNeue.ttc">
             <string>HelveticaNeue</string>
             <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-Medium</string>
         </array>
         <array key="HelveticaNeueExtras.ttc">
             <string>HelveticaNeue-CondensedBold</string>
@@ -27,53 +28,59 @@
             <objects>
                 <controller identifier="StartTimer" hidesWhenLoading="NO" id="HF2-90-OAa" customClass="StartTimerInterfaceController" customModule="SpeakingTimerWatch_Extension">
                     <items>
-                        <group width="1" alignment="center" spacing="2" id="V2p-oZ-yTi">
+                        <label width="1" alignment="center" text="Speaking Timer" textAlignment="center" id="hGi-6W-XSE">
+                            <color key="textColor" red="0.28235294119999998" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="font" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="10"/>
+                        </label>
+                        <group width="134" height="100" alignment="center" spacing="3" id="V2p-oZ-yTi">
                             <items>
-                                <group width="43" height="117" alignment="left" layout="vertical" spacing="4" id="zIG-cf-qON">
+                                <group width="43" height="100" alignment="left" layout="vertical" spacing="0.0" id="zIG-cf-qON">
                                     <items>
-                                        <label width="43" height="12" alignment="left" text="HH" textAlignment="center" id="73a-J9-uOi">
-                                            <color key="textColor" red="0.28235294119999998" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <label width="43" height="10" alignment="center" text="HH" textAlignment="center" id="73a-J9-uOi">
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="font" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
                                         </label>
-                                        <picker width="43" height="100" alignment="left" focusStyle="sequence" id="RYY-O3-7md">
+                                        <picker width="43" height="90" alignment="center" focusStyle="stack" id="RYY-O3-7md">
                                             <connections>
                                                 <action selector="pickerHoursSelectedItemChanged:" destination="HF2-90-OAa" id="rvk-BS-7b0"/>
                                             </connections>
                                         </picker>
                                     </items>
+                                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                                 </group>
-                                <group width="43" height="117" alignment="left" layout="vertical" spacing="4" id="pnW-dI-ur1">
+                                <group width="43" height="100" alignment="left" layout="vertical" spacing="0.0" id="pnW-dI-ur1">
                                     <items>
-                                        <label width="43" height="12" alignment="left" text="MM" textAlignment="center" id="Mvp-hF-yH3">
-                                            <color key="textColor" red="0.28235294119999998" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <label width="43" height="10" alignment="center" text="MM" textAlignment="center" id="Mvp-hF-yH3">
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="font" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
                                         </label>
-                                        <picker width="43" height="100" alignment="center" focusStyle="sequence" id="1yA-Oq-GPw">
+                                        <picker width="43" height="90" alignment="center" focusStyle="stack" id="1yA-Oq-GPw">
                                             <connections>
-                                                <action selector="pickerSecsSelectedItemChanged:" destination="HF2-90-OAa" id="fOv-yd-s75"/>
+                                                <action selector="pickerMinssSelectedItemChanged:" destination="HF2-90-OAa" id="lag-Zg-waL"/>
                                             </connections>
                                         </picker>
                                     </items>
                                 </group>
-                                <group width="43" height="117" alignment="left" layout="vertical" spacing="4" id="8Qo-ZJ-Pxu">
+                                <group width="43" height="100" alignment="left" layout="vertical" spacing="0.0" id="8Qo-ZJ-Pxu">
                                     <items>
-                                        <label width="43" height="12" alignment="left" text="SS" textAlignment="center" id="LsN-lE-bs3">
-                                            <color key="textColor" red="0.28235294119999998" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <label width="43" height="10" alignment="center" text="SS" textAlignment="center" id="LsN-lE-bs3">
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="font" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
                                         </label>
-                                        <picker width="43" height="100" alignment="left" focusStyle="sequence" id="VM1-Mt-UaC">
+                                        <picker width="43" height="90" alignment="center" focusStyle="stack" id="VM1-Mt-UaC">
                                             <connections>
-                                                <action selector="pickerMinssSelectedItemChanged:" destination="HF2-90-OAa" id="uPI-Bz-vNb"/>
+                                                <action selector="pickerSecsSelectedItemChanged:" destination="HF2-90-OAa" id="bsb-S6-8N9"/>
                                             </connections>
                                         </picker>
                                     </items>
+                                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                                 </group>
                             </items>
                             <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                         </group>
-                        <group width="1" alignment="center" id="BA0-vz-EDB">
+                        <group width="1" alignment="center" spacing="0.0" id="BA0-vz-EDB">
                             <items>
-                                <button width="1" alignment="center" title="Start" id="25k-yP-Ukt">
+                                <button width="1" height="40" alignment="center" verticalAlignment="bottom" title="Start" id="25k-yP-Ukt">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" red="0.015686274510000001" green="0.87058823529999996" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
@@ -82,6 +89,7 @@
                                     </connections>
                                 </button>
                             </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                         </group>
                     </items>
                     <connections>

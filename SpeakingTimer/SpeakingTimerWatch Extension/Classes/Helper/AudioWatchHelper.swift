@@ -27,6 +27,6 @@ class AudioWatchHelper: NSObject {
     }
     
     func playSound() {
-        player.play()
+//        player.play()
     }
 }

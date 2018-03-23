@@ -25,6 +25,9 @@ class StartTimerViewController: UIViewController {
     var viewModel = StartTimerViewModel()
     var timeInterval = 0
     
+    
+    // MARK: - All setup methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
@@ -32,11 +35,8 @@ class StartTimerViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.resetPickerView()
+        self.reset()
     }
-    
-    
-    // MARK: - All setup methods
     
     func addBackground() {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
@@ -54,16 +54,25 @@ class StartTimerViewController: UIViewController {
         self.timerPicker.setValue(UIColor.white, forKeyPath: "textColor")
     }
     
+    func reset() {
+        self.resetPickerView()
+        self.resetValues()
+    }
+    
     func resetPickerView() {
-        self.getPickerData()
         self.timerPicker.selectRow(0, inComponent: 0, animated: false)
         self.timerPicker.selectRow(0, inComponent: 1, animated: false)
         self.timerPicker.selectRow(0, inComponent: 2, animated: false)
     }
     
+    func resetValues() {
+        viewModel.hours = "0"
+        viewModel.minutes = "0"
+        viewModel.seconds = "0"
+    }
+    
     func getPickerData() {
         self.pickerData = viewModel.getPickerValues()
-        print(self.pickerData)
     }
     
     // MARK: - Navigation method between viewControllers

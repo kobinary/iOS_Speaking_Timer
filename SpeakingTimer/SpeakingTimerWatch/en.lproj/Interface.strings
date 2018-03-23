@@ -1,9 +1,9 @@
 
-/* Class = "WKInterfaceLabel"; text = "Speaking Timer"; ObjectID = "5r1-0j-wXf"; */
-"5r1-0j-wXf.text" = "Speaking Timer";
+/* Class = "WKInterfaceButton"; title = "Start"; ObjectID = "25k-yP-Ukt"; */
+"25k-yP-Ukt.title" = "Start";
 
-/* Class = "WKInterfaceButton"; title = "1 min"; ObjectID = "6mV-bA-7fG"; */
-"6mV-bA-7fG.title" = "1 min";
+/* Class = "WKInterfaceLabel"; text = "HH"; ObjectID = "73a-J9-uOi"; */
+"73a-J9-uOi.text" = "HH";
 
 /* Class = "WKInterfaceLabel"; text = "Alert Label"; ObjectID = "IdU-wH-bcW"; */
 "IdU-wH-bcW.text" = "Alert Label";
@@ -11,17 +11,17 @@
 /* Class = "WKInterfaceButton"; title = "Pause"; ObjectID = "Jwv-BL-lqW"; */
 "Jwv-BL-lqW.title" = "Pause";
 
+/* Class = "WKInterfaceLabel"; text = "SS"; ObjectID = "LsN-lE-bs3"; */
+"LsN-lE-bs3.text" = "SS";
+
+/* Class = "WKInterfaceLabel"; text = "MM"; ObjectID = "Mvp-hF-yH3"; */
+"Mvp-hF-yH3.text" = "MM";
+
 /* Class = "WKInterfaceLabel"; text = "Speaking Timer"; ObjectID = "SHd-JV-Bne"; */
 "SHd-JV-Bne.text" = "Speaking Timer";
 
-/* Class = "WKInterfaceButton"; title = "5 mins"; ObjectID = "cCM-LS-PgJ"; */
-"cCM-LS-PgJ.title" = "5 mins";
-
-/* Class = "WKInterfaceButton"; title = "2 mins"; ObjectID = "iQh-hg-dEt"; */
-"iQh-hg-dEt.title" = "2 mins";
+/* Class = "WKInterfaceLabel"; text = "Speaking Timer"; ObjectID = "hGi-6W-XSE"; */
+"hGi-6W-XSE.text" = "Speaking Timer";
 
 /* Class = "WKInterfaceButton"; title = "Stop"; ObjectID = "k1R-Vp-YJU"; */
 "k1R-Vp-YJU.title" = "Stop";
-
-/* Class = "WKInterfaceButton"; title = "10 mins"; ObjectID = "vBg-Al-YMb"; */
-"vBg-Al-YMb.title" = "10 mins";

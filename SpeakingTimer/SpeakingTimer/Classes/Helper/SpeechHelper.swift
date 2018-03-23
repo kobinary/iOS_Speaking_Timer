@@ -36,6 +36,7 @@ class SpeechHelper: NSObject {
         print(text)
         let speakMsg = AVSpeechUtterance(string: text)
         speakMsg.voice  = AVSpeechSynthesisVoice(language: speechLanguage)
+        speakMsg.rate = 0.5
         speechSynthesizer.speak(speakMsg)
     }
     

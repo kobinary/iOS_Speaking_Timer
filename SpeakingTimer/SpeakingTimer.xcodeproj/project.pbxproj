@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		113DF2E84030C33E63BED9EE /* Pods_SpeakingTimerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A006048AD3C3317AF175CE26 /* Pods_SpeakingTimerTests.framework */; };
+		4C09A71B206543130022C11D /* DeviceSizeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C09A71A206543130022C11D /* DeviceSizeHelper.swift */; };
 		4C30DBD82061205D00D6DB63 /* AudioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBD72061205D00D6DB63 /* AudioHelper.swift */; };
 		4C30DBDA2061320200D6DB63 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C30DBD92061320200D6DB63 /* AudioToolbox.framework */; };
 		4C30DBDF20613A2F00D6DB63 /* TimeConversorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBDE20613A2F00D6DB63 /* TimeConversorHelper.swift */; };
@@ -118,6 +119,7 @@
 		04BD42245F24B713581DC41A /* Pods-SpeakingTimerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakingTimerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakingTimerTests/Pods-SpeakingTimerTests.release.xcconfig"; sourceTree = "<group>"; };
 		388316CFDD8FB6CF97A26009 /* Pods-SpeakingTimerWatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakingTimerWatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakingTimerWatch/Pods-SpeakingTimerWatch.release.xcconfig"; sourceTree = "<group>"; };
 		3B431673027952026CE96B87 /* Pods-SpeakingTimerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakingTimerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakingTimerTests/Pods-SpeakingTimerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4C09A71A206543130022C11D /* DeviceSizeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSizeHelper.swift; sourceTree = "<group>"; };
 		4C30DBD72061205D00D6DB63 /* AudioHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioHelper.swift; sourceTree = "<group>"; };
 		4C30DBD92061320200D6DB63 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4C30DBDB2061320200D6DB63 /* SpeakingTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpeakingTimer.entitlements; sourceTree = "<group>"; };
@@ -159,13 +161,13 @@
 		4C60D88720611C5800659F85 /* alarm1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm1.mp3; sourceTree = "<group>"; };
 		4CF0449920650AE80011C2A5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		4CF0449A20650AE80011C2A5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		4CF0449B20650AE80011C2A5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Interface.strings; sourceTree = "<group>"; };
 		4CF0449D20650AFD0011C2A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		4CF0449E20650AFF0011C2A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		4CF0449F20650AFF0011C2A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Interface.strings; sourceTree = "<group>"; };
 		4CF044A62065109E0011C2A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4CF044A8206510A30011C2A5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4CF044AA20651C940011C2A5 /* pickerData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = pickerData.plist; path = SpeakingTimer/Resources/pickerData.plist; sourceTree = SOURCE_ROOT; };
+		4CF044B320653ABA0011C2A5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Interface.strings; sourceTree = "<group>"; };
+		4CF044B520653AC00011C2A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Interface.strings; sourceTree = "<group>"; };
 		526DFE21B00A608DE4962908 /* Pods_SpeakingTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeakingTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD2AE789E88A7196B57557D /* Pods-SpeakingTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakingTimer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakingTimer/Pods-SpeakingTimer.debug.xcconfig"; sourceTree = "<group>"; };
 		5E32229FD2F4B0C22C7F1898 /* Pods_SpeakingTimerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeakingTimerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -394,6 +396,7 @@
 				4C30DBDE20613A2F00D6DB63 /* TimeConversorHelper.swift */,
 				4C30DBE42062625900D6DB63 /* SpeechHelper.swift */,
 				4C30DBE62062C55E00D6DB63 /* BackgroundTask.swift */,
+				4C09A71A206543130022C11D /* DeviceSizeHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -925,6 +928,7 @@
 				4C60D85C205FC90100659F85 /* RunningTimerViewController.swift in Sources */,
 				4C30DBE72062C55E00D6DB63 /* BackgroundTask.swift in Sources */,
 				4C60D85E205FDEB900659F85 /* StartTimerViewModel.swift in Sources */,
+				4C09A71B206543130022C11D /* DeviceSizeHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1010,8 +1014,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				4C60D836205FB6C900659F85 /* Base */,
-				4CF0449B20650AE80011C2A5 /* de */,
-				4CF0449F20650AFF0011C2A5 /* en */,
+				4CF044B320653ABA0011C2A5 /* de */,
+				4CF044B520653AC00011C2A5 /* en */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";
@@ -1083,6 +1087,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1133,6 +1138,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
