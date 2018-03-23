@@ -60,9 +60,16 @@ class StartTimerInterfaceController: WKInterfaceController {
         }
         return pickerItems
     }
+    
+    func resetPicker() {
+        hoursPickerView?.setSelectedItemIndex(0)
+        minutesPickerView?.setSelectedItemIndex(0)
+        secondsPickerView?.setSelectedItemIndex(0)
+    }
 
     override func willActivate() {
         super.willActivate()
+        self.resetPicker()
     }
 
     override func didDeactivate() {

@@ -14,19 +14,14 @@ import WatchKit
 
 class AudioWatchHelper: NSObject {
 
-    var player: WKAudioFilePlayer!
-
     // MARK : Alarm Sound Logic
 
-    func setupPlayer() {
+    func setupPlayer() -> WKAudioFilePlayer {
         let filePath = Bundle.main.path(forResource: "alarm2", ofType: "mp3")!
         let fileUrl = NSURL.fileURL(withPath: filePath)
         let asset = WKAudioFileAsset.init(url: fileUrl)
         let playerItem = WKAudioFilePlayerItem(asset: asset)
-        player = WKAudioFilePlayer(playerItem: playerItem)
+        return WKAudioFilePlayer(playerItem: playerItem)
     }
-    
-    func playSound() {
-//        player.play()
-    }
+
 }

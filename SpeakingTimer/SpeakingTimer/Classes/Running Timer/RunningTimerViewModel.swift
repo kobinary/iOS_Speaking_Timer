@@ -45,9 +45,9 @@ class RunningTimerViewModel: NSObject {
             delegate?.showAlertIsOver()
         } else {
             time -= 1
-            
+            let isFinalCountdown = time < 10
             delegate?.updateLabelWithRunningTime(time: self.updateTimeLabel(time: time),
-                                                 leftTime: self.updateLeftTimeLabel(time: time))
+                                                 leftTime: isFinalCountdown ? "" : self.updateLeftTimeLabel(time: time))
         }
     }
     

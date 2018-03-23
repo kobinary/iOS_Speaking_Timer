@@ -51,4 +51,13 @@ class TimeConversorHelper: NSObject {
         return (hours,minutes,seconds)
     }
 
+    
+    // MARK : Get Time Difference from Date to hours, minuts, seconds
+    
+    static func getTimeDifference(startDate: Date) -> (Int, Int, Int) {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.hour, .minute, .second], from: startDate, to: Date())
+        return(components.hour!, components.minute!, components.second!)
+    }
+
 }

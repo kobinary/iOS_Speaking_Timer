@@ -78,6 +78,7 @@ class RunningTimerViewController: UIViewController, RunningTimerDelegate {
     func updateLabelWithRunningTime(time: String, leftTime: String) {
         self.timerLabel.text = time
         self.leftTimeLabel.text = leftTime
+        
     }
     
     func updatePasueResumeButton() {

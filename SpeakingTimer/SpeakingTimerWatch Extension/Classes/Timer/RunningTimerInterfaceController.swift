@@ -21,15 +21,17 @@ class RunningTimerInterfaceController: WKInterfaceController {
     @IBOutlet var pauseButton: WKInterfaceButton!
     @IBOutlet var stopButton: WKInterfaceButton!
     
+    var player: WKAudioFilePlayer!
     var isTimerPaused : Bool = false
     var speechTimer = Timer()
+    var backgroundTask = BackgroundTask()
     var time : Int = 0
-
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         self.updatePasueResumeButton()
         self.setupWithContext(context)
-        AudioWatchHelper().setupPlayer()
+        self.setupPlayer()
     }
     
     override func willActivate() {
@@ -37,10 +39,9 @@ class RunningTimerInterfaceController: WKInterfaceController {
     }
     
     override func didDeactivate() {
-        invalidateTimers()
         super.didDeactivate()
     }
-    
+
     
     // MARK : Setup Method
     
@@ -51,6 +52,10 @@ class RunningTimerInterfaceController: WKInterfaceController {
             self.starTimerWithTime(time)
         }
     }
+    
+    func setupPlayer() {
+        self.player = AudioWatchHelper().setupPlayer()
+    }
 }
 
 
@@ -59,26 +64,37 @@ class RunningTimerInterfaceController: WKInterfaceController {
 extension RunningTimerInterfaceController {
     
     func starTimerWithTime(_ time : Int) {
-        speechTimer = Timer.scheduledTimer(timeInterval: 1,
+        backgroundTask.startBackgroundTask()
+        self.speechTimer = Timer.scheduledTimer(timeInterval: 1,
                                            target: self,
                                            selector: (#selector(updateTimer)),
                                            userInfo: nil,
                                            repeats: true)
         
         let timeInDate  = NSDate(timeIntervalSinceNow: TimeInterval(time))
-        intervalTimer.setDate(timeInDate as Date)
-        intervalTimer.start()
+        self.intervalTimer.setDate(timeInDate as Date)
+        self.intervalTimer.start()
     }
     
     @objc func updateTimer() {
-        print("updateTimer: ",time)
         if time < 1 {
-            speechTimer.invalidate()
-            AudioWatchHelper().playSound()
+            SpeechHelper().speak(text: NSLocalizedString("timeIsOverText", comment: "timeIsOverText speech"))
+            self.timerIsOver()
+            self.showAlertIsOver()
         } else {
             time -= 1
-            updateSpeechTime(time: time)
+           self.updateSpeechTime(time: time)
         }
+    }
+    
+    func showAlertIsOver() {
+        let handleAction = WKAlertAction.init(title: NSLocalizedString("stopText", comment: "stopText for Alert"), style:.cancel) {
+            self.stopAlarm()
+        }
+        presentAlert(withTitle: NSLocalizedString("timerDoneText", comment: "timerDoneText for Alert"),
+                     message:nil,
+                     preferredStyle:.actionSheet,
+                     actions: [handleAction])
     }
     
     func updateSpeechTime(time: Int) {
@@ -88,12 +104,12 @@ extension RunningTimerInterfaceController {
     
     func resumeTimer() {
         self.isTimerPaused = false
-        starTimerWithTime(time)
+        self.starTimerWithTime(time)
     }
     
     func pausedTimer() {
         self.isTimerPaused = true
-        invalidateTimers()
+        self.invalidateTimers()
     }
     
     func updatePasueResumeButton() {
@@ -105,8 +121,13 @@ extension RunningTimerInterfaceController {
     }
     
     @IBAction func stopTimer() {
-        invalidateTimers()
+        self.invalidateTimers()
         popToRootController()
+    }
+    
+    func timerIsOver() {
+        self.invalidateTimers()
+        self.player.play()
     }
     
     @IBAction func pauseTimer() {
@@ -118,9 +139,14 @@ extension RunningTimerInterfaceController {
         self.updatePasueResumeButton()
     }
     
+    func stopAlarm() {
+        self.player.pause()
+        invalidateTimers()
+    }
+    
     func invalidateTimers() {
         intervalTimer.stop()
         speechTimer.invalidate()
+        backgroundTask.stopBackgroundTask()
     }
-    
 }

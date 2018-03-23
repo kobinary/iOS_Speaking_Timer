@@ -33,10 +33,9 @@ class SpeechHelper: NSObject {
     // MARK : Speak the text whic is being passed
 
     func speak(text: String) {
-        print(text)
         let speakMsg = AVSpeechUtterance(string: text)
         speakMsg.voice  = AVSpeechSynthesisVoice(language: speechLanguage)
-        speakMsg.rate = 0.5
+        speakMsg.rate = 0.55
         speechSynthesizer.speak(speakMsg)
     }
     
