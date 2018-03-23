@@ -6,31 +6,29 @@
   Copyright © 2018 Maria Ortega. All rights reserved.
 */
 
-"stillText" = "still"
+"stillText" = "still";
 
-"hoursText" = "hours"
+"hoursText" = "hours";
 
-"hourText" = "hour"
+"hourText" = "hour";
 
-"minutesText" = "minutes"
+"minutesText" = "minutes";
 
-"secondsText" = "seconds"
+"secondsText" = "seconds";
 
-"leftText" = "left"
+"leftText" = "left";
 
-"timerDoneText"= "Timer Done"
+"timerDoneText" = "Timer Done";
 
-"stilOneHourLeftText" = "still one hour left"
+"stilOneHourLeftText" = "still one hour left";
 
-"timeIsOverText" = "time is over"
+"timeIsOverText" = "time is over";
 
-"speechLanguage" =  "en-US"
+"speechLanguage" =  "en-US";
 
-"resumeText" = "Resume"
+"resumeText" = "Resume";
 
-"pauseText" = "Pause"
+"pauseText" = "Pause";
 
-"stopText" = "Stop"
-
-"en-US-SpeechLanguage" = "en-US"
+"stopText" = "Stop";
 
