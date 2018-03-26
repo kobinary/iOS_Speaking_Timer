@@ -17,16 +17,12 @@ import Hero
 let fontTimerName = "Helvetica Neue"
 
 class RunningTimerViewController: UIViewController, RunningTimerDelegate {
-
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
     
     var viewModel : RunningTimerViewModel!
     @IBOutlet weak var leftTimeLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var pauseResumeButton: UIButton!
-    
+    var isNotificationON : Bool = false
     
     // MARK: - Setup view methods
 
@@ -46,7 +42,7 @@ class RunningTimerViewController: UIViewController, RunningTimerDelegate {
     }
     
     func setup() {
-        self.addObservers()
+        self.addTimerNotification()
         self.addBackground()
         self.setupTimerLabel()
         self.updatePasueResumeButton()
@@ -100,6 +96,7 @@ extension RunningTimerViewController {
 
     func stopTimerAndDismissView() {
         viewModel.stopTimer()
+        self.stopTimerNotification()
         self.dismissTimer()
     }
 
@@ -109,8 +106,10 @@ extension RunningTimerViewController {
 
     @IBAction func pauseResumeTimer(_ sender: Any) {
         if viewModel.isTimerPaused {
+            self.addTimerNotification()
             viewModel.resumeTimer()
         } else {
+            self.stopTimerNotification()
             viewModel.pauseTimer()
         }
         self.updatePasueResumeButton()
@@ -138,6 +137,7 @@ extension RunningTimerViewController {
         AudioHelper().stopAlarm()
         self.stopTimerAndDismissView()
     }
+    
 }
 
 
@@ -145,8 +145,11 @@ extension RunningTimerViewController {
 
 extension RunningTimerViewController {
     
-    func addObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(timerDidEnterToBackground(notification:)), name: .UIApplicationDidEnterBackground, object: nil)
+    func addTimerNotification() {
+        if !isNotificationON {
+            NotificationCenter.default.addObserver(self, selector: #selector(timerDidEnterToBackground(notification:)), name: .UIApplicationDidEnterBackground, object: nil)
+            self.isNotificationON = true
+        }
     }
     
     @objc func timerDidEnterToBackground(notification: Notification) {
@@ -154,4 +157,12 @@ extension RunningTimerViewController {
             SpeechHelper().showSpeechNotification(time: viewModel.time)
         }
     }
+    
+    func stopTimerNotification() {
+        if isNotificationON {
+            NotificationCenter.default.removeObserver(self, name: .UIApplicationDidEnterBackground, object: nil)
+            self.isNotificationON = false
+        }
+    }
+
 }

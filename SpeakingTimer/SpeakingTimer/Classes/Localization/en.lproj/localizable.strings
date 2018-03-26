@@ -14,6 +14,10 @@
 
 "minutesText" = "minutes";
 
+"secondsMiniText" = "secs";
+
+"minutesMiniText" = "mins";
+
 "secondsText" = "seconds";
 
 "leftText" = "left";

@@ -14,6 +14,10 @@
 
 "secondsText" = "sekunden";
 
+"secondsMiniText" = "sekunden";
+
+"minutesMiniText" = "minuten";
+
 "leftText" = "übrig";
 
 "timerDoneText" = "Timer Fertig";

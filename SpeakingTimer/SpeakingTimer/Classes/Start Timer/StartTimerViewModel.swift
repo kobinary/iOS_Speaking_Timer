@@ -41,9 +41,13 @@ class StartTimerViewModel: NSObject {
     
     func getPickerValues() -> [[String]] {
         
-        var hoursValues = ["0 hours"]
-        var minutesValues = ["0 mins"]
-        var secondsValues = ["0 secs"]
+        let hours = NSLocalizedString("hoursText", comment: "hours Text for picker text")
+        let mins = NSLocalizedString("secondsMiniText", comment: "minutes Text for picker text")
+        let secs = NSLocalizedString("secondsMiniText", comment: "seconds Text for picker textt")
+        
+        var hoursValues = ["0 " + hours]
+        var minutesValues = ["0 " + mins]
+        var secondsValues = ["0 " + secs]
         
         for value in 1...59 {
             if value < 24 {
