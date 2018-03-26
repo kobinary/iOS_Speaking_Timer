@@ -153,7 +153,7 @@ extension RunningTimerViewController {
     }
     
     @objc func timerDidEnterToBackground(notification: Notification) {
-        if viewModel.isTimerRunning {
+        if viewModel.isTimerRunning && viewModel.time > 0 {
             SpeechHelper().showSpeechNotification(time: viewModel.time)
         }
     }
