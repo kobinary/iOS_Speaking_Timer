@@ -79,7 +79,6 @@ extension RunningTimerInterfaceController {
     }
     
     @objc func updateTimer() {
-        print(time)
         if time < 1 {
             SpeechHelper().speak(text: NSLocalizedString("timeIsOverText", comment: "timeIsOverText speech"))
             self.timerIsOver()
