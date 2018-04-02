@@ -29,6 +29,7 @@ class RunningTimerInterfaceController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        self.setTitle("")
         self.updatePasueResumeButton()
         self.setupWithContext(context)
         self.setupPlayer()
@@ -46,6 +47,7 @@ class RunningTimerInterfaceController: WKInterfaceController {
     // MARK : Setup Method
     
     func setupWithContext(_ context: Any?) {
+        self.invalidateTimers()
         let dict = context as? NSDictionary
         if dict != nil {
             self.time = dict!["time"] as! Int
@@ -77,13 +79,14 @@ extension RunningTimerInterfaceController {
     }
     
     @objc func updateTimer() {
+        print(time)
         if time < 1 {
             SpeechHelper().speak(text: NSLocalizedString("timeIsOverText", comment: "timeIsOverText speech"))
             self.timerIsOver()
             self.showAlertIsOver()
         } else {
             time -= 1
-           self.updateSpeechTime(time: time)
+            self.updateSpeechTime(time: time)
         }
     }
     
@@ -122,7 +125,7 @@ extension RunningTimerInterfaceController {
     
     @IBAction func stopTimer() {
         self.invalidateTimers()
-        popToRootController()
+        self.dismiss()
     }
     
     func timerIsOver() {
@@ -149,4 +152,5 @@ extension RunningTimerInterfaceController {
         speechTimer.invalidate()
         backgroundTask.stopBackgroundTask()
     }
+
 }

@@ -87,9 +87,9 @@ class SpeechHelper: NSObject {
     // MARK : Get the seconds speech text
     
     func secondsCountDown(hours: Int, minutes: Int, seconds: Int) -> String {
-        let stillLessThanTenSeconds = (hours == 0 && minutes == 0 && (seconds < 10 && seconds > 0))
+        let stillLessThanTenSeconds = (hours == 0 && minutes == 0 && (seconds < 11 && seconds > 0))
         let stillMoreThanTenSeconds = (hours == 0 && minutes == 0 && (seconds > 9  && seconds < 51))
-        let everyTenSeconds = (seconds == 50 || seconds == 40 || seconds == 30 || seconds == 20 || seconds == 10)
+        let everyTenSeconds = (seconds == 50 || seconds == 40 || seconds == 30 || seconds == 20)
         
         let stillSecondsLeft = stillMoreThanTenSeconds && everyTenSeconds
         

@@ -48,9 +48,6 @@
 		4C60D89020611C5900659F85 /* alarm1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C60D88720611C5800659F85 /* alarm1.mp3 */; };
 		4CF044A42065109E0011C2A5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CF044A72065109E0011C2A5 /* Localizable.strings */; };
 		4CF044A52065109E0011C2A5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CF044A72065109E0011C2A5 /* Localizable.strings */; };
-		4CF044AB20651C940011C2A5 /* pickerData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CF044AA20651C940011C2A5 /* pickerData.plist */; };
-		4CF044AC20651C940011C2A5 /* pickerData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CF044AA20651C940011C2A5 /* pickerData.plist */; };
-		4CF044AD2065254D0011C2A5 /* pickerData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CF044AA20651C940011C2A5 /* pickerData.plist */; };
 		4CF044AE206525530011C2A5 /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DBE62062C55E00D6DB63 /* BackgroundTask.swift */; };
 		4CF044AF206527630011C2A5 /* StartTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60D85D205FDEB900659F85 /* StartTimerViewModel.swift */; };
 		8A2C377D1FFC077B4B9427D9 /* Pods_SpeakingTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526DFE21B00A608DE4962908 /* Pods_SpeakingTimer.framework */; };
@@ -165,7 +162,6 @@
 		4CF0449E20650AFF0011C2A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		4CF044A62065109E0011C2A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4CF044A8206510A30011C2A5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4CF044AA20651C940011C2A5 /* pickerData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = pickerData.plist; path = SpeakingTimer/Resources/pickerData.plist; sourceTree = SOURCE_ROOT; };
 		4CF044B320653ABA0011C2A5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Interface.strings; sourceTree = "<group>"; };
 		4CF044B520653AC00011C2A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Interface.strings; sourceTree = "<group>"; };
 		526DFE21B00A608DE4962908 /* Pods_SpeakingTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeakingTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -353,7 +349,6 @@
 		4C60D859205FBEAD00659F85 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4CF044AA20651C940011C2A5 /* pickerData.plist */,
 				4C60D80A205FB60300659F85 /* Assets.xcassets */,
 				4C60D80C205FB60300659F85 /* LaunchScreen.storyboard */,
 			);
@@ -630,7 +625,6 @@
 			files = (
 				4C60D88B20611C5900659F85 /* alarm2.mp3 in Resources */,
 				4C60D88820611C5900659F85 /* alarm3.mp3 in Resources */,
-				4CF044AB20651C940011C2A5 /* pickerData.plist in Resources */,
 				4C60D80E205FB60300659F85 /* LaunchScreen.storyboard in Resources */,
 				4C60D80B205FB60300659F85 /* Assets.xcassets in Resources */,
 				4CF044A42065109E0011C2A5 /* Localizable.strings in Resources */,
@@ -659,7 +653,6 @@
 			files = (
 				4C60D88F20611C5900659F85 /* alarm1.mp3 in Resources */,
 				4C60D839205FB6C900659F85 /* Assets.xcassets in Resources */,
-				4CF044AD2065254D0011C2A5 /* pickerData.plist in Resources */,
 				4C60D837205FB6C900659F85 /* Interface.storyboard in Resources */,
 				4C60D88920611C5900659F85 /* alarm3.mp3 in Resources */,
 				4C60D88C20611C5900659F85 /* alarm2.mp3 in Resources */,
@@ -672,7 +665,6 @@
 			files = (
 				4CF044A52065109E0011C2A5 /* Localizable.strings in Resources */,
 				4C60D88D20611C5900659F85 /* alarm2.mp3 in Resources */,
-				4CF044AC20651C940011C2A5 /* pickerData.plist in Resources */,
 				4C60D88A20611C5900659F85 /* alarm3.mp3 in Resources */,
 				4C60D89020611C5900659F85 /* alarm1.mp3 in Resources */,
 				4C60D84B205FB6C900659F85 /* Assets.xcassets in Resources */,

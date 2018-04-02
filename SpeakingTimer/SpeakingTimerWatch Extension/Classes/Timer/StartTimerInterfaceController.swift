@@ -65,6 +65,7 @@ class StartTimerInterfaceController: WKInterfaceController {
         hoursPickerView?.setSelectedItemIndex(0)
         minutesPickerView?.setSelectedItemIndex(0)
         secondsPickerView?.setSelectedItemIndex(0)
+        BackgroundTask().stopBackgroundTask()
     }
 
     override func willActivate() {

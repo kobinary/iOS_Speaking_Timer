@@ -16,6 +16,7 @@ class BackgroundTask {
     
     var player = AVAudioPlayer()
     var timer = Timer()
+    var stillPlaying : Bool = false
     
     func startBackgroundTask() {
         NotificationCenter.default.addObserver(self, selector: #selector(interuptedAudio), name: NSNotification.Name.AVAudioSessionInterruption, object: AVAudioSession.sharedInstance())
@@ -24,7 +25,10 @@ class BackgroundTask {
     
     func stopBackgroundTask() {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.AVAudioSessionInterruption, object: nil)
-        player.stop()
+        if self.stillPlaying {
+            player.stop()
+            self.stillPlaying = false
+        }
     }
     
     @objc fileprivate func interuptedAudio(_ notification: Notification) {
@@ -47,6 +51,7 @@ class BackgroundTask {
             self.player.volume = 0.00
             self.player.prepareToPlay()
             self.player.play()
+            self.stillPlaying = true
         } catch { print(error) }
     }
 }
