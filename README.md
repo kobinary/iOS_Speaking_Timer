@@ -24,7 +24,7 @@ The Timer must also run in background, if the user locks the device during a run
 
 
 ## IMPLEMENTATION
-Following the job's requirements, I have developed a Speaking Timer app for iPhone and Apple Watch using the latest Xcode and Swift. Where users can set up a timer through a friendly interface. The timer has options to Start, Stop, Pause and Resume. It also speaks loudly the time left on the timer following the client’s requirements. And when the timer is over the alarm shows up with its alarm’s sound.
+I have developed a Speaking Timer app for iPhone and Apple Watch using the latest Xcode and Swift. Where users can set up a timer through a friendly interface. The timer has options to Start, Stop, Pause and Resume. It also speaks loudly the time left on the timer following the client’s requirements. And when the timer is over the alarm shows up with its alarm’s sound.
 
 The app runs also in the background, keeping the timer and voice work.
 
